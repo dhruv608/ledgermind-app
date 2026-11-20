@@ -1,0 +1,70 @@
+# LedgerMind on one server: nginx (https) in front of the web app and the API server.
+#
+#   First start (no certificate yet):   NGINX_MODE=http docker compose up -d --build
+#   Get the certificate:                see DEPLOY.md step 6
+#   Then, with https:                   docker compose up -d
+#
+# DOMAIN (e.g. ledgermind.duckdns.org) and NGINX_MODE come from the .env file next to this one.
+#
+# Memory limits (the server has 3.8 GB): a part that goes over its limit restarts on its own, instead of the whole
+# server running out of memory and freezing (27 Oct 2026). The backend has room for a workbook build (LibreOffice).
+#
+# Deploys: the Deploy workflow on GitHub builds the images and stores them in Amazon ECR; it sets BACKEND_IMAGE and
+# FRONTEND_IMAGE in .env and the server only pulls them (docker compose pull && docker compose up -d). Without those
+# two lines the images are built here as before (docker compose up -d --build): the backup way.
+
+services:
+  backend:
+    image: ${BACKEND_IMAGE:-ledgermind-backend}
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file: backend/.env.production
+    restart: unless-stopped
+    mem_limit: 2560m
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    image: ${FRONTEND_IMAGE:-ledgermind-frontend}
+    build: ./frontend
+    restart: unless-stopped
+    mem_limit: 384m
+    depends_on:
+      - backend
+
+  nginx:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    mem_limit: 128m
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN:-localhost}
+    volumes:
+      - ./nginx/templates-${NGINX_MODE:-https}:/etc/nginx/templates:ro
+      - certbot-www:/var/www/certbot:ro
+      - certbot-certs:/etc/letsencrypt:ro
+    depends_on:
+      - frontend
+      - backend
+    # Reload every 6 hours so a renewed certificate is picked up
+    command: ["/bin/sh", "-c", "while :; do sleep 6h; nginx -s reload; done & /docker-entrypoint.sh nginx -g 'daemon off;'"]
+
+  certbot:
+    image: certbot/certbot:latest
+    restart: unless-stopped
+    mem_limit: 128m
+    volumes:
+      - certbot-www:/var/www/certbot
+      - certbot-certs:/etc/letsencrypt
+    # Renews the certificate when it is close to expiring (checked twice a day)
+    entrypoint: ["/bin/sh", "-c", "trap exit TERM; while :; do certbot renew --webroot -w /var/www/certbot --quiet; sleep 12h & wait $${!}; done"]
+
+volumes:
+  certbot-www:
+  certbot-certs:

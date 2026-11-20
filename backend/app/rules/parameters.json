@@ -1,0 +1,362 @@
+[
+  {
+    "Param_ID": "P-VAT-REG",
+    "Description": "VAT registration threshold (rolling 12m taxable turnover)",
+    "Value": 90000,
+    "Unit": "£",
+    "Effective From": "1 Apr 2024",
+    "Primary Source": "gov.uk/vat-registration/when-to-register",
+    "Notes": "Also the forward-looking 30-day test"
+  },
+  {
+    "Param_ID": "P-VAT-CASH-JOIN",
+    "Description": "VAT cash accounting – join (expected taxable supplies next 12m)",
+    "Value": 1350000,
+    "Unit": "£",
+    "Effective From": "-",
+    "Primary Source": "Notice 731",
+    "Notes": "Excludes DRC supplies, HP, invoices issued in advance"
+  },
+  {
+    "Param_ID": "P-VAT-CASH-LEAVE",
+    "Description": "VAT cash accounting – must leave",
+    "Value": 1600000,
+    "Unit": "£",
+    "Effective From": "-",
+    "Primary Source": "Notice 731",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-VAT-FRS",
+    "Description": "Flat Rate Scheme – join (VAT-exclusive turnover)",
+    "Value": 150000,
+    "Unit": "£",
+    "Effective From": "-",
+    "Primary Source": "gov.uk/vat-flat-rate-scheme/eligibility",
+    "Notes": "DRC supplies are outside the FRS"
+  },
+  {
+    "Param_ID": "P-VAT-FRS-LEAVE",
+    "Description": "Flat Rate Scheme – must leave (VAT-inclusive turnover)",
+    "Value": 230000,
+    "Unit": "£",
+    "Effective From": "-",
+    "Primary Source": "gov.uk/vat-flat-rate-scheme/leaving-the-scheme",
+    "Notes": "Engagement Setup warning"
+  },
+  {
+    "Param_ID": "P-VAT-DRC-DIS",
+    "Description": "DRC 5% disregard (reverse-charge element of a single supply)",
+    "Value": 0.05,
+    "Unit": "%",
+    "Effective From": "1 Mar 2021",
+    "Primary Source": "VAT domestic reverse charge technical guide",
+    "Notes": "Not available where predominant element is zero-rated"
+  },
+  {
+    "Param_ID": "P-VAT-CGS-LAND",
+    "Description": "Capital Goods Scheme – land/buildings (acquired from 29 Jul 2026)",
+    "Value": 600000,
+    "Unit": "£",
+    "Effective From": "29 Jul 2026",
+    "Primary Source": "Revenue & Customs Brief 7 (2026)",
+    "Notes": "£250,000 for items before 29 Jul 2026; computers removed from CGS"
+  },
+  {
+    "Param_ID": "P-VAT-CGS-VESSEL",
+    "Description": "Capital Goods Scheme – aircraft/ships",
+    "Value": 50000,
+    "Unit": "£",
+    "Effective From": "-",
+    "Primary Source": "Revenue & Customs Brief 7 (2026)",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-CIS-RATE-REG",
+    "Description": "CIS deduction – registered subcontractor",
+    "Value": 0.2,
+    "Unit": "%",
+    "Effective From": "-",
+    "Primary Source": "gov.uk CIS contractor guidance",
+    "Notes": "Applied to labour element (excl. VAT & materials)"
+  },
+  {
+    "Param_ID": "P-CIS-RATE-UNREG",
+    "Description": "CIS deduction – unregistered subcontractor",
+    "Value": 0.3,
+    "Unit": "%",
+    "Effective From": "-",
+    "Primary Source": "gov.uk CIS contractor guidance",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-CIS-RATE-GROSS",
+    "Description": "CIS deduction – gross payment status",
+    "Value": 0,
+    "Unit": "%",
+    "Effective From": "-",
+    "Primary Source": "gov.uk CIS contractor guidance",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-CIS-DEEMED",
+    "Description": "Deemed contractor – construction spend in 12 months",
+    "Value": 3000000,
+    "Unit": "£",
+    "Effective From": "-",
+    "Primary Source": "gov.uk/what-is-the-construction-industry-scheme",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-CT-MAIN",
+    "Description": "Corporation tax – main rate",
+    "Value": 0.25,
+    "Unit": "%",
+    "Effective From": "1 Apr 2023",
+    "Primary Source": "gov.uk/corporation-tax-rates",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-CT-SPR",
+    "Description": "Corporation tax – small profits rate",
+    "Value": 0.19,
+    "Unit": "%",
+    "Effective From": "1 Apr 2023",
+    "Primary Source": "gov.uk/corporation-tax-rates",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-CT-LOWER",
+    "Description": "CT marginal relief lower limit",
+    "Value": 50000,
+    "Unit": "£",
+    "Effective From": "1 Apr 2023",
+    "Primary Source": "gov.uk/corporation-tax-rates",
+    "Notes": "Divided by associated companies + 1; pro-rated for short periods"
+  },
+  {
+    "Param_ID": "P-CT-UPPER",
+    "Description": "CT marginal relief upper limit",
+    "Value": 250000,
+    "Unit": "£",
+    "Effective From": "1 Apr 2023",
+    "Primary Source": "gov.uk/corporation-tax-rates",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-S455",
+    "Description": "s455 tax on loans to participators – loans from 6 Apr 2026",
+    "Value": 0.3575,
+    "Unit": "%",
+    "Effective From": "6 Apr 2026",
+    "Primary Source": "HMRC CTM61505",
+    "Notes": "33.75% for loans 6 Apr 2022 – 5 Apr 2026; 32.5% for 2016-22"
+  },
+  {
+    "Param_ID": "P-S455-PRIOR",
+    "Description": "s455 tax – loans 6 Apr 2022 to 5 Apr 2026",
+    "Value": 0.3375,
+    "Unit": "%",
+    "Effective From": "6 Apr 2022",
+    "Primary Source": "HMRC CTM61505",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-DIV",
+    "Description": "Dividend tax – ordinary / upper rate (individual)",
+    "Value": "10.75% / 35.75%",
+    "Unit": "%",
+    "Effective From": "6 Apr 2026",
+    "Primary Source": "Budget 2025 OOTLAR",
+    "Notes": "Additional rate unchanged"
+  },
+  {
+    "Param_ID": "P-AIA",
+    "Description": "Annual Investment Allowance",
+    "Value": 1000000,
+    "Unit": "£",
+    "Effective From": "-",
+    "Primary Source": "gov.uk/capital-allowances/annual-investment-allowance",
+    "Notes": "Not for cars"
+  },
+  {
+    "Param_ID": "P-WDA-MAIN",
+    "Description": "Main pool writing-down allowance",
+    "Value": 0.14,
+    "Unit": "%",
+    "Effective From": "1 Apr 2026 (CT) / 6 Apr 2026 (IT)",
+    "Primary Source": "Budget 2025 policy paper",
+    "Notes": "18% before; hybrid rate for straddling periods"
+  },
+  {
+    "Param_ID": "P-FYA-40",
+    "Description": "New 40% first-year allowance (main rate, incl. leasing & unincorporated)",
+    "Value": 0.4,
+    "Unit": "%",
+    "Effective From": "1 Jan 2026",
+    "Primary Source": "Budget 2025 policy paper",
+    "Notes": "Excludes cars, second-hand assets and overseas leasing"
+  },
+  {
+    "Param_ID": "P-NIC-SEC",
+    "Description": "Employer Class 1 NIC rate",
+    "Value": 0.15,
+    "Unit": "%",
+    "Effective From": "6 Apr 2025",
+    "Primary Source": "Rates & thresholds for employers 2026-27",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-NIC-ST",
+    "Description": "Secondary threshold (annual)",
+    "Value": 5000,
+    "Unit": "£",
+    "Effective From": "6 Apr 2025",
+    "Primary Source": "Rates & thresholds for employers 2026-27",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-NIC-1A",
+    "Description": "Class 1A NIC on benefits",
+    "Value": 0.15,
+    "Unit": "%",
+    "Effective From": "6 Apr 2025",
+    "Primary Source": "Rates & thresholds for employers 2026-27",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-EA",
+    "Description": "Employment Allowance",
+    "Value": 10500,
+    "Unit": "£",
+    "Effective From": "6 Apr 2025",
+    "Primary Source": "Rates & thresholds for employers 2026-27",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-NLW",
+    "Description": "National Living Wage (21+) per hour",
+    "Value": 12.71,
+    "Unit": "£",
+    "Effective From": "1 Apr 2026",
+    "Primary Source": "Rates & thresholds for employers 2026-27",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-SIZE-MICRO",
+    "Description": "Micro-entity: turnover / balance sheet (2 of 3 incl. ≤10 employees)",
+    "Value": "£1m / £500k",
+    "Unit": "£",
+    "Effective From": "FY beginning ≥ 6 Apr 2025",
+    "Primary Source": "SI 2024/1303",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-SIZE-SMALL",
+    "Description": "Small company: turnover / balance sheet (2 of 3 incl. ≤50 employees)",
+    "Value": "£15m / £7.5m",
+    "Unit": "£",
+    "Effective From": "FY beginning ≥ 6 Apr 2025",
+    "Primary Source": "SI 2024/1303",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-SIZE-MEDIUM",
+    "Description": "Medium company: turnover / balance sheet (2 of 3 incl. ≤250 employees)",
+    "Value": "£54m / £27m",
+    "Unit": "£",
+    "Effective From": "FY beginning ≥ 6 Apr 2025",
+    "Primary Source": "SI 2024/1303",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-FRS-2026",
+    "Description": "FRS 102/105 periodic review effective date",
+    "Value": "Periods beginning ≥ 1 Jan 2026",
+    "Unit": "date",
+    "Effective From": "1 Jan 2026",
+    "Primary Source": "FRC – FRS 102/105 amendments",
+    "Notes": "Five-step revenue; FRS 102 lessee on-balance-sheet"
+  },
+  {
+    "Param_ID": "P-MTD-ITSA",
+    "Description": "MTD for Income Tax qualifying income (sole traders/landlords)",
+    "Value": "£50k (from 6 Apr 2026); £30k (2027); £20k (2028)",
+    "Unit": "£",
+    "Effective From": "6 Apr 2026",
+    "Primary Source": "gov.uk MTD for Income Tax",
+    "Notes": "Relevant to unincorporated property/trading clients"
+  },
+  {
+    "Param_ID": "P-CH-2028",
+    "Description": "Companies House filing changes",
+    "Value": "Small/micro file P&L; no abridged accounts; software-only filing",
+    "Unit": "-",
+    "Effective From": "Apr 2028",
+    "Primary Source": "ICAEW (Jun 2026)",
+    "Notes": "Disclosure layer"
+  },
+  {
+    "Param_ID": "P-CAP-THR",
+    "Description": "Firm capitalisation threshold (policy)",
+    "Value": 500,
+    "Unit": "£",
+    "Effective From": "Client policy",
+    "Primary Source": "Engagement-specific",
+    "Notes": "INPUT – set per client"
+  },
+  {
+    "Param_ID": "P-MAT",
+    "Description": "Performance materiality (% of turnover or profit)",
+    "Value": 0.01,
+    "Unit": "%",
+    "Effective From": "Engagement-specific",
+    "Primary Source": "Firm methodology",
+    "Notes": "INPUT – set per client"
+  },
+  {
+    "Param_ID": "P-AMAP-CAR",
+    "Description": "Approved mileage allowance: car or van, first 10,000 business miles in the tax year, from 2026-27",
+    "Value": 0.55,
+    "Unit": "GBP per mile",
+    "Effective From": "6 Apr 2026",
+    "Primary Source": "HMRC EIM31240 (ITEPA 2003 s230); BIM75005",
+    "Notes": "45p for 2011-12 to 2025-26"
+  },
+  {
+    "Param_ID": "P-AMAP-CAR-PRIOR",
+    "Description": "Approved mileage allowance: car or van, first 10,000 business miles, 2011-12 to 2025-26",
+    "Value": 0.45,
+    "Unit": "GBP per mile",
+    "Effective From": "6 Apr 2011",
+    "Primary Source": "HMRC EIM31240 (ITEPA 2003 s230)",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-AMAP-CAR-OVER",
+    "Description": "Approved mileage allowance: car or van, business miles over 10,000 in the tax year",
+    "Value": 0.25,
+    "Unit": "GBP per mile",
+    "Effective From": "6 Apr 2011",
+    "Primary Source": "HMRC EIM31240 (ITEPA 2003 s230)",
+    "Notes": "Unchanged in 2026-27"
+  },
+  {
+    "Param_ID": "P-AMAP-MOTORCYCLE",
+    "Description": "Approved mileage allowance: motorcycle, all business miles",
+    "Value": 0.24,
+    "Unit": "GBP per mile",
+    "Effective From": "6 Apr 2011",
+    "Primary Source": "HMRC EIM31240 (ITEPA 2003 s230)",
+    "Notes": null
+  },
+  {
+    "Param_ID": "P-AMAP-CYCLE",
+    "Description": "Approved mileage allowance: cycle, all business miles",
+    "Value": 0.2,
+    "Unit": "GBP per mile",
+    "Effective From": "6 Apr 2011",
+    "Primary Source": "HMRC EIM31240 (ITEPA 2003 s230)",
+    "Notes": null
+  }
+]

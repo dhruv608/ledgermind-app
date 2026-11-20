@@ -1,0 +1,298 @@
+{
+  "_about": "2026-27 (checked 15 Nov 2026 against the law base): dividend rates 10.75% / 35.75% (FA 2026 s4); Class 2 SPT 7,105 and 3.65 a week (gov.uk self-employed NIC); LEL 6,708, student loans 26,900 / 29,385 / 33,795 and plan 5 25,000, PGL 21,000 (employer rates 2026-27); mileage 55p (BIM75005); main pool WDA 14% (CA23220); VCT 20% (ITA s263); BADR 18% (CG63955); official rate 3.75% (EIM26104); the rest unchanged. Qualifying care amounts for 2026-27 not yet published (BIM52765): the latest year's are used, with a note. Self Assessment rates by tax year (SOP v2 parameter table P-*; checked 3 Nov 2026 against ITA 2007 s10, s12B, s13A, s24, s35, ITEPA s681C, SSCBA s11 and s15, TMA s59A / SAM121490). England, Wales and Northern Ireland rates (Scottish rates on non-savings income not yet held). Mileage (BIM75005: 45p / 25p to 2025-26, 55p from 2026-27) and use-of-home flat rates (ITTOIA s94H, BIM75010) per month by hours worked at home. Student and postgraduate loan thresholds from gov.uk rates and thresholds for employers 2024-25 and 2025-26 (checked 3 Nov 2026); unearned income counts in full once over £2,000 (CSLM16035). Capital gains: annual exempt amount and rates by disposal date from gov.uk Capital Gains Tax rates and allowances (2024-25 split at 30 October 2024; Business Asset Disposal Relief 10% then 14% from 6 April 2025). Investment reliefs (ITA s158 EIS 30% on up to £1m, £2m with knowledge-intensive companies: a note; s257AB SEIS 50% on up to £200,000; s263 VCT 30% on up to £200,000) capital allowances (HS252: Annual Investment Allowance £1m, writing down 18% main pool and 6% special rate pool, a pool of £1,000 or less written off (CA23225), structures and buildings 3%; cash basis: cars only, BIM72067), Rent-a-Room £7,500 a year, £3,750 when someone else also has income from letting in the same home (ITTOIA s789), and the cap on reliefs from income (ITA s24A: the greater of £50,000 and 25% of adjusted total income). Termination payment exemption £30,000 (ITEPA s403, EIM13505) and the pension annual allowance £60,000 (from 6 April 2023, PTM051100, HS345) added 5 Nov 2026.",
+  "2024-25": {
+    "personal_allowance": 12570,
+    "taper_from": 100000,
+    "marriage_allowance": 1260,
+    "basic_band": 37700,
+    "higher_limit": 125140,
+    "rates": {
+      "basic": 0.2,
+      "higher": 0.4,
+      "additional": 0.45
+    },
+    "savings_starting_band": 5000,
+    "personal_savings_allowance": {
+      "basic": 1000,
+      "higher": 500,
+      "additional": 0
+    },
+    "dividend_allowance": 500,
+    "dividend_rates": {
+      "basic": 0.0875,
+      "higher": 0.3375,
+      "additional": 0.3935
+    },
+    "class4": {
+      "lower": 12570,
+      "upper": 50270,
+      "main": 0.06,
+      "above": 0.02
+    },
+    "class2": {
+      "small_profits_threshold": 6725,
+      "weekly": 3.45,
+      "weeks": 52
+    },
+    "class1": {
+      "lower_earnings_limit": 6396
+    },
+    "official_rate": 0.0225,
+    "coding_out_limit": 3000,
+    "termination_exempt": 30000,
+    "pension_annual_allowance": 60000,
+    "mtd": [[50000, "2026-04-06"], [30000, "2027-04-06"], [20000, "2028-04-06"]],
+    "qualifying_care": {
+      "fixed": 19360,
+      "under_11": 405,
+      "eleven_plus": 485,
+      "adult": 485
+    },
+    "foreign_pension_taxed": 1.0,
+    "short_page_limit": 90000,
+    "cgt_return_days": 60,
+    "deadlines": {
+      "paper": [0, 10, 31],
+      "coding_out": [0, 12, 30],
+      "online": [1, 1, 31],
+      "second_poa": [1, 7, 31]
+    },
+    "hicbc": {
+      "from": 60000,
+      "to": 80000,
+      "step": 200
+    },
+    "poa": {
+      "min_relevant": 1000,
+      "at_source_share": 0.8
+    },
+    "finance_cost_credit": 0.2,
+    "trading_allowance": 1000,
+    "property_allowance": 1000,
+    "rent_a_room": 7500,
+    "mileage": {
+      "car_first": 0.45,
+      "car_after": 0.25,
+      "first_miles": 10000,
+      "motorcycle": 0.24
+    },
+    "use_of_home": {
+      "25": 10,
+      "51": 18,
+      "101": 26
+    },
+    "student_loan": {
+      "PLAN_1": 24990,
+      "PLAN_2": 27295,
+      "PLAN_4": 31395,
+      "rate": 0.09,
+      "postgraduate": 21000,
+      "postgraduate_rate": 0.06,
+      "unearned_over": 2000
+    },
+    "capital_allowances": {"aia_limit": 1000000, "main": 0.18, "special": 0.06, "small_pool": 1000, "sba": 0.03},
+    "investment": {"VCT": [0.3, 200000], "EIS": [0.3, 1000000], "SEIS": [0.5, 200000]},
+    "loan_interest_cap": {"fixed": 50000, "share": 0.25},
+    "cgt": {
+      "exempt": 3000,
+      "periods": [
+        {"from": "2024-04-06", "to": "2024-10-29", "other": [0.1, 0.2], "residential": [0.18, 0.24], "badr": 0.1},
+        {"from": "2024-10-30", "to": "2025-04-05", "other": [0.18, 0.24], "residential": [0.18, 0.24], "badr": 0.1}
+      ]
+    }
+  },
+  "2025-26": {
+    "personal_allowance": 12570,
+    "taper_from": 100000,
+    "marriage_allowance": 1260,
+    "basic_band": 37700,
+    "higher_limit": 125140,
+    "rates": {
+      "basic": 0.2,
+      "higher": 0.4,
+      "additional": 0.45
+    },
+    "savings_starting_band": 5000,
+    "personal_savings_allowance": {
+      "basic": 1000,
+      "higher": 500,
+      "additional": 0
+    },
+    "dividend_allowance": 500,
+    "dividend_rates": {
+      "basic": 0.0875,
+      "higher": 0.3375,
+      "additional": 0.3935
+    },
+    "class4": {
+      "lower": 12570,
+      "upper": 50270,
+      "main": 0.06,
+      "above": 0.02
+    },
+    "class2": {
+      "small_profits_threshold": 6845,
+      "weekly": 3.5,
+      "weeks": 52
+    },
+    "class1": {
+      "lower_earnings_limit": 6500
+    },
+    "official_rate": 0.0375,
+    "coding_out_limit": 3000,
+    "termination_exempt": 30000,
+    "pension_annual_allowance": 60000,
+    "mtd": [[50000, "2026-04-06"], [30000, "2027-04-06"], [20000, "2028-04-06"]],
+    "qualifying_care": {
+      "fixed": 19690,
+      "under_11": 415,
+      "eleven_plus": 495,
+      "adult": 495
+    },
+    "foreign_pension_taxed": 1.0,
+    "short_page_limit": 90000,
+    "cgt_return_days": 60,
+    "deadlines": {
+      "paper": [0, 10, 31],
+      "coding_out": [0, 12, 30],
+      "online": [1, 1, 31],
+      "second_poa": [1, 7, 31]
+    },
+    "hicbc": {
+      "from": 60000,
+      "to": 80000,
+      "step": 200
+    },
+    "poa": {
+      "min_relevant": 1000,
+      "at_source_share": 0.8
+    },
+    "finance_cost_credit": 0.2,
+    "trading_allowance": 1000,
+    "property_allowance": 1000,
+    "rent_a_room": 7500,
+    "mileage": {
+      "car_first": 0.45,
+      "car_after": 0.25,
+      "first_miles": 10000,
+      "motorcycle": 0.24
+    },
+    "use_of_home": {
+      "25": 10,
+      "51": 18,
+      "101": 26
+    },
+    "student_loan": {
+      "PLAN_1": 26065,
+      "PLAN_2": 28470,
+      "PLAN_4": 32745,
+      "rate": 0.09,
+      "postgraduate": 21000,
+      "postgraduate_rate": 0.06,
+      "unearned_over": 2000
+    },
+    "capital_allowances": {"aia_limit": 1000000, "main": 0.18, "special": 0.06, "small_pool": 1000, "sba": 0.03},
+    "investment": {"VCT": [0.3, 200000], "EIS": [0.3, 1000000], "SEIS": [0.5, 200000]},
+    "loan_interest_cap": {"fixed": 50000, "share": 0.25},
+    "cgt": {
+      "exempt": 3000,
+      "periods": [
+        {"from": "2025-04-06", "to": "2026-04-05", "other": [0.18, 0.24], "residential": [0.18, 0.24], "badr": 0.14}
+      ]
+    }
+  },
+  "2026-27": {
+    "personal_allowance": 12570,
+    "taper_from": 100000,
+    "marriage_allowance": 1260,
+    "basic_band": 37700,
+    "higher_limit": 125140,
+    "rates": {
+      "basic": 0.2,
+      "higher": 0.4,
+      "additional": 0.45
+    },
+    "savings_starting_band": 5000,
+    "personal_savings_allowance": {
+      "basic": 1000,
+      "higher": 500,
+      "additional": 0
+    },
+    "dividend_allowance": 500,
+    "dividend_rates": {
+      "basic": 0.1075,
+      "higher": 0.3575,
+      "additional": 0.3935
+    },
+    "class4": {
+      "lower": 12570,
+      "upper": 50270,
+      "main": 0.06,
+      "above": 0.02
+    },
+    "class2": {
+      "small_profits_threshold": 7105,
+      "weekly": 3.65,
+      "weeks": 52
+    },
+    "class1": {
+      "lower_earnings_limit": 6708
+    },
+    "official_rate": 0.0375,
+    "coding_out_limit": 3000,
+    "termination_exempt": 30000,
+    "pension_annual_allowance": 60000,
+    "mtd": [[50000, "2026-04-06"], [30000, "2027-04-06"], [20000, "2028-04-06"]],
+    "foreign_pension_taxed": 1.0,
+    "short_page_limit": 90000,
+    "cgt_return_days": 60,
+    "deadlines": {
+      "paper": [0, 10, 31],
+      "coding_out": [0, 12, 30],
+      "online": [1, 1, 31],
+      "second_poa": [1, 7, 31]
+    },
+    "hicbc": {
+      "from": 60000,
+      "to": 80000,
+      "step": 200
+    },
+    "poa": {
+      "min_relevant": 1000,
+      "at_source_share": 0.8
+    },
+    "finance_cost_credit": 0.2,
+    "trading_allowance": 1000,
+    "property_allowance": 1000,
+    "rent_a_room": 7500,
+    "mileage": {
+      "car_first": 0.55,
+      "car_after": 0.25,
+      "first_miles": 10000,
+      "motorcycle": 0.24
+    },
+    "use_of_home": {
+      "25": 10,
+      "51": 18,
+      "101": 26
+    },
+    "student_loan": {
+      "PLAN_1": 26900,
+      "PLAN_2": 29385,
+      "PLAN_4": 33795, "PLAN_5": 25000,
+      "rate": 0.09,
+      "postgraduate": 21000,
+      "postgraduate_rate": 0.06,
+      "unearned_over": 2000
+    },
+    "capital_allowances": {"aia_limit": 1000000, "main": 0.14, "special": 0.06, "small_pool": 1000, "sba": 0.03},
+    "investment": {"VCT": [0.2, 200000], "EIS": [0.3, 1000000], "SEIS": [0.5, 200000]},
+    "loan_interest_cap": {"fixed": 50000, "share": 0.25},
+    "cgt": {
+      "exempt": 3000,
+      "periods": [
+        {"from": "2026-04-06", "to": "2027-04-05", "other": [0.18, 0.24], "residential": [0.18, 0.24], "badr": 0.18}
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+# Client data and local working files (never committed)
+data/
+temp/
+tmp/
+*.tmp
+*.csv
+~$*.xlsx
+~$*.xlsm
+
+# Secrets
+.env
+*.env
+**/.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.venv/
+venv/
+
+# Node and Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+# Written by `next dev` for local tooling
+frontend/AGENTS.md
+frontend/CLAUDE.md
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/
+*.swp
+
+# Local notes (only the public guides in docs/ are shared)
+docs/*
+!docs/ARCHITECTURE.md
+!docs/CONTRIBUTING.md
+!docs/deployment.md
+*.local.md

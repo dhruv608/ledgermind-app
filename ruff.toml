@@ -1,0 +1,20 @@
+# Python lint and format rules for backend/ (run: python -m ruff check backend)
+line-length = 120
+target-version = "py312"
+extend-exclude = ["backend/scripts"]
+
+[lint]
+# Real mistakes: syntax and name errors, unused imports and variables, undefined names
+select = ["E9", "F"]
+ignore = [
+    "E402",   # some modules import late on purpose (tables created at start-up, optional dependencies)
+]
+
+[lint.per-file-ignores]
+# Package entry points re-export what callers import from them
+"**/__init__.py" = ["F401"]
+# Tests define small throw-away helpers and import fixtures by name
+"backend/tests/**" = ["F811", "F841"]
+
+# The workbook's look modules share one palette and style set through a star import
+"backend/app/services/workbook/look/**" = ["F403", "F405"]

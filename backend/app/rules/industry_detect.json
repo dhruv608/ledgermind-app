@@ -1,0 +1,90 @@
+[
+  {
+    "Industry": "CON",
+    "SIC code range (indicative)": "41100-43999",
+    "CoA / GL keywords": "subcontractor, CIS, materials, plant hire, scaffolding, skip, retention, site, timber, cement, builders merchant",
+    "Typical counterparties": "Travis Perkins, Jewson, Screwfix, Toolstation, Selco, HSS, Speedy",
+    "Transaction pattern": "CIS returns, DRC invoices",
+    "Signal weight": 3
+  },
+  {
+    "Industry": "RES",
+    "SIC code range (indicative)": "56101-56302",
+    "CoA / GL keywords": "food, drink, kitchen, takeaway, tips, tronc, gas, PRS, PPL",
+    "Typical counterparties": "Deliveroo, Uber Eats, Just Eat, Booker, Brakes, Bidfood, Dojo, SumUp, Square",
+    "Transaction pattern": "Platform payouts, daily card settlements",
+    "Signal weight": 3
+  },
+  {
+    "Industry": "MFG",
+    "SIC code range (indicative)": "10110-33200",
+    "CoA / GL keywords": "raw materials, WIP, finished goods, production, machinery, factory, scrap, carriage inwards",
+    "Typical counterparties": "Steel/plastics suppliers, freight forwarders",
+    "Transaction pattern": "Postponed import VAT",
+    "Signal weight": 3
+  },
+  {
+    "Industry": "PRP",
+    "SIC code range (indicative)": "68100-68320; 41100",
+    "CoA / GL keywords": "rent received, tenant, letting agent, mortgage, service charge, ground rent, deposit",
+    "Typical counterparties": "Foxtons, OpenRent, letting agents, Land Registry, solicitors",
+    "Transaction pattern": "Monthly rent receipts",
+    "Signal weight": 3
+  },
+  {
+    "Industry": "ECM",
+    "SIC code range (indicative)": "47910",
+    "CoA / GL keywords": "Amazon fees, FBA, Shopify, Etsy, PayPal, Stripe, fulfilment, returns, postage",
+    "Typical counterparties": "Amazon, eBay, Shopify, Etsy, PayPal, Stripe, Royal Mail, DPD",
+    "Transaction pattern": "Many small receipts in batched payouts",
+    "Signal weight": 3
+  },
+  {
+    "Industry": "PRO",
+    "SIC code range (indicative)": "69101-74909",
+    "CoA / GL keywords": "fees, WIP, disbursements, PI insurance, professional subscriptions, CPD",
+    "Typical counterparties": "ICAEW, ACCA, Law Society, Xero, practice software",
+    "Transaction pattern": "Time-billing invoices",
+    "Signal weight": 2
+  },
+  {
+    "Industry": "SAAS",
+    "SIC code range (indicative)": "62011-63990",
+    "CoA / GL keywords": "subscriptions, hosting, AWS, development, deferred income, Stripe",
+    "Typical counterparties": "AWS, Google Cloud, Azure, GitHub, Atlassian, Stripe, Chargebee",
+    "Transaction pattern": "Recurring card subscriptions",
+    "Signal weight": 2
+  },
+  {
+    "Industry": "RTL",
+    "SIC code range (indicative)": "45-47 (excl 47910)",
+    "CoA / GL keywords": "stock, shop, till, EPOS, shrinkage, wholesale, carriage",
+    "Typical counterparties": "Wholesalers, EPOS providers, card acquirers",
+    "Transaction pattern": "Daily takings",
+    "Signal weight": 2
+  },
+  {
+    "Industry": "REC",
+    "SIC code range (indicative)": "78100-78300",
+    "CoA / GL keywords": "temp wages, placements, umbrella, timesheets, invoice finance",
+    "Typical counterparties": "Umbrella companies, job boards (Indeed, Reed, CV-Library)",
+    "Transaction pattern": "Weekly temp payroll",
+    "Signal weight": 3
+  },
+  {
+    "Industry": "TRN",
+    "SIC code range (indicative)": "49100-53202",
+    "CoA / GL keywords": "fuel, diesel, tachograph, HGV, fleet, tolls, operator licence, couriers",
+    "Typical counterparties": "Fuel card providers (Allstar, Keyfuels), DVSA, lessors",
+    "Transaction pattern": "Fuel cards, fleet HP",
+    "Signal weight": 3
+  },
+  {
+    "Industry": "Confirmation threshold (score)",
+    "SIC code range (indicative)": 6,
+    "CoA / GL keywords": "INPUT: below this score, raise U-TB-005-style query: 'Please confirm the principal activities of the business.'",
+    "Typical counterparties": null,
+    "Transaction pattern": null,
+    "Signal weight": null
+  }
+]

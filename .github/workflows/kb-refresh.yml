@@ -1,0 +1,60 @@
+# Refresh the law knowledge base every week (Sunday 02:00 UTC), or press "Run workflow" on the Actions tab.
+# The server reloads the gov.uk manuals and pages (HMRC manuals, notices, this tax year's rates) inside the backend
+# container; pages whose text has not changed are skipped, so only HMRC's changes are embedded again. It runs in the
+# background on the server (a full walk takes about an hour); its summary is printed at the start of the next run.
+# The Acts and the FRS 102 rulebook are files on the loading PC, reloaded by hand: backend/scripts/kb_load.py.
+
+name: Refresh law knowledge base
+
+on:
+  schedule:
+    - cron: "0 2 * * 0"
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: kb-refresh
+  cancel-in-progress: false
+
+env:
+  AWS_REGION: eu-west-2
+  INSTANCE_ID: i-026198d03f29b0664
+  ROLE_ARN: arn:aws:iam::361103952475:role/ledgermind-github-deploy
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Sign in to AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Show last week's result and start this week's refresh on the server
+        run: |
+          cat > /tmp/params.json <<'EOF'
+          {"commands": [
+            "set -e",
+            "echo '--- last refresh ---'",
+            "docker exec ledgermind-backend-1 sh -c 'tail -c 3000 /tmp/kb_refresh.log 2>/dev/null || echo none since the last restart'",
+            "docker exec -d ledgermind-backend-1 sh -c 'python backend/scripts/kb_load.py --online > /tmp/kb_refresh.log 2>&1'",
+            "echo '--- refresh started ---'"
+          ]}
+          EOF
+          id=$(aws ssm send-command --instance-ids "$INSTANCE_ID" --document-name AWS-RunShellScript \
+                 --comment "LedgerMind law refresh" --parameters file:///tmp/params.json \
+                 --timeout-seconds 120 --query Command.CommandId --output text)
+          for i in $(seq 1 24); do
+            status=$(aws ssm get-command-invocation --command-id "$id" --instance-id "$INSTANCE_ID" \
+                       --query Status --output text 2>/dev/null || echo Pending)
+            case "$status" in Success|Failed|Cancelled|TimedOut) break ;; esac
+            sleep 5
+          done
+          aws ssm get-command-invocation --command-id "$id" --instance-id "$INSTANCE_ID" \
+            --query '[StandardOutputContent,StandardErrorContent]' --output text
+          test "$status" = Success

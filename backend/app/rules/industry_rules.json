@@ -1,0 +1,2466 @@
+{
+ "source": "LM industry rules",
+ "industries": [
+  {
+   "code": "ECM",
+   "name": "E-commerce and online marketplaces",
+   "sic_examples": "47910, 47990",
+   "how_to_spot": "Receipts from AMAZON PAYMENTS, SHOPIFY, PAYPAL, STRIPE, EBAY, ETSY, TIKTOK; platform fee lines; many small receipts",
+   "rules": 15,
+   "red": 4
+  },
+  {
+   "code": "PRD",
+   "name": "Property - trading and development",
+   "sic_examples": "68100, 41100, 41201",
+   "how_to_spot": "Large property purchase / sale receipts; completion statements; SDLT; builders' invoices; development loans",
+   "rules": 11,
+   "red": 5
+  },
+  {
+   "code": "PRP",
+   "name": "Property - letting (investment)",
+   "sic_examples": "68209, 68320",
+   "how_to_spot": "Rent received; letting agent receipts; mortgage payments; tenancy deposits",
+   "rules": 14,
+   "red": 5
+  },
+  {
+   "code": "CON",
+   "name": "Construction and trades (CIS)",
+   "sic_examples": "41201, 43210, 43220, 43290, 43390, 81300",
+   "how_to_spot": "Receipts at 80% / 70% of invoices; CIS in descriptions; subcontractor payments with no VAT; reverse charge invoices",
+   "rules": 13,
+   "red": 5
+  },
+  {
+   "code": "RES",
+   "name": "Restaurants, takeaways and cafes",
+   "sic_examples": "56101, 56102, 56103",
+   "how_to_spot": "Card terminal settlements (Dojo, SumUp, Worldpay, Square); Uber Eats, Deliveroo, Just Eat payouts; cash bankings; food suppliers",
+   "rules": 12,
+   "red": 7
+  },
+  {
+   "code": "RTL",
+   "name": "Retail shops and wholesale",
+   "sic_examples": "47110, 47190, 46390, 46900",
+   "how_to_spot": "EPOS takings; card settlements; wholesaler purchases; mixed VAT rates",
+   "rules": 7,
+   "red": 1
+  },
+  {
+   "code": "HBB",
+   "name": "Hair, beauty and barbers",
+   "sic_examples": "96020, 96040",
+   "how_to_spot": "Card terminal settlements; chair or room rental receipts; product purchases; payments to stylists",
+   "rules": 7,
+   "red": 1
+  },
+  {
+   "code": "CNS",
+   "name": "Contractors and consultants (IT, locums, one-person companies)",
+   "sic_examples": "62020, 70229, 86210, 74909",
+   "how_to_spot": "Few customers; agency remittances; regular director dividends; home and mileage claims",
+   "rules": 7,
+   "red": 0
+  },
+  {
+   "code": "HLT",
+   "name": "Healthcare and care (medical, dental, care homes, pharmacy)",
+   "sic_examples": "86210, 86230, 87100, 87300, 47730",
+   "how_to_spot": "NHS / CCG / council receipts; NHS BSA payments (pharmacy); agency staff; CQC fees",
+   "rules": 8,
+   "red": 2
+  },
+  {
+   "code": "PRO",
+   "name": "Solicitors and professional firms",
+   "sic_examples": "69101, 69102, 69201",
+   "how_to_spot": "Client bank account; disbursements; SRA / practising certificate fees; WIP",
+   "rules": 7,
+   "red": 3
+  },
+  {
+   "code": "REC",
+   "name": "Recruitment and staffing",
+   "sic_examples": "78109, 78200, 78300",
+   "how_to_spot": "Large payroll for temps; invoice finance / factoring receipts; umbrella company payments",
+   "rules": 6,
+   "red": 2
+  },
+  {
+   "code": "TRN",
+   "name": "Transport and haulage",
+   "sic_examples": "49410, 52290, 53202",
+   "how_to_spot": "Fuel cards; HGV hire purchase; tolls and congestion charges; subcontract hauliers",
+   "rules": 6,
+   "red": 1
+  },
+  {
+   "code": "SAAS",
+   "name": "Digital agencies, software and SaaS",
+   "sic_examples": "62012, 62020, 63120, 73110",
+   "how_to_spot": "Stripe / subscription receipts; annual licences sold in advance; developer salaries; contractor payments abroad",
+   "rules": 6,
+   "red": 2
+  },
+  {
+   "code": "MFG",
+   "name": "Manufacturing",
+   "sic_examples": "10-33 (all)",
+   "how_to_spot": "Raw material purchases; production wages; machinery; finished goods sales",
+   "rules": 5,
+   "red": 1
+  },
+  {
+   "code": "CHR",
+   "name": "Charities and churches (charitable companies)",
+   "sic_examples": "88990, 94910",
+   "how_to_spot": "Donations; Gift Aid receipts; grants; restricted funds",
+   "rules": 7,
+   "red": 3
+  },
+  {
+   "code": "HLD",
+   "name": "Holding and investment companies",
+   "sic_examples": "64209, 64303, 68100",
+   "how_to_spot": "Dividends from subsidiaries; intercompany transfers; broker statements",
+   "rules": 6,
+   "red": 3
+  }
+ ],
+ "rules": [
+  {
+   "id": "IND-ECM-01",
+   "industry": "ECM",
+   "part": "Data to request",
+   "rule": "Settlement / payout reports per platform for the full year",
+   "action": "Add to Notes & Queries if not uploaded",
+   "tab": "A",
+   "level": "Info",
+   "codes": [
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:ECM"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-02",
+   "industry": "ECM",
+   "part": "Data to request",
+   "rule": "Platform fee invoices; refunds and chargebacks report",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:ECM"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-03",
+   "industry": "ECM",
+   "part": "Data to request",
+   "rule": "Year-end stock report incl. stock at Amazon FBA / 3PL",
+   "action": "Request; feeds D1",
+   "tab": "D1",
+   "level": "Info",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:ECM"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-04",
+   "industry": "ECM",
+   "part": "Data to request",
+   "rule": "Purchase invoices, import documents, postponed VAT accounting (CDS) statements",
+   "action": "Request; feeds G3",
+   "tab": "G3",
+   "level": "Info",
+   "codes": [
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:ECM"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-05",
+   "industry": "ECM",
+   "part": "Coding",
+   "rule": "One clearing account per platform, treated like a bank",
+   "action": "Create F tab per platform",
+   "tab": "Fn",
+   "level": "Info",
+   "codes": [
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "F-P platform clearing"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-06",
+   "industry": "ECM",
+   "part": "Coding",
+   "rule": "Sales grossed up: payout + fees + refunds + reserve held = gross sales",
+   "action": "Propose gross-up journal",
+   "tab": "B2",
+   "level": "Amber",
+   "codes": [
+    "0-999",
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "F-P platform clearing"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-07",
+   "industry": "ECM",
+   "part": "Coding",
+   "rule": "Platform fees and advertising to selling costs, never netted off sales",
+   "action": "Re-analysis",
+   "tab": "B4",
+   "level": "Amber",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "E-REV-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-08",
+   "industry": "ECM",
+   "part": "Coding",
+   "rule": "Import VAT under postponed accounting through boxes 1 and 4; duty and freight to cost of sales",
+   "action": "Check VAT and coding",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "0-999",
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "E-VAT-003"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-09",
+   "industry": "ECM",
+   "part": "Reconciliation",
+   "rule": "Opening held + gross sales - fees - refunds - payouts = closing per platform report",
+   "action": "Control per platform",
+   "tab": "Fn",
+   "level": "Red",
+   "codes": [
+    "0-999",
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "F-P platform clearing"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-10",
+   "industry": "ECM",
+   "part": "Reconciliation",
+   "rule": "Payouts matched to bank receipts line by line",
+   "action": "Match",
+   "tab": "Fn.1",
+   "level": "Red",
+   "codes": [
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "F-P platform clearing (monthly)"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-11",
+   "industry": "ECM",
+   "part": "Reconciliation",
+   "rule": "Gross sales per platform report = GL sales by platform",
+   "action": "Check cell",
+   "tab": "K1",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "F-P platform clearing"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-12",
+   "industry": "ECM",
+   "part": "Red flags",
+   "rule": "Sales equal to payouts (posted net)",
+   "action": "Highlight",
+   "tab": "K1",
+   "level": "Red",
+   "codes": [
+    "0-999",
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "E-REV-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-13",
+   "industry": "ECM",
+   "part": "Red flags",
+   "rule": "Fees below the firm's % of sales; refunds above the firm's %",
+   "action": "Highlight (thresholds are firm settings)",
+   "tab": "K1",
+   "level": "Amber",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "E-REV-003"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-14",
+   "industry": "ECM",
+   "part": "Red flags",
+   "rule": "No closing stock for a goods seller",
+   "action": "Query",
+   "tab": "D1",
+   "level": "Amber",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "E-INV-001",
+    "U-STK-003"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-ECM-15",
+   "industry": "ECM",
+   "part": "Red flags",
+   "rule": "Overseas seller: marketplace may account for the VAT",
+   "action": "Query before coding output VAT",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-ECM-15"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRD-01",
+   "industry": "PRD",
+   "part": "Data to request",
+   "rule": "Completion statements for every purchase and sale",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:PRD"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRD-02",
+   "industry": "PRD",
+   "part": "Data to request",
+   "rule": "List of properties held at year end with costs to date and expected sale price",
+   "action": "Request; feeds stock",
+   "tab": "D1-P",
+   "level": "Info",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:PRD"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRD-03",
+   "industry": "PRD",
+   "part": "Data to request",
+   "rule": "Development loan statements; builders' invoices",
+   "action": "Request",
+   "tab": "G4",
+   "level": "Info",
+   "codes": [
+    "5000-5510"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:PRD"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRD-04",
+   "industry": "PRD",
+   "part": "Coding",
+   "rule": "Purchase price, SDLT, legal fees, improvements and development costs to stock / WIP of that property",
+   "action": "Reclass from P&L / fixed assets",
+   "tab": "D1-P",
+   "level": "Red",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "property SOP B1"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRD-05",
+   "industry": "PRD",
+   "part": "Coding",
+   "rule": "Sale proceeds to turnover; that property's cost to cost of sales",
+   "action": "Journal on completion",
+   "tab": "K1",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "property SOP B3"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRD-06",
+   "industry": "PRD",
+   "part": "Coding",
+   "rule": "Loan interest: expense, or added to WIP if that is the firm's policy",
+   "action": "Per policy",
+   "tab": "D1-P",
+   "level": "Amber",
+   "codes": [
+    "4300-4303",
+    "1000-1030",
+    "5000-5510"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "D1-P finance fees flag"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRD-07",
+   "industry": "PRD",
+   "part": "Reconciliation",
+   "rule": "Property schedule: one row per property - address, date bought, costs, sold, closing stock",
+   "action": "Build schedule",
+   "tab": "D1-P",
+   "level": "Red",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "D1-P property schedule"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRD-08",
+   "industry": "PRD",
+   "part": "Reconciliation",
+   "rule": "Closing stock at the lower of cost and net realisable value",
+   "action": "NRV check per property",
+   "tab": "D1-P",
+   "level": "Amber",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "D1-P NRV check"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRD-09",
+   "industry": "PRD",
+   "part": "Red flags",
+   "rule": "Property costs in the P&L of a trading company",
+   "action": "Highlight",
+   "tab": "K tabs",
+   "level": "Red",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-PRD-09"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRD-10",
+   "industry": "PRD",
+   "part": "Red flags",
+   "rule": "Sale with no completion statement",
+   "action": "Query",
+   "tab": "A",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-PRD-10"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRD-11",
+   "industry": "PRD",
+   "part": "Red flags",
+   "rule": "Trading v letting not confirmed",
+   "action": "Stop until set at setup",
+   "tab": "Setup",
+   "level": "Red",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "setup: industry confirmed"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-01",
+   "industry": "PRP",
+   "part": "Data to request",
+   "rule": "Letting agent statements for the full year",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:PRP"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-02",
+   "industry": "PRP",
+   "part": "Data to request",
+   "rule": "Mortgage statements; completion statements; works invoices",
+   "action": "Request",
+   "tab": "G4 / C1-P",
+   "level": "Info",
+   "codes": [
+    "5000-5510"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:PRP"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-03",
+   "industry": "PRP",
+   "part": "Data to request",
+   "rule": "Tenancy deposit details",
+   "action": "Request",
+   "tab": "G",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:PRP"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-04",
+   "industry": "PRP",
+   "part": "Coding",
+   "rule": "Purchase price, SDLT, legal fees and improvements capitalised to that property",
+   "action": "Reclass to investment property",
+   "tab": "C1-P",
+   "level": "Red",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "property SOP A1",
+    "P-CLS-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-05",
+   "industry": "PRP",
+   "part": "Coding",
+   "rule": "Repairs and maintenance to the P&L",
+   "action": "Capital v revenue review",
+   "tab": "K tabs",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "P-RPR-001",
+    "C1.2 capital review"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-06",
+   "industry": "PRP",
+   "part": "Coding",
+   "rule": "Agent statements grossed up: gross rent to income; commission, repairs and fees to expenses; net to bank",
+   "action": "Gross-up journal",
+   "tab": "B2",
+   "level": "Red",
+   "codes": [
+    "0-999",
+    "4800-4830",
+    "3100"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "P2 agent statements"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-07",
+   "industry": "PRP",
+   "part": "Coding",
+   "rule": "Rent held by the agent at year end = debtor",
+   "action": "Post debtor",
+   "tab": "E3",
+   "level": "Amber",
+   "codes": [
+    "3100"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "P2 agent statements"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-08",
+   "industry": "PRP",
+   "part": "Coding",
+   "rule": "Tenant deposit held by the company = liability, not income",
+   "action": "Reclass",
+   "tab": "G",
+   "level": "Amber",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-PRP-08"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-09",
+   "industry": "PRP",
+   "part": "Coding",
+   "rule": "FRS 102: fair value, no depreciation, deferred tax on the gain. FRS 105: cost",
+   "action": "Per FRS chosen at setup",
+   "tab": "C1-P / I",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "P-VAL-001",
+    "U-DT-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-10",
+   "industry": "PRP",
+   "part": "Reconciliation",
+   "rule": "Gross rent per agent statements = rent in GL; net per statements = bank receipts from agent",
+   "action": "Check cells",
+   "tab": "K1",
+   "level": "Red",
+   "codes": [
+    "4800-4830",
+    "3100"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "P2 agent statements"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-11",
+   "industry": "PRP",
+   "part": "Reconciliation",
+   "rule": "Each mortgage agrees to the lender statement",
+   "action": "Loan tab per mortgage",
+   "tab": "G4.n",
+   "level": "Red",
+   "codes": [
+    "5000-5510"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "G4 loan tab per lender (statement)"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-12",
+   "industry": "PRP",
+   "part": "Red flags",
+   "rule": "Rent received equal to bank receipts (posted net)",
+   "action": "Highlight",
+   "tab": "K1",
+   "level": "Red",
+   "codes": [
+    "0-999",
+    "4800-4830",
+    "3100"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "P-REV-002"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-13",
+   "industry": "PRP",
+   "part": "Red flags",
+   "rule": "Improvements expensed",
+   "action": "Highlight",
+   "tab": "K tabs",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "P-RPR-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRP-14",
+   "industry": "PRP",
+   "part": "Red flags",
+   "rule": "Commercial property with VAT charged and no option to tax on file",
+   "action": "Query",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "P-VAT-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-01",
+   "industry": "CON",
+   "part": "Data to request",
+   "rule": "CIS payment and deduction statements from every contractor",
+   "action": "Request",
+   "tab": "E3",
+   "level": "Info",
+   "codes": [
+    "4421"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:CON"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-02",
+   "industry": "CON",
+   "part": "Data to request",
+   "rule": "Contractor clients: CIS300 returns, subcontractor verification",
+   "action": "Request",
+   "tab": "G",
+   "level": "Info",
+   "codes": [
+    "5321",
+    "1440"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:CON"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-03",
+   "industry": "CON",
+   "part": "Data to request",
+   "rule": "EPS showing CIS suffered set against PAYE",
+   "action": "Request",
+   "tab": "G7.2",
+   "level": "Info",
+   "codes": [
+    "4421",
+    "5320",
+    "5330",
+    "3000-3010"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:CON"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-04",
+   "industry": "CON",
+   "part": "Coding",
+   "rule": "Sales grossed up: net receipt + CIS deducted = invoice",
+   "action": "Gross-up journal",
+   "tab": "B2",
+   "level": "Red",
+   "codes": [
+    "0-999",
+    "5321",
+    "1440"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-CON-04 (cis/gross_up.py)"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-05",
+   "industry": "CON",
+   "part": "Coding",
+   "rule": "CIS suffered to a CIS debtor, never to expenses",
+   "action": "Reclass",
+   "tab": "E3",
+   "level": "Red",
+   "codes": [
+    "4421"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-CON-05"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-06",
+   "industry": "CON",
+   "part": "Coding",
+   "rule": "Contractor: CIS withheld to a CIS liability, paid with PAYE",
+   "action": "Liability control",
+   "tab": "G",
+   "level": "Amber",
+   "codes": [
+    "5321",
+    "1440",
+    "5320",
+    "5330",
+    "3000-3010"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "CIS T1",
+    "CIS T10"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-07",
+   "industry": "CON",
+   "part": "Coding",
+   "rule": "VAT domestic reverse charge on construction services between VAT/CIS-registered businesses",
+   "action": "Check sales and purchase VAT",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "0-999",
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "C-VAT-003",
+    "C-VAT-004"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-08",
+   "industry": "CON",
+   "part": "Reconciliation",
+   "rule": "CIS suffered per statements = CIS debtor movement; set-off per EPS; balance = repayment claim",
+   "action": "CIS control",
+   "tab": "E3",
+   "level": "Red",
+   "codes": [
+    "4421"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "CIS T4",
+    "CIS T5",
+    "CIS T6"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-09",
+   "industry": "CON",
+   "part": "Reconciliation",
+   "rule": "Contractor: deductions per CIS300 = liability paid",
+   "action": "Control",
+   "tab": "G",
+   "level": "Red",
+   "codes": [
+    "5321",
+    "1440"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "CIS T1",
+    "CIS T10"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-10",
+   "industry": "CON",
+   "part": "Red flags",
+   "rule": "Sales equal to bank receipts (posted net of CIS)",
+   "action": "Highlight",
+   "tab": "K1",
+   "level": "Red",
+   "codes": [
+    "0-999",
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "CIS T7"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-11",
+   "industry": "CON",
+   "part": "Red flags",
+   "rule": "Reverse-charge invoices carrying UK VAT, or VAT missing to end users",
+   "action": "Highlight",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "C-VAT-003",
+    "C-VAT-004"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-12",
+   "industry": "CON",
+   "part": "Red flags",
+   "rule": "Retentions not in debtors; long contracts with no WIP",
+   "action": "Query",
+   "tab": "E / D",
+   "level": "Amber",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "C-REV-004",
+    "C-WIP-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CON-13",
+   "industry": "CON",
+   "part": "Red flags",
+   "rule": "Vans and tools: capital allowances (AIA) - not cars",
+   "action": "Check pool",
+   "tab": "H1.2",
+   "level": "Info",
+   "codes": [
+    "4120-4141"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "H1.2 capital allowances"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-01",
+   "industry": "RES",
+   "part": "Data to request",
+   "rule": "EPOS Z-reports (daily takings by payment type)",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:RES"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-02",
+   "industry": "RES",
+   "part": "Data to request",
+   "rule": "Card terminal and delivery platform statements",
+   "action": "Request",
+   "tab": "Fn",
+   "level": "Info",
+   "codes": [
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:RES"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-03",
+   "industry": "RES",
+   "part": "Data to request",
+   "rule": "Cash banking records; stock count; tips / tronc records",
+   "action": "Request",
+   "tab": "F / D1",
+   "level": "Info",
+   "codes": [
+    "4300-4303",
+    "1000-1030",
+    "5350"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:RES"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-04",
+   "industry": "RES",
+   "part": "Coding",
+   "rule": "Card and delivery sales grossed up; fees and commission posted separately",
+   "action": "Gross-up journal",
+   "tab": "B2",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "K1-T takings"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-05",
+   "industry": "RES",
+   "part": "Coding",
+   "rule": "Cash takings recorded in full, not only what was banked",
+   "action": "Cash control",
+   "tab": "Fn",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "K1-T takings (cash control)"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-06",
+   "industry": "RES",
+   "part": "Coding",
+   "rule": "Hot food and takeaway hot food standard-rated; cold takeaway food may be zero-rated",
+   "action": "VAT code check",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "R-VAT-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-07",
+   "industry": "RES",
+   "part": "Reconciliation",
+   "rule": "Takings per Z-reports = sales in GL",
+   "action": "Check cell",
+   "tab": "K1",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "K1-T takings (Z-reports v ledger)"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-08",
+   "industry": "RES",
+   "part": "Reconciliation",
+   "rule": "Card / delivery sales per reports = settlements + fees",
+   "action": "Control per provider",
+   "tab": "Fn",
+   "level": "Red",
+   "codes": [
+    "0-999",
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "K1-T takings"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-09",
+   "industry": "RES",
+   "part": "Reconciliation",
+   "rule": "Cash takings - banked - cash expenses = cash in hand",
+   "action": "Cash control",
+   "tab": "Fn",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "K1-T takings (cash control)"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-10",
+   "industry": "RES",
+   "part": "Red flags",
+   "rule": "Gross margin far from last year",
+   "action": "Analytical review",
+   "tab": "K",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-RES-10"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-11",
+   "industry": "RES",
+   "part": "Red flags",
+   "rule": "No cash sales in a cash trade; negative cash",
+   "action": "Highlight",
+   "tab": "Fn",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "R-REV-004",
+    "F1 overdrawn check"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RES-12",
+   "industry": "RES",
+   "part": "Red flags",
+   "rule": "Delivery platform sales posted net",
+   "action": "Highlight",
+   "tab": "K1",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "R-REV-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RTL-01",
+   "industry": "RTL",
+   "part": "Data to request",
+   "rule": "EPOS reports by VAT rate; stock count at year end",
+   "action": "Request",
+   "tab": "D1",
+   "level": "Info",
+   "codes": [
+    "4300-4303",
+    "1000-1030",
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:RTL"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RTL-02",
+   "industry": "RTL",
+   "part": "Data to request",
+   "rule": "VAT retail scheme used (if any)",
+   "action": "Setup field",
+   "tab": "G3",
+   "level": "Info",
+   "codes": [
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:RTL"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RTL-03",
+   "industry": "RTL",
+   "part": "Coding",
+   "rule": "Sales split by VAT rate (standard, zero, exempt) as per the retail scheme",
+   "action": "VAT check",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "0-999",
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "RT-VAT-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RTL-04",
+   "industry": "RTL",
+   "part": "Coding",
+   "rule": "Card settlements grossed up for fees",
+   "action": "Gross-up journal",
+   "tab": "B2",
+   "level": "Amber",
+   "codes": [
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "K1-T takings"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RTL-05",
+   "industry": "RTL",
+   "part": "Reconciliation",
+   "rule": "Takings per EPOS = sales in GL; stock per count = D1",
+   "action": "Check cells",
+   "tab": "K1 / D1",
+   "level": "Red",
+   "codes": [
+    "0-999",
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "K1-T takings (EPOS v ledger)"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RTL-06",
+   "industry": "RTL",
+   "part": "Red flags",
+   "rule": "Gross margin movement v last year",
+   "action": "Analytical review",
+   "tab": "K",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-RTL-06"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-RTL-07",
+   "industry": "RTL",
+   "part": "Red flags",
+   "rule": "Stock not counted or same as last year",
+   "action": "Query",
+   "tab": "D1",
+   "level": "Amber",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "stock_unchanged",
+    "U-STK-003"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HBB-01",
+   "industry": "HBB",
+   "part": "Data to request",
+   "rule": "Booking system / till reports; chair rental agreements",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:HBB"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HBB-02",
+   "industry": "HBB",
+   "part": "Coding",
+   "rule": "Chair / room rental income is standard-rated for VAT",
+   "action": "VAT check",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "0-999",
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HBB-02"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HBB-03",
+   "industry": "HBB",
+   "part": "Coding",
+   "rule": "Product sales and services coded separately",
+   "action": "Re-analysis",
+   "tab": "K1",
+   "level": "Info",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HBB-03"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HBB-04",
+   "industry": "HBB",
+   "part": "Coding",
+   "rule": "Stylists paid as self-employed v employees",
+   "action": "Query employment status",
+   "tab": "G7",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HBB-06"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HBB-05",
+   "industry": "HBB",
+   "part": "Reconciliation",
+   "rule": "Takings per till / booking reports = sales in GL",
+   "action": "Check cell",
+   "tab": "K1",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "K1-T takings"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HBB-06",
+   "industry": "HBB",
+   "part": "Red flags",
+   "rule": "Regular payments to individuals with no payroll",
+   "action": "Query",
+   "tab": "G7",
+   "level": "Amber",
+   "codes": [
+    "5320",
+    "5330",
+    "3000-3010"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HBB-06"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HBB-07",
+   "industry": "HBB",
+   "part": "Red flags",
+   "rule": "Tips not recorded or not through payroll",
+   "action": "Query",
+   "tab": "G7",
+   "level": "Info",
+   "codes": [
+    "5320",
+    "5330",
+    "3000-3010",
+    "5350"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HBB-07"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CNS-01",
+   "industry": "CNS",
+   "part": "Data to request",
+   "rule": "Agency remittances or self-billing statements; timesheets for unbilled days",
+   "action": "Request",
+   "tab": "E",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:CNS"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CNS-02",
+   "industry": "CNS",
+   "part": "Data to request",
+   "rule": "Contracts (for the IR35 question)",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:CNS"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CNS-03",
+   "industry": "CNS",
+   "part": "Coding",
+   "rule": "Income per remittance gross; unbilled days at year end as accrued income",
+   "action": "Accrued income",
+   "tab": "E",
+   "level": "Amber",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "PS-REV-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CNS-04",
+   "industry": "CNS",
+   "part": "Coding",
+   "rule": "Use of home and mileage",
+   "action": "Default journals",
+   "tab": "G5",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "U-ADJ-004"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CNS-05",
+   "industry": "CNS",
+   "part": "Coding",
+   "rule": "VAT flat rate % and limited cost trader test",
+   "action": "Check",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "PS-VAT-003",
+    "U-VAT-004"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CNS-06",
+   "industry": "CNS",
+   "part": "Red flags",
+   "rule": "IR35 status not confirmed",
+   "action": "Query only, no decision",
+   "tab": "A",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "PS-IR35-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CNS-07",
+   "industry": "CNS",
+   "part": "Red flags",
+   "rule": "Personal costs in the P&L",
+   "action": "Highlight to DLA",
+   "tab": "G5",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "U-DLA-002"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLT-01",
+   "industry": "HLT",
+   "part": "Data to request",
+   "rule": "NHS / council remittances; pharmacy NHSBSA statements; payroll and agency invoices",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [
+    "5320",
+    "5330",
+    "3000-3010"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:HLT"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLT-02",
+   "industry": "HLT",
+   "part": "Coding",
+   "rule": "Medical care by registered health professionals and welfare services by registered providers are generally VAT exempt",
+   "action": "VAT liability check",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HLT-07"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLT-03",
+   "industry": "HLT",
+   "part": "Coding",
+   "rule": "Pharmacy: dispensed NHS prescriptions zero-rated; retail sales at their own rates",
+   "action": "VAT split",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "0-999",
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HLT-03"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLT-04",
+   "industry": "HLT",
+   "part": "Coding",
+   "rule": "Income accrued for months paid in arrears by NHS / council",
+   "action": "Accrued income",
+   "tab": "E",
+   "level": "Amber",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HLT-04"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLT-05",
+   "industry": "HLT",
+   "part": "Reconciliation",
+   "rule": "Income per remittances = sales in GL",
+   "action": "Check cell",
+   "tab": "K1",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "K1-R remittances"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLT-06",
+   "industry": "HLT",
+   "part": "Reconciliation",
+   "rule": "Pharmacy stock per count = D1",
+   "action": "Check",
+   "tab": "D1",
+   "level": "Red",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "U-STK-003"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLT-07",
+   "industry": "HLT",
+   "part": "Red flags",
+   "rule": "VAT claimed on costs relating to exempt income (partial exemption)",
+   "action": "Query",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "0-999",
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HLT-07"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLT-08",
+   "industry": "HLT",
+   "part": "Red flags",
+   "rule": "Large agency staff costs with no contracts",
+   "action": "Query",
+   "tab": "K",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HLT-08"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRO-01",
+   "industry": "PRO",
+   "part": "Data to request",
+   "rule": "Office and client bank statements; client ledger balances; WIP report",
+   "action": "Request",
+   "tab": "F",
+   "level": "Info",
+   "codes": [
+    "4300-4303",
+    "1000-1030",
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:PRO"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRO-02",
+   "industry": "PRO",
+   "part": "Coding",
+   "rule": "Client money is not the firm's money: client bank and client ledger kept off the firm's P&L",
+   "action": "Separate client account",
+   "tab": "F",
+   "level": "Red",
+   "codes": [
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "PS-CLM-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRO-03",
+   "industry": "PRO",
+   "part": "Coding",
+   "rule": "Disbursements v recharges: recharges carry VAT, true disbursements do not",
+   "action": "VAT check",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "PS-VAT-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRO-04",
+   "industry": "PRO",
+   "part": "Coding",
+   "rule": "Unbilled work at year end as accrued income (WIP)",
+   "action": "Accrued income",
+   "tab": "E",
+   "level": "Amber",
+   "codes": [
+    "0-999",
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "PS-REV-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRO-05",
+   "industry": "PRO",
+   "part": "Reconciliation",
+   "rule": "Client bank = total client ledger balances",
+   "action": "Check cell",
+   "tab": "F",
+   "level": "Red",
+   "codes": [
+    "4800-4830"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "PS-CLM-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRO-06",
+   "industry": "PRO",
+   "part": "Red flags",
+   "rule": "Client money posted to sales",
+   "action": "Highlight",
+   "tab": "K1",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "PS-CLM-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-PRO-07",
+   "industry": "PRO",
+   "part": "Red flags",
+   "rule": "Professional indemnity insurance prepayment",
+   "action": "Prepayment check",
+   "tab": "E4",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "E3.2 prepayment review"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-REC-01",
+   "industry": "REC",
+   "part": "Data to request",
+   "rule": "Payroll for temps; timesheets for the last week; invoice finance statements",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [
+    "5320",
+    "5330",
+    "3000-3010",
+    "5000-5510"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:REC"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-REC-02",
+   "industry": "REC",
+   "part": "Coding",
+   "rule": "Unbilled timesheets at year end as accrued income, with the related wage cost",
+   "action": "Accrual both sides",
+   "tab": "E / G",
+   "level": "Amber",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-REC-02"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-REC-03",
+   "industry": "REC",
+   "part": "Coding",
+   "rule": "Invoice finance account treated as a loan or bank control, not netted against debtors",
+   "action": "Separate control",
+   "tab": "G",
+   "level": "Red",
+   "codes": [
+    "4800-4830",
+    "5000-5510"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "RC-FIN-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-REC-04",
+   "industry": "REC",
+   "part": "Coding",
+   "rule": "Holiday pay accrual for temps",
+   "action": "Accrual",
+   "tab": "G",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "RC-HOL-001",
+    "RC-PAY-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-REC-05",
+   "industry": "REC",
+   "part": "Reconciliation",
+   "rule": "Invoice finance balance agrees to the finance company statement",
+   "action": "Control",
+   "tab": "G",
+   "level": "Red",
+   "codes": [
+    "5000-5510"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "RC-FIN-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-REC-06",
+   "industry": "REC",
+   "part": "Red flags",
+   "rule": "Margin per placement far from last year",
+   "action": "Analytical review",
+   "tab": "K",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-REC-06"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-TRN-01",
+   "industry": "TRN",
+   "part": "Data to request",
+   "rule": "Fuel card statements; HP agreements; vehicle list",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:TRN"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-TRN-02",
+   "industry": "TRN",
+   "part": "Coding",
+   "rule": "HGVs and vans on HP: asset per vehicle, loan per agreement",
+   "action": "FAR and loan tabs",
+   "tab": "C1-1 / G4.n",
+   "level": "Red",
+   "codes": [
+    "5000-5510",
+    "4120-4141"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "G4 loan tab per agreement",
+    "C1 FAR additions"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-TRN-03",
+   "industry": "TRN",
+   "part": "Coding",
+   "rule": "Capital allowances: lorries and vans are not cars (AIA available)",
+   "action": "Pool check",
+   "tab": "H1.2",
+   "level": "Amber",
+   "codes": [
+    "4120-4141"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "CT capital allowances: vans, AIA"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-TRN-04",
+   "industry": "TRN",
+   "part": "Coding",
+   "rule": "International freight may be zero-rated - check VAT on cross-border jobs",
+   "action": "VAT check",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "T-VAT-002"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-TRN-05",
+   "industry": "TRN",
+   "part": "Reconciliation",
+   "rule": "Fuel per fuel card statements = fuel in GL",
+   "action": "Check cell",
+   "tab": "K",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "T-COS-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-TRN-06",
+   "industry": "TRN",
+   "part": "Red flags",
+   "rule": "Fines and penalties in the P&L",
+   "action": "Add back in CT",
+   "tab": "H1",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "T-PEN-001",
+    "U-CT-002"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-SAAS-01",
+   "industry": "SAAS",
+   "part": "Data to request",
+   "rule": "Subscription / billing report; contracts with retainers",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:SAAS"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-SAAS-02",
+   "industry": "SAAS",
+   "part": "Coding",
+   "rule": "Income billed in advance for future months to deferred income",
+   "action": "Deferred income",
+   "tab": "G",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "U-DEF-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-SAAS-03",
+   "industry": "SAAS",
+   "part": "Coding",
+   "rule": "Overseas services bought in: reverse charge VAT",
+   "action": "VAT check",
+   "tab": "G3",
+   "level": "Amber",
+   "codes": [
+    "5300"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "S-VAT-002"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-SAAS-04",
+   "industry": "SAAS",
+   "part": "Coding",
+   "rule": "Development costs expensed unless the firm's policy capitalises them",
+   "action": "Per policy",
+   "tab": "C",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "S-DEV-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-SAAS-05",
+   "industry": "SAAS",
+   "part": "Reconciliation",
+   "rule": "Deferred income per billing report = G balance",
+   "action": "Check cell",
+   "tab": "G",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "U-DEF-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-SAAS-06",
+   "industry": "SAAS",
+   "part": "Red flags",
+   "rule": "R&D activity: query if a claim is intended (merged scheme / ERIS rules apply)",
+   "action": "Query",
+   "tab": "H1",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "S-RD-001"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-MFG-01",
+   "industry": "MFG",
+   "part": "Data to request",
+   "rule": "Stock count split raw materials, WIP and finished goods; costing basis",
+   "action": "Request",
+   "tab": "D1",
+   "level": "Info",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:MFG"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-MFG-02",
+   "industry": "MFG",
+   "part": "Coding",
+   "rule": "Stock includes production overheads, at the lower of cost and net realisable value",
+   "action": "Stock valuation check",
+   "tab": "D1",
+   "level": "Amber",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "M-INV-003"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-MFG-03",
+   "industry": "MFG",
+   "part": "Coding",
+   "rule": "Machinery: full expensing / AIA",
+   "action": "Capital allowances",
+   "tab": "H1.2",
+   "level": "Amber",
+   "codes": [
+    "4120-4141"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "CT capital allowances: AIA"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-MFG-04",
+   "industry": "MFG",
+   "part": "Reconciliation",
+   "rule": "Stock per count = D1; movement through cost of sales",
+   "action": "Check",
+   "tab": "D1",
+   "level": "Red",
+   "codes": [
+    "0-999",
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "U-STK-003"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-MFG-05",
+   "industry": "MFG",
+   "part": "Red flags",
+   "rule": "Gross margin movement; slow-moving stock",
+   "action": "Analytical review",
+   "tab": "K / D1",
+   "level": "Amber",
+   "codes": [
+    "4300-4303",
+    "1000-1030"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "M-INV-003"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CHR-01",
+   "industry": "CHR",
+   "part": "Data to request",
+   "rule": "Donation records, Gift Aid claims, grant agreements, trustee minutes",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:CHR"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CHR-02",
+   "industry": "CHR",
+   "part": "Coding",
+   "rule": "Funds split restricted / unrestricted / endowment (Charities SORP)",
+   "action": "Fund analysis",
+   "tab": "J",
+   "level": "Red",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-CHR-02"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CHR-03",
+   "industry": "CHR",
+   "part": "Coding",
+   "rule": "Gift Aid claimed but not received at year end as a debtor",
+   "action": "Debtor",
+   "tab": "E3",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-CHR-03"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CHR-04",
+   "industry": "CHR",
+   "part": "Coding",
+   "rule": "Grants with conditions not yet met: deferred",
+   "action": "Deferred income",
+   "tab": "G",
+   "level": "Amber",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-CHR-04"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CHR-05",
+   "industry": "CHR",
+   "part": "Reconciliation",
+   "rule": "Each fund: b/f + income - spend = c/f",
+   "action": "Fund schedule",
+   "tab": "J",
+   "level": "Red",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-CHR-02"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CHR-06",
+   "industry": "CHR",
+   "part": "Red flags",
+   "rule": "Trustee payments or expenses",
+   "action": "Query (needs authority)",
+   "tab": "A",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-CHR-06"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-CHR-07",
+   "industry": "CHR",
+   "part": "Red flags",
+   "rule": "Accounts format must follow the SORP, not FRS 105",
+   "action": "Setup check",
+   "tab": "Setup",
+   "level": "Red",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-CHR-07"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLD-01",
+   "industry": "HLD",
+   "part": "Data to request",
+   "rule": "Subsidiaries' accounts; dividend vouchers; broker / investment statements; intercompany confirmations",
+   "action": "Request",
+   "tab": "A",
+   "level": "Info",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "query industry:HLD"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLD-02",
+   "industry": "HLD",
+   "part": "Coding",
+   "rule": "Dividends received to dividend income (usually not taxable)",
+   "action": "CT treatment",
+   "tab": "H1",
+   "level": "Amber",
+   "codes": [
+    "0-999"
+   ],
+   "codes_from": "words",
+   "covered_by": [
+    "CT computation: dividends received exempt"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLD-03",
+   "industry": "HLD",
+   "part": "Coding",
+   "rule": "Intercompany balances by company, never netted",
+   "action": "Separate controls",
+   "tab": "E / G",
+   "level": "Red",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HLD-03"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLD-04",
+   "industry": "HLD",
+   "part": "Reconciliation",
+   "rule": "Each intercompany balance agrees to the other company's books",
+   "action": "Check",
+   "tab": "E / G",
+   "level": "Red",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HLD-03"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLD-05",
+   "industry": "HLD",
+   "part": "Reconciliation",
+   "rule": "Investments agree to statements",
+   "action": "Check",
+   "tab": "C",
+   "level": "Red",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "IND-HLD-05"
+   ],
+   "built": true
+  },
+  {
+   "id": "IND-HLD-06",
+   "industry": "HLD",
+   "part": "Red flags",
+   "rule": "Associated companies not set in H1 (CT rate)",
+   "action": "Setup check",
+   "tab": "H1",
+   "level": "Amber",
+   "codes": [],
+   "codes_from": "words",
+   "covered_by": [
+    "A3 associated companies"
+   ],
+   "built": true
+  }
+ ]
+}

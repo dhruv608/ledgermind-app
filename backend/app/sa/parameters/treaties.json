@@ -1,0 +1,247 @@
+{
+ "_about": "The firm's treaty table (SOP v2 P-TRT-*): one row per country and kind of income the firm has checked. A row says who may tax it: UK_ONLY (no foreign tax credit: the client reclaims the foreign tax there, R-SA106-02) or BOTH with the most the source country may take (max_rate) for the credit. A country and kind not in the table is an accountant decision: look the treaty up before the credit is given. Countries by HMRC's 3-letter codes (SA106 notes). Foreign tax years for time-apportioning (R-SA106-05). Rows for New Zealand, France, Australia, USA, Ireland, India, South Africa and the UAE read from each treaty's text on GOV.UK (5 Nov 2026); India's dividends and France's government pensions are left to a decision (the article needs reading case by case).",
+ "rows": [
+  {
+   "country": "ZAF",
+   "kind": "PENSION",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-South Africa treaty Art 17: private pensions taxable only in the state of residence",
+   "checked": "SOP v2 P-TRT-ZA-17 (verified)"
+  },
+  {
+   "country": "NZL",
+   "kind": "INTEREST",
+   "taxed_in": "BOTH",
+   "max_rate": 0.1,
+   "article": "UK-New Zealand DTC 1983 (2007 protocol) Art 12: NZ tax on interest at most 10%",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "NZL",
+   "kind": "DIVIDEND",
+   "taxed_in": "BOTH",
+   "max_rate": 0.15,
+   "article": "UK-New Zealand DTC 1983 Art 11: NZ tax on dividends at most 15%",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "NZL",
+   "kind": "PENSION",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-New Zealand DTC 1983 Art 19: pensions and annuities taxable only in the state of residence",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "NZL",
+   "kind": "BENEFIT",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-New Zealand DTC 1983 Art 19: social security pensions taxable only in the state of residence",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "FRA",
+   "kind": "INTEREST",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-France DTC 2008 Art 12: interest taxable only in the state of residence",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "FRA",
+   "kind": "DIVIDEND",
+   "taxed_in": "BOTH",
+   "max_rate": 0.15,
+   "article": "UK-France DTC 2008 Art 11: French tax on dividends at most 15%",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "FRA",
+   "kind": "PENSION",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-France DTC 2008 Art 18: private pensions taxable only in the state of residence (government pensions: Art 19, a decision)",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "AUS",
+   "kind": "INTEREST",
+   "taxed_in": "BOTH",
+   "max_rate": 0.1,
+   "article": "UK-Australia DTC 2003 Art 11: Australian tax on interest at most 10%",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "AUS",
+   "kind": "DIVIDEND",
+   "taxed_in": "BOTH",
+   "max_rate": 0.15,
+   "article": "UK-Australia DTC 2003 Art 10: Australian tax on dividends at most 15% (individuals)",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "AUS",
+   "kind": "PENSION",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-Australia DTC 2003 Art 17: pensions (including government pensions) and annuities taxable only in the state of residence",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "USA",
+   "kind": "INTEREST",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-USA DTC 2001 Art 11: interest taxable only in the state of residence",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "USA",
+   "kind": "DIVIDEND",
+   "taxed_in": "BOTH",
+   "max_rate": 0.15,
+   "article": "UK-USA DTC 2001 Art 10: US tax on dividends at most 15% (individuals)",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "USA",
+   "kind": "PENSION",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-USA DTC 2001 Art 17(1): pensions taxable only in the state of residence (a lump sum: US, Art 17(2); a US-exempt amount is exempt here too)",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "USA",
+   "kind": "BENEFIT",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-USA DTC 2001 Art 17(3): US social security paid to a UK resident taxable only in the UK",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "IRL",
+   "kind": "INTEREST",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-Ireland DTC 1976 (1998 protocol) Art 12: interest taxable only in the state of residence",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "IRL",
+   "kind": "DIVIDEND",
+   "taxed_in": "BOTH",
+   "max_rate": 0.15,
+   "article": "UK-Ireland DTC 1976 Art 11: Irish tax on dividends at most 15% (individuals)",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "IRL",
+   "kind": "PENSION",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-Ireland DTC 1976 Art 17: pensions and annuities taxable only in the state of residence",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "IND",
+   "kind": "INTEREST",
+   "taxed_in": "BOTH",
+   "max_rate": 0.15,
+   "article": "UK-India DTC 1993 Art 12: Indian tax on interest at most 15%",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "IND",
+   "kind": "PENSION",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-India DTC 1993 Art 20: pensions and annuities taxable only in the state of residence",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "IND",
+   "kind": "BENEFIT",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-India DTC 1993 Art 20(2): social security payments are pensions, taxable only in the state of residence",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "ZAF",
+   "kind": "INTEREST",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-South Africa DTC 2002 (2010 protocol) Art 11: interest taxable only in the state of residence",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "ZAF",
+   "kind": "DIVIDEND",
+   "taxed_in": "BOTH",
+   "max_rate": 0.1,
+   "article": "UK-South Africa DTC 2002 Art 10: South African tax on dividends at most 10% (individuals)",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "ARE",
+   "kind": "DIVIDEND",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-UAE DTC 2016 Art 10: dividends exempt in the UAE (except out of income from immovable property)",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  },
+  {
+   "country": "ARE",
+   "kind": "PENSION",
+   "taxed_in": "UK_ONLY",
+   "max_rate": 0,
+   "article": "UK-UAE DTC 2016 Art 17: pensions taxable only in the state of residence",
+   "checked": "treaty text on GOV.UK, read 5 Nov 2026"
+  }
+ ],
+ "tax_years": {
+  "ZAF": "1 March to the end of February",
+  "NZL": "1 April to 31 March",
+  "AUS": "1 July to 30 June",
+  "IND": "1 April to 31 March",
+  "USA": "the calendar year",
+  "FRA": "the calendar year",
+  "IRL": "the calendar year"
+ },
+ "names": {
+  "ZAF": "South Africa",
+  "NZL": "New Zealand",
+  "AUS": "Australia",
+  "IND": "India",
+  "USA": "United States of America",
+  "FRA": "France",
+  "IRL": "Ireland (Republic of)",
+  "ARE": "United Arab Emirates",
+  "ESP": "Spain",
+  "DEU": "Germany",
+  "ITA": "Italy",
+  "PRT": "Portugal",
+  "NLD": "Netherlands",
+  "CAN": "Canada",
+  "PAK": "Pakistan",
+  "POL": "Poland",
+  "ROU": "Romania",
+  "CHE": "Switzerland",
+  "BEL": "Belgium",
+  "SGP": "Singapore",
+  "HKG": "Hong Kong",
+  "CHN": "China",
+  "JPN": "Japan",
+  "NGA": "Nigeria",
+  "GHA": "Ghana",
+  "KEN": "Kenya",
+  "BGD": "Bangladesh",
+  "LKA": "Sri Lanka",
+  "GRC": "Greece",
+  "CYP": "Cyprus",
+  "MLT": "Malta"
+ }
+}

@@ -1,0 +1,510 @@
+{
+  "about": "Engagement Setup industry data (from the firm prototype, 5 Oct 2026): business models and industry questions per industry; each question names the query it switches on. Add industries here without a code change.",
+  "industries": {
+    "CON": {
+      "name": "Construction",
+      "models": [
+        "Main contractor",
+        "Subcontractor",
+        "Specialist contractor",
+        "Labour-only",
+        "Property developer"
+      ],
+      "questions": [
+        {
+          "id": "cProjects",
+          "label": "Active projects at year end",
+          "type": "number",
+          "rules": "C-WIP-001"
+        },
+        {
+          "id": "cRet",
+          "label": "Retentions held by customers",
+          "type": "yn",
+          "rules": "C-REV-004",
+          "evidence": {
+            "accounts": "retention"
+          }
+        },
+        {
+          "id": "cWip",
+          "label": "Work done not yet invoiced at year end",
+          "type": "yn",
+          "rules": "C-REV-002",
+          "evidence": {
+            "accounts": "^(?!.*prepay).*(accrued income|work in progress|\\bwip\\b|unbilled|amounts recoverable)"
+          }
+        },
+        {
+          "id": "cAdv",
+          "label": "Customer advances / deposits",
+          "type": "yn",
+          "rules": "C-REV-003",
+          "evidence": {
+            "accounts": "^(?!.*accrual).*(customer deposit|advance|payments on account|deferred income|income in advance)"
+          }
+        },
+        {
+          "id": "cPlant",
+          "label": "Plant hire or owned plant",
+          "type": "yn",
+          "rules": "C-COS-002, C-FA-001",
+          "evidence": {
+            "accounts": "plant"
+          }
+        },
+        {
+          "id": "cVar",
+          "label": "Unagreed variations or claims",
+          "type": "yn",
+          "rules": "C-REV-005"
+        },
+        {
+          "id": "cZero",
+          "label": "New-build or conversion work (0% / 5%)",
+          "type": "yn",
+          "rules": "C-VAT-007"
+        }
+      ]
+    },
+    "RES": {
+      "name": "Restaurant / Café / Takeaway",
+      "models": [
+        "Restaurant",
+        "Café",
+        "Takeaway",
+        "Delivery-led",
+        "Catering",
+        "Franchise"
+      ],
+      "questions": [
+        {
+          "id": "rPos",
+          "label": "POS system",
+          "type": "text",
+          "rules": "R-REV-003"
+        },
+        {
+          "id": "rPlat",
+          "label": "Delivery platforms used",
+          "type": "chips",
+          "options": [
+            "Deliveroo",
+            "Uber Eats",
+            "Just Eat",
+            "Own website"
+          ],
+          "rules": "R-REV-002"
+        },
+        {
+          "id": "rCash",
+          "label": "Cash takings",
+          "type": "yn",
+          "rules": "R-REV-004",
+          "evidence": {
+            "accounts": "cash takings|cash sales|till",
+            "ledger": "cash takings|cash sales|till takings"
+          }
+        },
+        {
+          "id": "rAlc",
+          "label": "Alcohol sales",
+          "type": "yn",
+          "rules": "R-VAT-001",
+          "evidence": {
+            "accounts": "alcohol|wine|beer|spirits|\\bbar\\b|drinks"
+          }
+        },
+        {
+          "id": "rTips",
+          "label": "Service charge or tronc",
+          "type": "yn",
+          "rules": "R-VAT-002",
+          "evidence": {
+            "accounts": "tronc|\\btips\\b|gratuit"
+          }
+        },
+        {
+          "id": "rVouch",
+          "label": "Gift vouchers sold",
+          "type": "yn",
+          "rules": "R-REV-005",
+          "evidence": {
+            "accounts": "voucher|gift card"
+          }
+        }
+      ]
+    },
+    "MFG": {
+      "name": "Manufacturing",
+      "models": [
+        "Make to order",
+        "Make to stock",
+        "Contract manufacturer"
+      ],
+      "questions": [
+        {
+          "id": "mWip",
+          "label": "WIP at year end",
+          "type": "yn",
+          "rules": "M-INV-001",
+          "evidence": {
+            "accounts": "^(?!.*prepay).*(accrued income|work in progress|\\bwip\\b|unbilled|amounts recoverable)"
+          }
+        },
+        {
+          "id": "mAbs",
+          "label": "Overheads absorbed into stock",
+          "type": "yn",
+          "rules": "M-INV-002"
+        },
+        {
+          "id": "mImp",
+          "label": "Imported materials",
+          "type": "yn",
+          "rules": "M-IMP-001",
+          "evidence": {
+            "ledger": "import vat|import duty|customs duty|hmrc.{0,5}duty|\\bc79\\b|postponed vat|customs clearance"
+          }
+        },
+        {
+          "id": "mWarr",
+          "label": "Warranties given",
+          "type": "yn",
+          "rules": "M-PRV-001",
+          "evidence": {
+            "accounts": "warrant"
+          }
+        }
+      ]
+    },
+    "PRP": {
+      "name": "Property",
+      "models": [
+        "Buy-to-let",
+        "Commercial letting",
+        "Development for sale",
+        "Property trading",
+        "Property management"
+      ],
+      "questions": [
+        {
+          "id": "pCount",
+          "label": "Properties held",
+          "type": "number",
+          "rules": "P-CLS-001"
+        },
+        {
+          "id": "pVal",
+          "label": "Year-end valuations obtained",
+          "type": "yn",
+          "rules": "P-VAL-001"
+        },
+        {
+          "id": "pAgent",
+          "label": "Letting agent used",
+          "type": "yn",
+          "rules": "P-REV-002",
+          "evidence": {
+            "accounts": "letting agent|agent fee|management fee",
+            "ledger": "letting agent|lettings"
+          }
+        },
+        {
+          "id": "pDep",
+          "label": "Tenant deposits held",
+          "type": "yn",
+          "rules": "P-DEP-001",
+          "evidence": {
+            "accounts": "tenant deposit|deposits held|rent deposit"
+          }
+        },
+        {
+          "id": "pHol",
+          "label": "Holiday lets",
+          "type": "yn",
+          "rules": "P-FHL-001",
+          "evidence": {
+            "accounts": "holiday let|airbnb|booking\\.com",
+            "ledger": "airbnb|booking\\.com"
+          }
+        }
+      ]
+    },
+    "ECM": {
+      "name": "E-commerce",
+      "models": [
+        "Amazon",
+        "Shopify",
+        "eBay",
+        "Etsy",
+        "Own website",
+        "Multi-channel"
+      ],
+      "questions": [
+        {
+          "id": "eFba",
+          "label": "Stock at FBA / 3PL",
+          "type": "yn",
+          "rules": "E-INV-001",
+          "evidence": {
+            "accounts": "\\bfba\\b|fulfil|3pl",
+            "ledger": "\\bfba\\b|fulfilment by amazon|fulfillment by amazon"
+          }
+        },
+        {
+          "id": "eOs",
+          "label": "Sales to EU / NI consumers",
+          "type": "yn",
+          "rules": "E-VAT-002",
+          "evidence": {
+            "ledger": "\\boss\\b|one stop shop"
+          }
+        },
+        {
+          "id": "eImp",
+          "label": "Goods imported",
+          "type": "yn",
+          "rules": "E-VAT-003",
+          "evidence": {
+            "ledger": "import vat|import duty|customs duty|hmrc.{0,5}duty|\\bc79\\b|postponed vat|customs clearance"
+          }
+        },
+        {
+          "id": "eFx",
+          "label": "Multi-currency balances",
+          "type": "yn",
+          "rules": "E-FX-001",
+          "evidence": {
+            "accounts": "\\b(eur|usd|jpy|aud|cad|chf|sek|nok|dkk|pln|cny|hkd|sgd)\\b|euro|dollar|\\byen\\b"
+          }
+        }
+      ]
+    },
+    "PRO": {
+      "name": "Professional services",
+      "models": [
+        "Time-billed",
+        "Fixed fee",
+        "Retainer",
+        "Contingent fee"
+      ],
+      "questions": [
+        {
+          "id": "sWip",
+          "label": "Unbilled WIP at year end",
+          "type": "yn",
+          "rules": "PS-REV-001",
+          "evidence": {
+            "accounts": "^(?!.*prepay).*(accrued income|work in progress|\\bwip\\b|unbilled|amounts recoverable)"
+          }
+        },
+        {
+          "id": "sCm",
+          "label": "Client money held",
+          "type": "yn",
+          "rules": "PS-CLM-001",
+          "evidence": {
+            "accounts": "client money|clients'? account|client account|held on behalf",
+            "absent": "N"
+          }
+        },
+        {
+          "id": "sPsc",
+          "label": "Single-client contractor (IR35)",
+          "type": "yn",
+          "rules": "PS-IR35-001",
+          "evidence": {
+            "check": "customer_concentration"
+          }
+        }
+      ]
+    },
+    "SAAS": {
+      "name": "IT / SaaS",
+      "models": [
+        "Subscription SaaS",
+        "Licences",
+        "Development services",
+        "Support & maintenance"
+      ],
+      "questions": [
+        {
+          "id": "iSub",
+          "label": "Annual subscriptions billed upfront",
+          "type": "yn",
+          "rules": "S-REV-001",
+          "evidence": {
+            "accounts": "^(?!.*accrual).*(deferred income|deferred revenue|income in advance)"
+          }
+        },
+        {
+          "id": "iDev",
+          "label": "Software development costs",
+          "type": "yn",
+          "rules": "S-DEV-001",
+          "evidence": {
+            "accounts": "development cost|capitalised development|software development"
+          }
+        },
+        {
+          "id": "iOpt",
+          "label": "Share options (EMI)",
+          "type": "yn",
+          "rules": "S-SBP-001",
+          "evidence": {
+            "accounts": "share option|\\bemi\\b|share.based"
+          }
+        }
+      ]
+    },
+    "RTL": {
+      "name": "Retail / Wholesale",
+      "models": [
+        "Retail shop",
+        "Wholesale",
+        "Mixed"
+      ],
+      "questions": [
+        {
+          "id": "tCount",
+          "label": "Year-end stock count done",
+          "type": "yn",
+          "rules": "RT-INV-001"
+        },
+        {
+          "id": "tReb",
+          "label": "Supplier rebates",
+          "type": "yn",
+          "rules": "RT-REB-001",
+          "evidence": {
+            "accounts": "rebate",
+            "ledger": "rebate|retro"
+          }
+        },
+        {
+          "id": "tAlc",
+          "label": "Alcohol sold to trade (AWRS)",
+          "type": "yn",
+          "rules": "RT-AWRS-001",
+          "evidence": {
+            "accounts": "alcohol|wine|beer|spirits|\\bbar\\b|drinks"
+          }
+        }
+      ]
+    },
+    "REC": {
+      "name": "Recruitment",
+      "models": [
+        "Temporary staffing",
+        "Permanent placement",
+        "Contract (PSC)"
+      ],
+      "questions": [
+        {
+          "id": "kUmb",
+          "label": "Umbrella companies in supply chain",
+          "type": "yn",
+          "rules": "RC-UMB-001",
+          "evidence": {
+            "ledger": "umbrella"
+          }
+        },
+        {
+          "id": "kFin",
+          "label": "Invoice finance facility",
+          "type": "yn",
+          "rules": "RC-FIN-001",
+          "evidence": {
+            "accounts": "invoice finance|factoring",
+            "ledger": "invoice finance|factoring|bibby|close brothers"
+          }
+        },
+        {
+          "id": "kTs",
+          "label": "Unbilled timesheets at year end",
+          "type": "yn",
+          "rules": "RC-REV-002",
+          "evidence": {
+            "accounts": "^(?!.*prepay).*(accrued income|work in progress|\\bwip\\b|unbilled|amounts recoverable)"
+          }
+        }
+      ]
+    },
+    "TRN": {
+      "name": "Transport / Logistics",
+      "models": [
+        "Haulage",
+        "Courier",
+        "Passenger (10+ seats)",
+        "Taxi / private hire"
+      ],
+      "questions": [
+        {
+          "id": "xFleet",
+          "label": "Vehicles in fleet",
+          "type": "number",
+          "rules": "T-FA-001"
+        },
+        {
+          "id": "xSelf",
+          "label": "Self-employed drivers",
+          "type": "yn",
+          "rules": "T-CTR-001"
+        },
+        {
+          "id": "xInt",
+          "label": "International freight",
+          "type": "yn",
+          "rules": "T-VAT-002",
+          "evidence": {
+            "ledger": "international|customs|import|export"
+          }
+        }
+      ]
+    }
+  },
+  "prior_year_issues": [
+    {
+      "label": "Prior-year adjustments",
+      "rules": "U-TB-002"
+    },
+    {
+      "label": "Open client queries",
+      "rules": "carry forward"
+    },
+    {
+      "label": "HMRC enquiry",
+      "rules": "U-CT-001"
+    },
+    {
+      "label": "VAT error / disclosure",
+      "rules": "V-I03"
+    },
+    {
+      "label": "CT issue",
+      "rules": "CT-LOS-001"
+    },
+    {
+      "label": "Companies House late filing",
+      "rules": "U-DISC-001"
+    },
+    {
+      "label": "Going concern doubt",
+      "rules": "U-GC-001"
+    },
+    {
+      "label": "Overdrawn DLA / s455",
+      "rules": "U-DLA-001, CT-A-001"
+    },
+    {
+      "label": "Related-party issue",
+      "rules": "U-RP-001"
+    },
+    {
+      "label": "Unreconciled bank / suspense",
+      "rules": "U-BNK-001, U-TB-003"
+    }
+  ],
+  "about_evidence": "evidence on a question: what in the books suggests the answer (accounts / ledger regex -> Yes; absent N -> No when nothing matches; check customer_concentration). A suggestion only."
+}

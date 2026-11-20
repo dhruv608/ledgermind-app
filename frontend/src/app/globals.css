@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+/* Ximverse teal (data/satrplan.md section 4): every teal-* and brand-* class in the app takes it from here.
+   Emerald ("done", "agrees") is a mint-green in the same family, so status still reads apart from the brand colour;
+   red (stop) and amber (to do) are unchanged. */
+@theme {
+  --color-teal-50: #eef7f7;
+  --color-teal-100: #d4ecea;
+  --color-teal-200: #9fcfce;
+  --color-teal-300: #7bb9b8;
+  --color-teal-400: #4f9a99;
+  --color-teal-500: #2a7a79;
+  --color-teal-600: #226b6a;
+  --color-teal-700: #1a5c5b;
+  --color-teal-800: #144b4a;
+  --color-teal-900: #0e3b3a;
+  --color-teal-950: #0a2c2b;
+
+  --color-brand-50: #eef7f7;
+  --color-brand-100: #d4ecea;
+  --color-brand-200: #9fcfce;
+  --color-brand-500: #2a7a79;
+  --color-brand-600: #226b6a;
+  --color-brand-700: #1a5c5b;
+  --color-brand-800: #144b4a;
+  --color-brand-900: #0e3b3a;
+  --color-mint: #9fe0c7;
+
+  /* Terra: the warm accent beside the teal (the logo's sun): step numbers, the current item, progress, what to do next */
+  --color-terra-50: #fbf2ec;
+  --color-terra-100: #f6e0d2;
+  --color-terra-200: #edc0a5;
+  --color-terra-300: #e29c76;
+  --color-terra-400: #d77a4d;
+  --color-terra-500: #c8623a;
+  --color-terra-600: #b0502d;
+  --color-terra-700: #8f4026;
+  --color-terra-800: #713421;
+
+  --color-emerald-50: #effaf5;
+  --color-emerald-100: #d6f3e7;
+  --color-emerald-200: #b4e9d5;
+  --color-emerald-300: #9fe0c7;
+  --color-emerald-400: #5fc6a1;
+  --color-emerald-500: #2fa77f;
+  --color-emerald-600: #238a69;
+  --color-emerald-700: #1d6f56;
+  --color-emerald-800: #185946;
+  --color-emerald-900: #134a3b;
+}
+
+@layer base {
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+}
+
+/* Custom scrollbars for clean light data tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom Sonner Toast Styling: Top-Right Close Button & Decreasing Progress Bar */
+[data-sonner-toaster] [data-sonner-toast] {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Position close button neatly on the top-right */
+[data-sonner-toaster] [data-sonner-toast] [data-close-button] {
+  position: absolute !important;
+  left: auto !important;
+  right: 10px !important;
+  top: 10px !important;
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 9999px !important;
+  background-color: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #64748b !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+  cursor: pointer !important;
+  z-index: 50 !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-close-button]:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+  transform: scale(1.1) !important;
+}
+
+/* Decreasing duration progress bar at the bottom of the toast */
+[data-sonner-toaster] [data-sonner-toast]::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 3.5px !important;
+  background: linear-gradient(90deg, #1a5c5b, #2a7a79) !important;
+  transform-origin: left !important;
+  animation: sonner-countdown 4s linear forwards !important;
+  pointer-events: none !important;
+  z-index: 40 !important;
+}
+
+/* Success toast progress bar (e.g. deletion, upload, save) */
+[data-sonner-toaster] [data-sonner-toast][data-type="success"]::after {
+  background: linear-gradient(90deg, #16a34a, #22c55e) !important;
+}
+
+/* Error toast progress bar */
+[data-sonner-toaster] [data-sonner-toast][data-type="error"]::after {
+  background: linear-gradient(90deg, #dc2626, #ef4444) !important;
+}
+
+/* Info toast progress bar */
+[data-sonner-toaster] [data-sonner-toast][data-type="info"]::after {
+  background: linear-gradient(90deg, #2563eb, #3b82f6) !important;
+}
+
+/* Pause the countdown bar while the user hovers over the toast */
+[data-sonner-toaster] [data-sonner-toast]:hover::after {
+  animation-play-state: paused !important;
+}
+
+@keyframes sonner-countdown {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+/* Keyboard focus: a clear teal outline on anything you can tab to (mouse clicks don't show it) */
+:where(a, button, input, select, textarea, summary, [role="option"], [tabindex]):focus-visible {
+  outline: 2px solid #2a7a79;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* A text box whose surrounding box already shows the focus (the assistant's input): no second outline */
+.focus-in-parent:focus-visible {
+  outline: none;
+}
+
+/* A row that scrolls sideways without showing a scrollbar (the client's step tabs) */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Loading placeholders: a light sweep moving across the bar, so the wait reads as loading, not as an empty page */
+.skeleton {
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 45%, #e2e8f0 65%);
+  background-size: 300% 100%;
+  animation: skeleton-sweep 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-sweep {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+/* A document being read (Self Assessment): a teal line sweeps down the page and back, with a soft band behind it */
+.scan-beam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #2a7a79;
+  animation: scan-sweep 2.4s ease-in-out infinite;
+}
+.scan-beam::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  height: 40px;
+  background: #2a7a79;
+  opacity: 0.1;
+}
+
+@keyframes scan-sweep {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: calc(100% - 3px);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+  .scan-beam {
+    animation: none;
+    top: 50%;
+  }
+}
+
+/* The assistant: a slim scrollbar that shows only while the list is hovered */
+.lm-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.lm-scroll:hover {
+  scrollbar-color: rgb(203 213 225) transparent;
+}
+
+/* The assistant's "Thinking" line: a soft light passing over the words */
+.lm-shimmer {
+  background: linear-gradient(90deg, rgb(100 116 139) 0%, rgb(203 213 225) 50%, rgb(100 116 139) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: lm-shimmer 1.6s linear infinite;
+}
+@keyframes lm-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lm-shimmer { animation: none; color: rgb(100 116 139); background: none; }
+}

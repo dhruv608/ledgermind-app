@@ -1,0 +1,1139 @@
+{
+ "about": "Merchant dictionary for the reanalysis engine: the ways a merchant's name appears in bank and ledger text (aliases, matched as whole words in the cleaned text, longest first) and its category. Categories group unknown merchants with similar ones and feed the context score; they never decide a code alone. Seeded 28 Oct 2026 from the merchants seen in 2+ clients in his final WPs and the live bank pack, his SOP and the definition cards. New merchants with no history are added here over time.",
+ "version": "2026-10-28 draft 1",
+ "merchants": [
+  {
+   "merchant": "Amazon",
+   "category": "marketplace",
+   "aliases": [
+    "amazon",
+    "amzn",
+    "amznmktplace",
+    "amazon co uk",
+    "amazon marketplace",
+    "amzn mktp"
+   ]
+  },
+  {
+   "merchant": "Amazon Prime",
+   "category": "streaming",
+   "aliases": [
+    "amazon prime",
+    "prime video",
+    "amzn prime"
+   ]
+  },
+  {
+   "merchant": "eBay",
+   "category": "marketplace",
+   "aliases": [
+    "ebay"
+   ]
+  },
+  {
+   "merchant": "Etsy",
+   "category": "platform payout",
+   "aliases": [
+    "etsy"
+   ]
+  },
+  {
+   "merchant": "Airbnb",
+   "category": "platform payout",
+   "aliases": [
+    "airbnb"
+   ]
+  },
+  {
+   "merchant": "Booking.com",
+   "category": "platform payout",
+   "aliases": [
+    "booking com",
+    "bookingcom"
+   ]
+  },
+  {
+   "merchant": "Uber",
+   "category": "travel",
+   "aliases": [
+    "uber",
+    "uber trip"
+   ]
+  },
+  {
+   "merchant": "Uber Eats",
+   "category": "food and drink",
+   "aliases": [
+    "uber eats",
+    "ubereats"
+   ]
+  },
+  {
+   "merchant": "Deliveroo",
+   "category": "platform payout",
+   "aliases": [
+    "deliveroo"
+   ]
+  },
+  {
+   "merchant": "Just Eat",
+   "category": "platform payout",
+   "aliases": [
+    "just eat",
+    "justeat"
+   ]
+  },
+  {
+   "merchant": "Stripe",
+   "category": "payment platform",
+   "aliases": [
+    "stripe"
+   ]
+  },
+  {
+   "merchant": "PayPal",
+   "category": "payment platform",
+   "aliases": [
+    "paypal"
+   ]
+  },
+  {
+   "merchant": "SumUp",
+   "category": "payment platform",
+   "aliases": [
+    "sumup",
+    "sum up"
+   ]
+  },
+  {
+   "merchant": "Square",
+   "category": "payment platform",
+   "aliases": [
+    "square up",
+    "squareup"
+   ]
+  },
+  {
+   "merchant": "Worldpay",
+   "category": "payment platform",
+   "aliases": [
+    "worldpay"
+   ]
+  },
+  {
+   "merchant": "Zettle",
+   "category": "payment platform",
+   "aliases": [
+    "zettle",
+    "izettle"
+   ]
+  },
+  {
+   "merchant": "Dojo",
+   "category": "payment platform",
+   "aliases": [
+    "dojo"
+   ]
+  },
+  {
+   "merchant": "Paddle",
+   "category": "payment platform",
+   "aliases": [
+    "paddle net",
+    "paddle"
+   ]
+  },
+  {
+   "merchant": "IgnitionPay",
+   "category": "payment platform",
+   "aliases": [
+    "ignitionpay",
+    "ignition pay",
+    "practice ignition"
+   ]
+  },
+  {
+   "merchant": "GoCardless",
+   "category": "payment platform",
+   "aliases": [
+    "gocardless"
+   ]
+  },
+  {
+   "merchant": "Tesco",
+   "category": "supermarket",
+   "aliases": [
+    "tesco",
+    "tesco stores",
+    "tesco express",
+    "tesco extra",
+    "tesco metro"
+   ]
+  },
+  {
+   "merchant": "Tesco fuel",
+   "category": "fuel",
+   "aliases": [
+    "tesco pfs",
+    "tesco pump"
+   ]
+  },
+  {
+   "merchant": "Sainsbury's",
+   "category": "supermarket",
+   "aliases": [
+    "sainsbury",
+    "sainsburys",
+    "sainsbury s"
+   ]
+  },
+  {
+   "merchant": "Asda",
+   "category": "supermarket",
+   "aliases": [
+    "asda",
+    "asda stores",
+    "asda superstore"
+   ]
+  },
+  {
+   "merchant": "Morrisons",
+   "category": "supermarket",
+   "aliases": [
+    "morrisons",
+    "morrisons daily"
+   ]
+  },
+  {
+   "merchant": "Aldi",
+   "category": "supermarket",
+   "aliases": [
+    "aldi",
+    "aldi stores"
+   ]
+  },
+  {
+   "merchant": "Lidl",
+   "category": "supermarket",
+   "aliases": [
+    "lidl",
+    "lidl gb"
+   ]
+  },
+  {
+   "merchant": "Co-op",
+   "category": "supermarket",
+   "aliases": [
+    "co op",
+    "coop",
+    "co operative"
+   ]
+  },
+  {
+   "merchant": "Waitrose",
+   "category": "supermarket",
+   "aliases": [
+    "waitrose"
+   ]
+  },
+  {
+   "merchant": "Marks & Spencer",
+   "category": "supermarket",
+   "aliases": [
+    "marks spencer",
+    "m&s",
+    "marks and spencer"
+   ]
+  },
+  {
+   "merchant": "Iceland",
+   "category": "supermarket",
+   "aliases": [
+    "iceland foods"
+   ]
+  },
+  {
+   "merchant": "Home Bargains",
+   "category": "general retail",
+   "aliases": [
+    "home bargains"
+   ]
+  },
+  {
+   "merchant": "Poundland",
+   "category": "general retail",
+   "aliases": [
+    "poundland"
+   ]
+  },
+  {
+   "merchant": "Boots",
+   "category": "general retail",
+   "aliases": [
+    "boots"
+   ]
+  },
+  {
+   "merchant": "IKEA",
+   "category": "general retail",
+   "aliases": [
+    "ikea"
+   ]
+  },
+  {
+   "merchant": "Argos",
+   "category": "general retail",
+   "aliases": [
+    "argos"
+   ]
+  },
+  {
+   "merchant": "Costco",
+   "category": "wholesaler",
+   "aliases": [
+    "costco",
+    "costco wholesale"
+   ]
+  },
+  {
+   "merchant": "Booker",
+   "category": "wholesaler",
+   "aliases": [
+    "booker"
+   ]
+  },
+  {
+   "merchant": "Bidfood",
+   "category": "wholesaler",
+   "aliases": [
+    "bidfood"
+   ]
+  },
+  {
+   "merchant": "Brakes",
+   "category": "wholesaler",
+   "aliases": [
+    "brakes"
+   ]
+  },
+  {
+   "merchant": "Bestway",
+   "category": "wholesaler",
+   "aliases": [
+    "bestway"
+   ]
+  },
+  {
+   "merchant": "Makro",
+   "category": "wholesaler",
+   "aliases": [
+    "makro"
+   ]
+  },
+  {
+   "merchant": "Shell",
+   "category": "fuel",
+   "aliases": [
+    "shell"
+   ]
+  },
+  {
+   "merchant": "BP",
+   "category": "fuel",
+   "aliases": [
+    "bp",
+    "bp connect"
+   ]
+  },
+  {
+   "merchant": "Esso",
+   "category": "fuel",
+   "aliases": [
+    "esso"
+   ]
+  },
+  {
+   "merchant": "Texaco",
+   "category": "fuel",
+   "aliases": [
+    "texaco"
+   ]
+  },
+  {
+   "merchant": "Gulf",
+   "category": "fuel",
+   "aliases": [
+    "gulf"
+   ]
+  },
+  {
+   "merchant": "Microsoft",
+   "category": "software",
+   "aliases": [
+    "microsoft",
+    "msft",
+    "office 365"
+   ]
+  },
+  {
+   "merchant": "Adobe",
+   "category": "software",
+   "aliases": [
+    "adobe"
+   ]
+  },
+  {
+   "merchant": "Google Workspace",
+   "category": "software",
+   "aliases": [
+    "google workspace",
+    "gsuite",
+    "google gsuite"
+   ]
+  },
+  {
+   "merchant": "Google Ads",
+   "category": "advertising",
+   "aliases": [
+    "google ads",
+    "google adwords"
+   ]
+  },
+  {
+   "merchant": "Google Play",
+   "category": "software",
+   "aliases": [
+    "google play"
+   ]
+  },
+  {
+   "merchant": "Apple",
+   "category": "software",
+   "aliases": [
+    "apple com bill",
+    "apple com",
+    "itunes"
+   ]
+  },
+  {
+   "merchant": "Xero",
+   "category": "software",
+   "aliases": [
+    "xero"
+   ]
+  },
+  {
+   "merchant": "QuickBooks",
+   "category": "software",
+   "aliases": [
+    "quickbooks",
+    "intuit"
+   ]
+  },
+  {
+   "merchant": "Sage",
+   "category": "software",
+   "aliases": [
+    "sage software"
+   ]
+  },
+  {
+   "merchant": "Dropbox",
+   "category": "software",
+   "aliases": [
+    "dropbox"
+   ]
+  },
+  {
+   "merchant": "Canva",
+   "category": "software",
+   "aliases": [
+    "canva"
+   ]
+  },
+  {
+   "merchant": "Zoom",
+   "category": "software",
+   "aliases": [
+    "zoom",
+    "zoom us"
+   ]
+  },
+  {
+   "merchant": "Slack",
+   "category": "software",
+   "aliases": [
+    "slack"
+   ]
+  },
+  {
+   "merchant": "Loom",
+   "category": "software",
+   "aliases": [
+    "loom"
+   ]
+  },
+  {
+   "merchant": "Squarespace",
+   "category": "website",
+   "aliases": [
+    "squarespace",
+    "sqsp"
+   ]
+  },
+  {
+   "merchant": "Wix",
+   "category": "website",
+   "aliases": [
+    "wix"
+   ]
+  },
+  {
+   "merchant": "GoDaddy",
+   "category": "website",
+   "aliases": [
+    "godaddy",
+    "go daddy"
+   ]
+  },
+  {
+   "merchant": "Shopify",
+   "category": "software",
+   "aliases": [
+    "shopify"
+   ]
+  },
+  {
+   "merchant": "OpenAI",
+   "category": "software",
+   "aliases": [
+    "openai",
+    "chatgpt"
+   ]
+  },
+  {
+   "merchant": "Docusign",
+   "category": "software",
+   "aliases": [
+    "docusign"
+   ]
+  },
+  {
+   "merchant": "Zapier",
+   "category": "software",
+   "aliases": [
+    "zapier"
+   ]
+  },
+  {
+   "merchant": "Facebook",
+   "category": "advertising",
+   "aliases": [
+    "facebook",
+    "facebk",
+    "meta platforms",
+    "fb me"
+   ]
+  },
+  {
+   "merchant": "LinkedIn",
+   "category": "advertising",
+   "aliases": [
+    "linkedin"
+   ]
+  },
+  {
+   "merchant": "Vistaprint",
+   "category": "advertising",
+   "aliases": [
+    "vistaprint"
+   ]
+  },
+  {
+   "merchant": "Netflix",
+   "category": "streaming",
+   "aliases": [
+    "netflix"
+   ]
+  },
+  {
+   "merchant": "Spotify",
+   "category": "streaming",
+   "aliases": [
+    "spotify"
+   ]
+  },
+  {
+   "merchant": "Disney+",
+   "category": "streaming",
+   "aliases": [
+    "disney plus",
+    "disneyplus"
+   ]
+  },
+  {
+   "merchant": "Now TV",
+   "category": "streaming",
+   "aliases": [
+    "now tv",
+    "nowtv"
+   ]
+  },
+  {
+   "merchant": "Twitch",
+   "category": "streaming",
+   "aliases": [
+    "twitch"
+   ]
+  },
+  {
+   "merchant": "BT",
+   "category": "telecoms",
+   "aliases": [
+    "bt group",
+    "british telecom",
+    "bt broadband",
+    "bt business"
+   ]
+  },
+  {
+   "merchant": "Vodafone",
+   "category": "telecoms",
+   "aliases": [
+    "vodafone"
+   ]
+  },
+  {
+   "merchant": "EE",
+   "category": "telecoms",
+   "aliases": [
+    "ee limited",
+    "ee mobile"
+   ]
+  },
+  {
+   "merchant": "O2",
+   "category": "telecoms",
+   "aliases": [
+    "o2",
+    "telefonica"
+   ]
+  },
+  {
+   "merchant": "Three",
+   "category": "telecoms",
+   "aliases": [
+    "three on",
+    "three mobile",
+    "three uk"
+   ]
+  },
+  {
+   "merchant": "Virgin Media",
+   "category": "telecoms",
+   "aliases": [
+    "virgin media"
+   ]
+  },
+  {
+   "merchant": "Sky",
+   "category": "telecoms",
+   "aliases": [
+    "sky digital",
+    "sky uk",
+    "sky subscription",
+    "sky broadband"
+   ]
+  },
+  {
+   "merchant": "giffgaff",
+   "category": "telecoms",
+   "aliases": [
+    "giffgaff"
+   ]
+  },
+  {
+   "merchant": "Octopus Energy",
+   "category": "utilities",
+   "aliases": [
+    "octopus energy"
+   ]
+  },
+  {
+   "merchant": "British Gas",
+   "category": "utilities",
+   "aliases": [
+    "british gas"
+   ]
+  },
+  {
+   "merchant": "EDF",
+   "category": "utilities",
+   "aliases": [
+    "edf energy",
+    "edf"
+   ]
+  },
+  {
+   "merchant": "E.ON",
+   "category": "utilities",
+   "aliases": [
+    "eon next",
+    "e on"
+   ]
+  },
+  {
+   "merchant": "Water Plus",
+   "category": "utilities",
+   "aliases": [
+    "water plus"
+   ]
+  },
+  {
+   "merchant": "Severn Trent",
+   "category": "utilities",
+   "aliases": [
+    "severn trent"
+   ]
+  },
+  {
+   "merchant": "Thames Water",
+   "category": "utilities",
+   "aliases": [
+    "thames water"
+   ]
+  },
+  {
+   "merchant": "Trainline",
+   "category": "travel",
+   "aliases": [
+    "trainline"
+   ]
+  },
+  {
+   "merchant": "TfL",
+   "category": "travel",
+   "aliases": [
+    "tfl",
+    "transport for london"
+   ]
+  },
+  {
+   "merchant": "Premier Inn",
+   "category": "travel",
+   "aliases": [
+    "premier inn"
+   ]
+  },
+  {
+   "merchant": "Travelodge",
+   "category": "travel",
+   "aliases": [
+    "travelodge"
+   ]
+  },
+  {
+   "merchant": "easyJet",
+   "category": "travel",
+   "aliases": [
+    "easyjet"
+   ]
+  },
+  {
+   "merchant": "Ryanair",
+   "category": "travel",
+   "aliases": [
+    "ryanair"
+   ]
+  },
+  {
+   "merchant": "British Airways",
+   "category": "travel",
+   "aliases": [
+    "british airways"
+   ]
+  },
+  {
+   "merchant": "RingGo",
+   "category": "parking",
+   "aliases": [
+    "ringgo"
+   ]
+  },
+  {
+   "merchant": "JustPark",
+   "category": "parking",
+   "aliases": [
+    "justpark"
+   ]
+  },
+  {
+   "merchant": "PayByPhone",
+   "category": "parking",
+   "aliases": [
+    "paybyphone"
+   ]
+  },
+  {
+   "merchant": "NCP",
+   "category": "parking",
+   "aliases": [
+    "ncp"
+   ]
+  },
+  {
+   "merchant": "McDonald's",
+   "category": "food and drink",
+   "aliases": [
+    "mcdonalds",
+    "mcdonald s"
+   ]
+  },
+  {
+   "merchant": "Greggs",
+   "category": "food and drink",
+   "aliases": [
+    "greggs"
+   ]
+  },
+  {
+   "merchant": "Costa",
+   "category": "food and drink",
+   "aliases": [
+    "costa coffee"
+   ]
+  },
+  {
+   "merchant": "Starbucks",
+   "category": "food and drink",
+   "aliases": [
+    "starbucks"
+   ]
+  },
+  {
+   "merchant": "Pret",
+   "category": "food and drink",
+   "aliases": [
+    "pret a manger"
+   ]
+  },
+  {
+   "merchant": "Screwfix",
+   "category": "diy and trade",
+   "aliases": [
+    "screwfix",
+    "screw fix"
+   ]
+  },
+  {
+   "merchant": "Toolstation",
+   "category": "diy and trade",
+   "aliases": [
+    "toolstation"
+   ]
+  },
+  {
+   "merchant": "B&Q",
+   "category": "diy and trade",
+   "aliases": [
+    "b&q",
+    "b q"
+   ]
+  },
+  {
+   "merchant": "Wickes",
+   "category": "diy and trade",
+   "aliases": [
+    "wickes"
+   ]
+  },
+  {
+   "merchant": "Travis Perkins",
+   "category": "diy and trade",
+   "aliases": [
+    "travis perkins"
+   ]
+  },
+  {
+   "merchant": "Currys",
+   "category": "electronics",
+   "aliases": [
+    "currys",
+    "pc world"
+   ]
+  },
+  {
+   "merchant": "Royal Mail",
+   "category": "postage",
+   "aliases": [
+    "royal mail"
+   ]
+  },
+  {
+   "merchant": "Post Office",
+   "category": "postage",
+   "aliases": [
+    "post office"
+   ]
+  },
+  {
+   "merchant": "HMRC",
+   "category": "tax",
+   "aliases": [
+    "hmrc",
+    "hmrc paye",
+    "hmrc vat",
+    "hmrc ndds",
+    "hmrc shipley",
+    "hmrc cumbernauld",
+    "inland revenue"
+   ]
+  },
+  {
+   "merchant": "Companies House",
+   "category": "government",
+   "aliases": [
+    "companies house"
+   ]
+  },
+  {
+   "merchant": "ICO",
+   "category": "government",
+   "aliases": [
+    "ico",
+    "information commissioner",
+    "ico registration"
+   ]
+  },
+  {
+   "merchant": "DVLA",
+   "category": "government",
+   "aliases": [
+    "dvla"
+   ]
+  },
+  {
+   "merchant": "Council",
+   "category": "council",
+   "aliases": [
+    "city council",
+    "borough council",
+    "district council",
+    "county council"
+   ]
+  },
+  {
+   "merchant": "TaxAssist",
+   "category": "accountancy",
+   "aliases": [
+    "taxassist",
+    "taxassist accountants",
+    "tax assist"
+   ]
+  },
+  {
+   "merchant": "Superscript",
+   "category": "insurance",
+   "aliases": [
+    "superscript"
+   ]
+  },
+  {
+   "merchant": "Hiscox",
+   "category": "insurance",
+   "aliases": [
+    "hiscox"
+   ]
+  },
+  {
+   "merchant": "Simply Business",
+   "category": "insurance",
+   "aliases": [
+    "simply business"
+   ]
+  },
+  {
+   "merchant": "Aviva",
+   "category": "insurance",
+   "aliases": [
+    "aviva"
+   ]
+  },
+  {
+   "merchant": "AXA",
+   "category": "insurance",
+   "aliases": [
+    "axa"
+   ]
+  },
+  {
+   "merchant": "Admiral",
+   "category": "insurance",
+   "aliases": [
+    "admiral"
+   ]
+  },
+  {
+   "merchant": "Hastings",
+   "category": "insurance",
+   "aliases": [
+    "hastings insurance",
+    "hastings direct"
+   ]
+  },
+  {
+   "merchant": "NEST",
+   "category": "pension",
+   "aliases": [
+    "nest",
+    "nest pensions"
+   ]
+  },
+  {
+   "merchant": "Nutmeg",
+   "category": "pension",
+   "aliases": [
+    "nutmeg",
+    "nutmeg pension"
+   ]
+  },
+  {
+   "merchant": "Capital on Tap",
+   "category": "finance",
+   "aliases": [
+    "capital on tap",
+    "capital tap"
+   ]
+  },
+  {
+   "merchant": "Barclaycard",
+   "category": "finance",
+   "aliases": [
+    "barclaycard"
+   ]
+  },
+  {
+   "merchant": "American Express",
+   "category": "finance",
+   "aliases": [
+    "american express",
+    "amex"
+   ]
+  },
+  {
+   "merchant": "Funding Circle",
+   "category": "finance",
+   "aliases": [
+    "funding circle"
+   ]
+  },
+  {
+   "merchant": "Iwoca",
+   "category": "finance",
+   "aliases": [
+    "iwoca"
+   ]
+  },
+  {
+   "merchant": "Precise Mortgages",
+   "category": "finance",
+   "aliases": [
+    "precise mortgages"
+   ]
+  },
+  {
+   "merchant": "Revolut",
+   "category": "bank",
+   "aliases": [
+    "revolut",
+    "revolut business"
+   ]
+  },
+  {
+   "merchant": "Monzo",
+   "category": "bank",
+   "aliases": [
+    "monzo"
+   ]
+  },
+  {
+   "merchant": "Starling",
+   "category": "bank",
+   "aliases": [
+    "starling"
+   ]
+  },
+  {
+   "merchant": "Wise",
+   "category": "bank",
+   "aliases": [
+    "transferwise",
+    "wise payments"
+   ]
+  },
+  {
+   "merchant": "Tide",
+   "category": "bank",
+   "aliases": [
+    "tide platform",
+    "tide card"
+   ]
+  },
+  {
+   "merchant": "PureGym",
+   "category": "personal leisure",
+   "aliases": [
+    "puregym",
+    "pure gym"
+   ]
+  },
+  {
+   "merchant": "The Gym Group",
+   "category": "personal leisure",
+   "aliases": [
+    "the gym group",
+    "gym group"
+   ]
+  },
+  {
+   "merchant": "Google",
+   "category": "software",
+   "aliases": [
+    "google",
+    "google one",
+    "google cloud",
+    "google storage"
+   ]
+  },
+  {
+   "merchant": "AliExpress",
+   "category": "marketplace",
+   "aliases": [
+    "aliexpress"
+   ]
+  },
+  {
+   "merchant": "Temu",
+   "category": "marketplace",
+   "aliases": [
+    "temu"
+   ]
+  }
+ ],
+ "category_defaults": {
+  "_about": "The code a merchant's category usually points to (SOP step 3d), the weakest candidate: memory and the cards come first.",
+  "fuel": 3231,
+  "telecoms": 3290,
+  "software": 3241,
+  "website": 3293,
+  "advertising": 3280,
+  "streaming": 5400,
+  "personal leisure": 5400,
+  "parking": 3233,
+  "postage": 3270,
+  "insurance": 3260,
+  "accountancy": 3301,
+  "wholesaler": 1100,
+  "travel": 3081
+ }
+}

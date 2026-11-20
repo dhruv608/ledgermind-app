@@ -1,0 +1,455 @@
+{
+  "accounts_ct": {
+    "title": "Accounts and CT600 Checklist",
+    "objective": "To ensure the accounts and corporation tax return have been prepared accuratley and in accordance with accounting standards / tax legislation",
+    "notes": [
+      "Ensure all of the below have been considered by putting yes, no or N/A - if anything important should be noted, add a note"
+    ],
+    "items": [
+      {
+        "section": "Presentation",
+        "text": "Ensure registered office address on accounts deliverables is the same as Companies House"
+      },
+      {
+        "section": "Presentation",
+        "text": "Ensure business address on accounts deliverables is the trading address (it should not be 367 Welford Road, Leicester, LE2 6BJ)"
+      },
+      {
+        "section": "Presentation",
+        "text": "Ensure active directors and resignations in the year are aligned with Companies House"
+      },
+      {
+        "section": "Presentation",
+        "text": "Correct FRS has been used in line with instructions"
+      },
+      {
+        "section": "Presentation",
+        "text": "Chart of accounts have been renamed where appropriate i.e Bank Account 1 = Account name"
+      },
+      {
+        "section": "Presentation",
+        "text": "Ensure comparatives from prior financial year have been posted correctly"
+      },
+      {
+        "section": "Presentation",
+        "text": "Where TaxCalc has applied rounding, ensure it is posted to an account so it does not show (1)"
+      },
+      {
+        "section": "Presentation",
+        "text": "Ensure disclosure checklist has been used and all relevant disclosures made for the FRS used"
+      },
+      {
+        "section": "Presentation",
+        "text": "Review the Full FS and Registrar FS PDFs for any presentational issues or anomalies in comparatives"
+      },
+      {
+        "section": "Accounts",
+        "text": "Reconcile all bank accounts and credit cards to statements (where Monzo pots are used - combine as if one bank account, do not set up separate accounts on bookkeeping software)"
+      },
+      {
+        "section": "Accounts",
+        "text": "Reconcile loans and hire purchase agreements to statements, ensure operating and finance leases have been treated appropriatley"
+      },
+      {
+        "section": "Accounts",
+        "text": "Adjust for any hire purchase or loan interest and split by current (principal paid within the next 1 year) & non-current liabilities (principal paid after 1 year)"
+      },
+      {
+        "section": "Accounts",
+        "text": "Reconcile payroll and CIS to BrightPay, NEST and HMRC - Ensure salary, NI and pension has been appropriatley split between direct, admin and directors"
+      },
+      {
+        "section": "Accounts",
+        "text": "Reconcile VAT to VAT Returns and HMRC"
+      },
+      {
+        "section": "Accounts",
+        "text": "Reconcile corporation tax to HMRC"
+      },
+      {
+        "section": "Accounts",
+        "text": "Reconcile s455 balance and review if any refunds are due if loan has been paid back"
+      },
+      {
+        "section": "Accounts",
+        "text": "Adjust tax balances for any interest/penalties"
+      },
+      {
+        "section": "Accounts",
+        "text": "Review aged debtors and creditors and identify any that need to be queried if still unpaid post year-end"
+      },
+      {
+        "section": "Accounts",
+        "text": "Adjust for closing stock"
+      },
+      {
+        "section": "Accounts",
+        "text": "Adjust for deferred income"
+      },
+      {
+        "section": "Accounts",
+        "text": "Adjust for accrued income"
+      },
+      {
+        "section": "Accounts",
+        "text": "Adjust for accruals including accounting accrual"
+      },
+      {
+        "section": "Accounts",
+        "text": "Adjust for prepayments i.e annual or quarterly payments made (calculate on a monthly basis rather than daily)"
+      },
+      {
+        "section": "Accounts",
+        "text": "Prepare fixed asset register and calculate depreciation - if client uses Xero ensure the Xero Fixed asset register is used and pasted in the relevant tab"
+      },
+      {
+        "section": "Accounts",
+        "text": "Adjust for profit/loss on disposal of assets"
+      },
+      {
+        "section": "Accounts",
+        "text": "Ensure share capital matches companies house / instructions"
+      },
+      {
+        "section": "Accounts",
+        "text": "Review profit and loss accounts to ensure they are reasonable and perform variance analysis"
+      },
+      {
+        "section": "Accounts",
+        "text": "Adjust for any reliefs e.g working from home, mileage or expenses paid for personally"
+      },
+      {
+        "section": "Accounts",
+        "text": "Reconcile our fees invoiced to the Company using TaxAssist Xero to ensure it has been recorded (in case client has paid for any fees via another payment method)"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Notice to File\nConfirm that HMRC have been informed that the company has come within the charge of corporation tax"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Basis\nChanges in basis on which trading profits are calculated dealt with correctly. https://library.croneri.co.uk/cch_uk/btr/723-400"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Associated Companies\nConfirm the correct number of associated companies has been included from Associated Co's tab"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Quarterly Installments\nIf applicable ensure quarterly instalment payments are correctly calculated by reference to correct number of associated companies"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "CT Rates\nConfirm the correct rates of CT have been used applicable to the financial years. Changes occurred from April 2023 where the rates will then be small profit, marginal or main rates."
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Interest received\n• Confirm whether computation identifies if interest is received net or gross\n• Confirm interest received is excluded from trading profits and is included as a non-trading loan relationship credit (including credit interest from overpaid corporation tax) (Interest will only be from a trading loan relationship where the business is that of lending)\n• Confirm interest received is calculated on the accruals basis"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Royalties received\n• Confirm correctly accounted for under GAAP and treated for tax purposes under the Intangible fixed asset rules"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Dividends received\n• Determine if dividends received are taxable or exempt\n• Confirm shown gross of withholding tax where applicable"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Expenses\n• Confirm company formation expenses are disallowed\n• Confirm capital expenditure is disallowed\n• Confirm expenses are incurred wholly and exclusively for the purposes of the trade"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Advertising \n• Ensure gifts and hospitality are including in entertaining\n• Ensure advertising excludes capital items (e.g. signs)"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Entertaining\n• Except for staff entertaining and small promotional gifts (not food, drink or tobacco) are disallowed\n• Confirm staff subsistence, meeting expenses are at reasonable levels or consider a disallowance\n• Confirm round sum allowances don’t include entertaining"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Repairs\n• Confirm capital items excluded\n• Confirm expenditure on integral features exceeding 50% of the replacement costs is disallowed and special rate capital allowances claimed"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Leasing\n• Confirm high emission car leases are adjusted and correct emission limits are used\n• Non-long funding finance leases – where depreciation is properly calculated on a commercial basis, disallow the rental payments, allow interest, allow depreciation, don’t claim capital allowances\n• Non-long funding finance leases – where depreciation isn’t properly calculated, allow the lease rentals, disallow interest, disallow depreciation, don’t claim capital allowances\n• Long funding leases – disallow rental payments, allow interest, disallow depreciation, claim capital allowances"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Bad/doubtful debts\n• Does a provision need to be made for bad or doubtful debts.\n• Refer to Croner-I for more complicated bad debt scenarios - https://library.croneri.co.uk/cch_uk/pctm/50-240"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Legal fees\n• Confirm that all capital items are disallowed"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Subscriptions and donations\n• Confirm all disallowable items are adjusted in the computation\n• Confirm relief has been claimed for qualifying charitable donations made in the accounting period. Relief is claimed after any other relief (other than certain group reliefs)"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Interest penalties and surcharges\n• Add back interest, penalties and surcharges in relation non corporation tax liabilities as per the table here - https://library.croneri.co.uk/cch_uk/btr/703-400\n• Interest on corporation tax is allowable as a loan relationship non-trading debit\n• Add back interest on overdue amounts in relation to CT61 income tax, PAYE tax and NIC’s and student loan deductions - https://library.croneri.co.uk/cch_uk/btr/707-890\n• Confirm the debits and credits on loan relationships are treated as trading or non-trading credits or debits as appropriate.\n• Is any interest expense restricted by the corporate interest restriction in TIOPA 2010, Part 10?"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Directors remuneration and staff costs\n• If necessary do the computations analyse directors remuneration and benefits\n• Confirm bonuses and other accruals including holiday pay have all been paid within 9 months after the end of the accounting period\n• Confirm bonuses are paid wholly and exclusively for the trade\n• Check whether any accrued bonuses are included in accordance with the accounting standard used"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Pension contributions\n• Confirm corporation tax relief claimed on a paid basis\n• Confirm computation is adjusted for spreading of special contributions\n• Confirm contributions paid wholly and exclusively for the trade – see Croner-I guidance - https://library.croneri.co.uk/po-heading-id_nTit75i-CEy7jENlfy55ng?highlight=1"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Rent paid\n• Confirm rents paid to non-residents are disclosed separately and where appropriate basic rate tax has been deducted\n• Confirm any deductible proportion of short lease premiums has been claimed\n• Confirm rental income is included separately under property business profits unless it qualifies as surplus business accommodation\n• Confirm property income computed as a notional trade on the accruals basis as companies can’t use the cash basis"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Financial instruments\n• Confirm interest paid on trading loans is shown as a trading income deduction\n• Confirm interest paid on non-trading loans is shown as a non-trading loan relationship debit. This includes interest on corporation tax but not PAYE or CIS tax which is disallowable\n• Ensure income tax deducted on payments of interest to individuals and non-resident companies and has been paid to HMRC and CT61’s completed"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Royalties paid\n• Confirm correctly accounted for under UK GAAP and in accordance with the Intangible Fixed Asset rules\n• Confirm income tax deducted at source from royalties paid overseas"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "R & D\n• Has a claim notification been submitted within 6 months of the end of the accounting period for the claim on the CT600 to be valid? https://www.gov.uk/guidance/tell-hmrc-that-youre-planning-to-claim-research-and-development-rd-tax-relief\n• Confirm qualifying expenditure has attracted the appropriate relief\n• If a repayable tax credit has been claimed, confirm cap has been applied or company is exempt from the cap\n• Confirm the correct rate of relief has been used"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Land remediation relief\n• Confirm if any qualifying payments have been made and the relief is claimed"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Creative industry tax reliefs\n• Confirm whether the company has made any qualifying payments and relief is claimed where appropriate"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Directors loan accounts\n• Confirm that loans and other benefits to participators have been recorded and that a tax charge under CTA2010, s455 or s464a has been calculated where appropriate\n• Where s455 tax has been paid in earlier periods and the loan has been repaid in part or in full, confirm that a claim has been made under s458 for the repayment of the s455 tax"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Tangible fixed assets\n• Confirm additions per accounts reconcile to capital allowances computation\n• Confirm integral features and long life assets allocated to special rate pool\n• Confirm 100% enhanced capital allowances (FYA’s) claimed on electric and zero emission cars and goods vehicles\n• Confirm temporary 130% super-deduction claimed where applicable and balancing charge declared where relevant assets are disposed of.\n• Confirm AIA calculated appropriately and expenditure matched efficiently\n• Confirm disposals with proceeds exceeding cost have proceeds limited to cost and excess is taxed as a chargeable gain\n• Confirm elections for short life assets made where appropriate\n• Confirm WDA’s calculated dependent on length of accounting period\n• For buildings acquired on or after 1 April 2014 confirm CA’s not claimed on fixtures unless pooled by previous owner and values agreed\n• Consider if expenditure after 29 October 2018 qualifies for Structures and Buildings Allowance at rate relevant to accounting period\n• Confirm cars not qualifying for FYA’s are in the correct pool by reference to CO2 emissions and the changes on or after a April 2021,\n• Confirm allowances not double counted, for example WDA’s claimed on vehicles qualifying for AIA"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Intangible fixed assets (IFA’s)\n• Confirm gains and losses accounted for in accordance with the applicable accounting standard\n• Confirm past tax debts in respect of IFA’s sold have been brought back into charge\n• Confirm reinvestment relief claims made where appropriate\n• Confirm goodwill and customer-related IFA’s have been dealt with correctly. No tax relief on assets acquired on or after 8 July 2015. Limited relief available for some acquisitions on or after 1 April 2019\n• For IFA’s apart from goodwill and customer-related IFA’s, consider if relief due at 4% and make relevant election\n• Consider if restricted asset rules apply for IFA’s acquired from a related party after 1 July 2020"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Chargeable gains\n• Freehold/leasehold property\n• Investments, including Crypto\n• Other CGT chargeable assets\n\nConfirm computation includes:\n• Date of acquisition\n• Cost of acquisition\n• Date and cost of enhancements/improvements\n• Amount of sale proceeds and expense\n• Values at 6/4/65 and 41/3/82 where relevant\n• Indexation to 31 December 2017\n• Confirm claims or elections made for rollover, holdover, VCT relief etc\n• Ensure gain excluded on shares where substantial shareholding exemption applies\n• Restrict loss where CA’s have been claimed\n• Restrict cost where SBA claimed\n• Restrict cost for wasting assets and short leaseholds\n• Restrict cost where gains previously held over or rolled over\n• Include capital losses brought forward"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Losses\n• Relieve current period trading losses against current period total profits, including chargeable gains. If CT rates is expected to increase carrying forward may be more appropriate. See sideways relief\n• Carry back current period trading losses against profits including chargeable gains of the proceeding 12 months if appropriate.\n• Surrender current period trading losses for repayable tax credits if appropriate. (R & D, land remediation, energy saving/environmental efficient P & M)\n• Carry forward pre 1 April2017 trading losses which can only be set against the same trade, but not non-trading loan relationship profits, property income or profits from a different trade\n• Carry forward post 1 April 2017 trading losses unless set against total income of the next period if conditions apply\n• Is the carry forward of certain post 1 April 2017 losses restricted by the 50% restriction of profits in excess of £5m? (CTA 2010 Part ZA)\n• Does the CT600 specify the amount of the deductions allowance, generally £5m/12 months and where appropriate has the trading profits deduction allowance been kept separate from the non-trading profits deduction allowance?\n• Consider deferred tax implication of losses carried forward \n• Confirm other losses, including non trading loan relationship debits, non-trading intangible fixed asset losses, management expenses, and both UK and overseas property losses are relieved in the most beneficial manner"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Losses (sideways relief)\n• Has the trading loss been offset against total profits of the loss making period, reduced by loan relationship non-trading deficits of the current or later periods, loan relationship non-trading deficit carried forward from previous periods, trading losses brought back to the loss making period, management expenses, charitable donations, UK property business losses of the current period, and group relief?\n• Has relief been claimed within 2 years of the end of the loss making period?\n• Did the company carry on a trade for the period the trading loss was incurred and was this on a commercial basis with an expectation of making a profit?\n• Did the company carry on the trade outside the UK?\n• Was the trading loss ring fenced (oil and gas)?\n• Was the loss made in farming or market gardening?"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Double Taxation\n• Establish overseas taxes and check DTA to see if relief available as a deduction or credit"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Categories of property business\n• Keep separate income and expenditure related to UK and Overseas property, and also UK and Overseas FHL income and expenditure before 1 April 2025\n• Exclude from property income, profits from mines and quarries, wayleaves and property post cessation receipts"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Basis on which property business profits calculated\n• Ensure property income is reported on the accruals basis"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Additional rules for property income profits\n• Lease premiums\n• Furnished accommodation including replacement of domestic items\n• Acquisition of property business\n• Receipt of reverse premiums\n• Specific deductions for expenditure on energy saving items\n• Apportionments on sale of land\n• Adjustment on change of basis\n• Expenditure on integral features"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Furnished holiday lettings (prior to 1 April 2025)\n• Confirm properties reported as such meet the definition of furnished holiday lettings\n• Separate calculations required for FHL profits where capital allowances and loss relief are relevant"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Overseas taxes for property business\n• Confirm whether rents from overseas properties have been received after any overseas taxes deducted\n• Establish overseas taxes and check DTA to see if relief available as a deduction or credit"
+      },
+      {
+        "section": "Corporation Tax",
+        "text": "Annual Tax on Enveloped Dwellings – residential property\n• See support site page - https://hub.taxassist.co.uk/pages/annual-tax-on-enveloped-dwellings-ated\n• ATED is payable each year (1 April to 30 March) in advance by 30 April or within 30 days of acquisition where the acquisition is in year\n• Obtain a list of all residential properties in the scope of ATED together with acquisition dates and values where the acquisition or value exceeds £500,000\n• Check any properties acquired before 1 April 2022 are valued as at that date for chargeable periods beginning with 2023/24\n• Obtain a list on pending purchases of residential properties which may be in the scope of ATED as a result of 30 day deadline\n• Obtain from the company relevant documents to confirm sale, acquisitions, details of use and occupation and any changes to use and occupation"
+      },
+      {
+        "section": "Further Considerations - VAT",
+        "text": "VAT\n• Monitor turnover on a rolling 12 months basis to determine whether VAT registration is required depending on goods/services\n• Consider whether any excess is a one off and a notification can be made to HMRC that the client has exceeded the limit but does not plan to register.\n• Where turnover reduces to below £88,000 consider de-registration"
+      }
+    ]
+  },
+  "frs102_1a": {
+    "title": "FRS 102 Disclosure Checklist",
+    "objective": "To ensure all disclosures have been made in line with FRS 102 1A standards",
+    "notes": [
+      "Ensure all of the below have been considered by putting yes, no or N/A - if anything important should be noted, add a note",
+      "Below are the main issues to consider, for the full disclosure checklist please view the following links:",
+      "Disclosure Checklist - https://hub.taxassist.co.uk/download/42562",
+      "Support Site Guidance - https://hub.taxassist.co.uk/pages/frs-102#taxPayable",
+      "Calculate effective interest rate - https://www.youtube.com/watch?v=zhdS1LQXSbE"
+    ],
+    "items": [
+      {
+        "section": "General",
+        "text": "Is FRS 102 1A selected in TaxCalc?"
+      },
+      {
+        "section": "General",
+        "text": "Are comparative figures shown?"
+      },
+      {
+        "section": "General",
+        "text": "Do the balance sheet and profit and loss give a true and fair view"
+      },
+      {
+        "section": "Accountants Report",
+        "text": "Contains reference to the fact that the accounts are unaudited"
+      },
+      {
+        "section": "Accountants Report",
+        "text": "Ensure our accounting body has been stated correctly"
+      },
+      {
+        "section": "Accounting Policies",
+        "text": "Reference to FRS 102 1A in accounting conventions policy"
+      },
+      {
+        "section": "Accounting Policies",
+        "text": "Correct depreciation rates shown"
+      },
+      {
+        "section": "Notes to the accounts (at foot of Balance Sheet)",
+        "text": "Transactions with directors including advances, credits and guarantees\nFor each advance/credit, show:\n• Amount and total of advance/credit\n• Interest rate if applicable\n• Main conditions\n• Total of any amounts repaid\n• Total of any amounts written off\n\nFor each guarantee:\n• Main terms\n• Maximum of liability"
+      },
+      {
+        "section": "Notes to the accounts (at foot of Balance Sheet)",
+        "text": "Guarantees and other financial commitments\n• Total amount not included on the Balance Sheet, with the following shown separately:\n• Total amount of pension contributions\n• Total amount of commitments undertaken on behalf of any parent, fellow subsidiary or any subsidiary of the entity\n• Total amount of commitments undertaken on behalf of any undertaking in which the entity has a participating interest"
+      },
+      {
+        "section": "Notes to the accounts (at foot of Balance Sheet)",
+        "text": "Average number of employees\n• Average number of employees as required by section 411 of the Act"
+      },
+      {
+        "section": "Notes to the accounts (at foot of Balance Sheet)",
+        "text": "Off balance sheet arrangements\n• Information about off balance sheet arrangements as required by section 410 of the Act"
+      },
+      {
+        "section": "Tax Matters",
+        "text": "One of the key practical aspects of the change in accounting is the impact it has on a company’s tax.\n\nOf the many changes, there are real opportunities to gain a tax advantage with:\n• changes to lease incentives\n• recognition of separate intangible assets\n• reclassification of software etc as intangible fixed assets\n\nEqually there are potentially harmful tax and deferred tax liabilities hiding in the detail for loan relationships, financial instruments and revaluations.\n\nSome companies will have accelerated a dividend pre 5 April 2015 for income tax reasons without considering the impact of FRS102 on distributable reserves – the changes in the worst instance could be a serious burden.\n\nAs always, a comprehensive impact assessment will be vitally important in determining whether your business can or will benefit from these changes."
+      },
+      {
+        "section": "Will FRS 102 affect tax payable?",
+        "text": "In some cases, the application of the new standard and any subsequent prior period adjustments may have an impact on taxable profits, which could mean either additional tax becoming payable or less tax being payable.\n\nOther important considerations include the impact of changes on the calculation of loan covenants and on profit-related bonuses."
+      },
+      {
+        "section": "What key changes will FRS 102 make?",
+        "text": "The greatest changes will be felt by companies with financial instrument transactions (for example interest rate swaps or forward contracts for foreign exchange), defined benefit pension schemes, investment properties and investments in listed shares. However, all entities will be affected in some way and in many cases their reported profits will be different.\n\nThere are a number of subtle changes and there are also some more significant ones. We have not provided below a full list of all the these but have just highlighted some."
+      },
+      {
+        "section": "Presentation of accounts",
+        "text": "The new standard introduces additional options for the names of parts of the financial statements and changes the way that certain items are disclosed. Many entities, however, will not see a great deal of change in the way that their accounts are presented other than, for example, the use of the term ‘inventories’ rather than ‘stocks’.\n\nThe Balance Sheet and Profit and Loss account are renamed the Statement of Financial Position and Income Statement. However the standard allows companies to continue to use the old names (For the rest of the document we have continued to use the old names)\n\nA Statement of Comprehensive Income will be required. This is broadly a replacement for the Statement of Total Recognised Gains and Losses (STRGL). However, unlike the STRGL it can be presented as a single statement, following on from the Profit and Loss Account.\n\nA Statement of Changes in Equity will be required, to show movements on each element of capital and reserves. In many cases the only changes in these amounts will arise from the profit for the period and dividends paid. In these cases the changes can be shown at the end of the Profit and Loss Account rather than including a separate Statement of Changes in Equity.\n\nThe Statement of Cash Flows shows changes in cash and cash equivalents in the period rather than just cash, as is currently the case.\n\nFor most companies this will have no effect; however those companies which have entries in the Management of Liquid Resources section of their current Cashflow Statement will need to consider whether these items will be reclassified as cash equivalents.\n\nIn addition the Statement of Cash Flows will be reorganised into just three sections: operating, investing and financing."
+      },
+      {
+        "section": "Abridged accounts",
+        "text": "The concept of abbreviated accounts does not apply to micro-entities. Instead, the concept of ‘abridged accounts’ for small companies is introduced. The draft legislation notes that these would form the full accounts for members, provided they all approve. Abridged accounts, in this context, permit the profit and loss account to start at the ‘gross profit or loss’ line and also cut down on the analysis otherwise required by law for balance sheet items.\n\nThe removal of traditional abbreviated accounts could lead to more small private company information being available in the public domain; even where the directors’ report and profit and loss account are not filed.\n\nUsing abridged accounts as a route to filing slightly less information may be an option, though there are multiple other considerations here and the notes requirements do not disappear."
+      },
+      {
+        "section": "Revalued property, plant and equipment",
+        "text": "On transition to FRS 102 companies may elect to treat the revalued amount of certain assets, arrived at using UK GAAP before the transition date, as its deemed cost at the date of revaluation.\n\nAn estimate on the balance sheet of any tax payable in the event of a property eventually being sold for its revalued amount will need to be recognised as a provision for deferred tax. This is currently not generally required and would reduce the net assets on the balance sheet.\n\nRules on the prescribed frequency of revaluations have been relaxed.\n\nCare will be needed here if there is any banking covenant or loan restriction related to any of the figures in the accounts.\n\nThis applies to tangible fixed assets, investment properties or intangible assets (other than goodwill).\n\nAlternatively, assets can be revalued at fair value on the date of transition, even if this was not included in the previous UK GAAP accounts."
+      },
+      {
+        "section": "Investment properties",
+        "text": "The basic principles of accounting for investment properties remain the same (ie they are included at market value). However, there are changes to the definition of investment properties, where the revaluation is recorded and the deferred tax treatment.\n\nRather than surpluses or deficits on revaluation being taken to reserves as they are at present, they will be presented as part of the profit or loss for the period. They will not, however, be ‘realised profits or losses’ and they will not be available for the payment of dividends!\n\nThere are a number of other detailed differences from the present accounting for investment properties which may mean more (or fewer) properties may qualify as investment properties.\n\nAs noted above as regards other revalued property, a provision for the tax payable if the property were to be sold (deferred tax) will be required, again reducing the net assets on the balance sheet.\n\nCare will be needed where the assessment of the entity’s performance is based upon the presented profit and loss account, which will show movements in the value of investment properties. Consideration of the methods employed in calculating loan covenants and profit-related bonuses will be needed.\n\nThere have been some changes to the definition of Investment properties, for example properties which had previously been accounted for as a tangible fixed asset because they were used by another group company may now be an investment property. Both FRS 102 and the previous UK standards require the revaluation of investment properties every year.\n\nHowever, under FRS 102 this revaluation will be included in the profit and loss account for the year, rather than the STRGL. In addition, companies will need to account for deferred tax based on the amount of tax that they would have to pay if they disposed of the property at the revalued amount. Currently deferred tax is not usually accounted for on investment property revaluations.\n\nAlthough the revaluation may be accounted for through the Profit and Loss Account it will still not meet the definition of realised and therefore you will need to keep a separate note so you can calculate the amounts of profits available for dividends to shareholders etc.\n\nIn addition, under FRS 102 where the fair value of the investment properties cannot be determined without undue cost or effort, such properties can be accounted for at cost less depreciation."
+      },
+      {
+        "section": "Business combinations, Goodwill and other intangible assets",
+        "text": "The requirement for consolidated accounts is not changed by FRS 102, however the use of merger accounting for transactions other than group reconstructions is not allowed.\n\nThe main differences will be in the calculation of goodwill. However, there will be no requirement to recalculate goodwill on business combinations which took place before the company’s transition date (the first day of the comparative accounting period)\n\nUnless an entity is able to reliably estimate the life of an intangible fixed asset, ten years will be the maximum. This compares to 20 years in the existing standards.\n\nReducing the amortisation period of goodwill and other intangibles from 20 years to ten years could have a very significant impact on reported profits and on the net assets, though if tax relief is available this could reduce tax payable, and again a reduction in the net assets on the balance sheet could cause problems with lending covenants.\n\nThe new standard also increases the likelihood of recognising more different types of intangible asset on an acquisition than under current accounting standards.\n\nIt is likely that the goodwill calculated on acquisitions under FRS 102 will be lower as more intangible fixed assets are allowed to be separately identified as part of the purchase. There is no need to recalculate the goodwill on acquisitions before the transition to FRS 102, as there is a specific exemption from the need to do this. However you can choose to adopt a point of time prior to 31 December 2013 and apply the new provisions to all acquisitions subsequent to that date.\n\nIn addition goodwill and other intangible assets must be amortised over a finite period, they cannot be considered to have an indefinite useful life. Where no reliable estimate of the useful life can be made the maximum period allowed is ten years."
+      },
+      {
+        "section": "Defined benefit pension schemes",
+        "text": "The method of valuing the defined benefit pension scheme liability or asset remains the same under FRS 102. However, the split between those movements which are taken to the profit and loss account and those included in “other comprehensive income” are different, so the reported profit will be affected.\n\nThe treatment of multi employer schemes will be different in some cases.\n\nFor multi employer schemes where the individual employers are unable to identify their share of the assets and liabilities the companies are currently permitted to account for the schemes as if they were defined contribution schemes in their individual accounts. Typically in these cases the defined benefit liability or asset is only shown in the group accounts.\n\nUnder FRS 102 this arrangement will continue for most of the companies involved, although they will now be required to recognise a liability for any committed deficit funding. However, where this is the case the company which is legally responsible for the scheme will recognise the defined benefit liability on its individual balance sheet."
+      },
+      {
+        "section": "Interest free loans",
+        "text": "Where companies have given interest free loans or loans with interest below a commercial rate (typically to other group companies) current accounting is usually to ignore the non-commercial nature of the arrangement, under FRS 102 adjustments will be made to recognise this.\n\nThe lender is required to account for the loan at the present value of the cashflows that it expects to receive (discounted using a market rate of interest). It will then show an ‘interest’ income over the period of the loan; so that when it comes to be repaid the debtor is equal to the amount received.\n\nThis is the case even where the loan is technically repayable on demand. In these cases the lending company will need to estimate when it expects to be repaid.\n\nIn principle the treatment by the company receiving the loan will mirror that of the lender. However, it will treat amounts as payable on their due dates rather than when it expects to pay them, so loans repayable on demand will be included as short term creditors at the amount of cash required to settle them, with no discounting."
+      },
+      {
+        "section": "Lease incentives",
+        "text": "The principle of spreading the cost of any lease incentives remains, however for some leases the period will be different.\n\nUnder current standards lease incentives are spread over the period up to the point when the rentals revert to the market rate (generally taken to be the first rent review). However, under FRS 102 they are spread over the non-cancellable period for which the lessee has contracted to lease the asset together with any further terms for which the lessee has an option to continue to lease the asset when, at the inception of the lease, it is reasonably certain that the lessee will exercise that option."
+      },
+      {
+        "section": "Holiday pay accruals",
+        "text": "Where untaken holiday pay is owing at the end of the period, it may be necessary to provide for the accrued value in the year-end accounts.\n\nWhere a company’s holiday year is not the same as its financial year an accrual will need to be made for any holiday accrued in the period which has not been taken by the period end (and a prepayment in respect of any taken which will only accrue in respect of service after the period end)."
+      },
+      {
+        "section": "Related parties",
+        "text": "A welcome change from current accounting standards for many, is that FRS 102 does not require the publication of the names of any related parties with whom the entity has transactions.\n\nRelated parties includes directors, significant shareholders and relevant family members, though HMRC may still request such information separately."
+      },
+      {
+        "section": "Disclosure exemptions for Qualifying Entities",
+        "text": "FRS 102 contains a number of disclosure exemptions for Qualifying Entities (ie members of groups where the parent of that group prepares publicly available consolidated financial statements).\n\nThese include exemption from the following requirements:\n• Preparation of a Statement of Cash Flows\n• Disclosure of Key Management Compensation (however, the statutory requirements on Directors’ Remuneration as required by the Company Act remain)\n• Most of the disclosures on share based payments, provided that these are included in the parent’s consolidated accounts\n• Most of the disclosures on financial instruments, provided that these are included in the parent’s consolidated accounts\n• Reconciliation of the number of shares outstanding at the beginning and end of the period"
+      },
+      {
+        "section": "Transition",
+        "text": "The general principle is that the balances at the opening date of the preceding period are restated based on the new accounting framework, however some exemptions from this.\n\nThere are exemptions for:\n• Goodwill on business combinations before the transition date (see above)\n• Share based payments where the company previously adopted the FRSSE\n• Previously revalued assets (see above)\n• Investments in subsidiaries, associates and joint ventures in the parent company’s own accounts can use the carrying amount in the UK GAAP accounts at the date of transition as the deemed cost\n• Where the liability component of a compound financial instrument is not outstanding at the transition date the financial instrument does not need to be split into its components.\n• Accounting for oil and gas assets\n• Some arrangements containing a lease\n• Decommissioning liabilities included in the cost of property, plant and equipment may be measured at the transition date rather than the date of acquisition\n• Dormant companies may retain their UK GAAP accounting policies until there is any change to their assets or liabilities or they undertake new transactions.\n• Companies may elect to treat deferred development costs calculated under UK GAAP as the deemed cost at the transition date\n• Companies may commence capitalisation of borrowing costs from the date of transition without restating to capitalise borrowing costs prior to this\n• Lease incentives entered into before the transition date may continue to be accounted for over the period that would have applied under UK GAAP\n• Financial instruments may be designated as at fair value through the profit and loss at the transition date even if they were not designated as such on initial recognition.\n• There are also specific exemptions relating to Public Benefit Entities and to subsidiaries, associates and joint ventures who transition to FRS 102 at a different date from their parent company."
+      }
+    ]
+  },
+  "frs105": {
+    "title": "FRS 105 Disclosure Checklist",
+    "objective": "To ensure all disclosures have been made in line with FRS 105 standards",
+    "notes": [
+      "Ensure all of the below have been considered by putting yes, no or N/A - if anything important should be noted, add a note",
+      "This checklist is intended as a guide only, and its purpose is to highlight the most common disclosures that are relevant to small companies. Where a company does have complex and/or transactions outside those normally expected then please contact the Helpdesk or refer to FRS 105:",
+      "https://www.frc.org.uk/Our-Work/Publications/Accounting-and-Reporting-Policy/FRS-105-The-Financial-Reporting-Standard-applicab.pdf"
+    ],
+    "items": [
+      {
+        "section": "General",
+        "text": "Is FRS 105 selected in TaxCalc?"
+      },
+      {
+        "section": "General",
+        "text": "Are comparative figures shown?"
+      },
+      {
+        "section": "General",
+        "text": "Do the balance sheet and profit and loss give a true and fair view"
+      },
+      {
+        "section": "Accountants Report",
+        "text": "Contains reference to the fact that the accounts are unaudited"
+      },
+      {
+        "section": "Accountants Report",
+        "text": "Ensure our accounting body has been stated correctly"
+      },
+      {
+        "section": "Accounting Policies",
+        "text": "Reference to FRS 105 in accounting conventions policy"
+      },
+      {
+        "section": "Accounting Policies",
+        "text": "Correct depreciation rates shown"
+      },
+      {
+        "section": "Notes to the accounts (at foot of Balance Sheet)",
+        "text": "Transactions with directors including advances, credits and guarantees\nFor each advance/credit, show:\n• Amount and total of advance/credit\n• Interest rate if applicable\n• Main conditions\n• Total of any amounts repaid\n• Total of any amounts written off\n\nFor each guarantee:\n• Main terms\n• Maximum of liability\n\nIf closing balances are credit in prior year and current financial year - no disclosure is required."
+      },
+      {
+        "section": "Notes to the accounts (at foot of Balance Sheet)",
+        "text": "Guarantees and other financial commitments\n• Total amount not included on the Balance Sheet, with the following shown separately:\n• Total amount of pension contributions\n• Total amount of commitments undertaken on behalf of any parent, fellow subsidiary or any subsidiary of the entity\n• Total amount of commitments undertaken on behalf of any undertaking in which the entity has a participating interest"
+      },
+      {
+        "section": "Notes to the accounts (at foot of Balance Sheet)",
+        "text": "Average number of employees\n• Average number of employees as required by section 411 of the Act"
+      },
+      {
+        "section": "Notes to the accounts (at foot of Balance Sheet)",
+        "text": "Off balance sheet arrangements\n• Information about off balance sheet arrangements as required by section 410 of the Act"
+      }
+    ]
+  }
+}

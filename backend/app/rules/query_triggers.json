@@ -1,0 +1,1124 @@
+{
+  "U-TB-001": {
+    "test": "tb_out_of_balance"
+  },
+  "U-TB-003": {
+    "test": "suspense"
+  },
+  "U-TB-004": {
+    "test": "abnormal_balances"
+  },
+  "U-BNK-003": {
+    "test": "keyword_lines",
+    "side": "any",
+    "words": "savings|deposit account|\\bisa\\b|instant access|reserve account|business saver|\\bpot\\b",
+    "unless_names": "saving|deposit|reserve|\\bisa\\b|\\bpot\\b",
+    "title": "Ledger lines mention a savings or deposit account that is not in the trial balance ({n} lines, {total})"
+  },
+  "U-REV-003": {
+    "test": "monthly_sales_swing",
+    "share": 0.5
+  },
+  "U-DEB-001": {
+    "test": "ledger_vs_aged_list",
+    "kind": "AR",
+    "code": 4400
+  },
+  "U-CRD-001": {
+    "test": "ledger_vs_aged_list",
+    "kind": "AP",
+    "code": 5200
+  },
+  "U-VAT-002": {
+    "test": "vat_threshold"
+  },
+  "U-VAT-004": {
+    "test": "flat_rate_limit"
+  },
+  "U-FA-003": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "sale of (car|van|vehicle|equipment|machine|plant|laptop)|sold (car|van|vehicle|equipment)|part[- ]?ex|disposal|trade[- ]in|we buy any car|motorpoint|cazoo|auction",
+    "title": "Money in that looks like an asset sale ({n} lines, {total}): disposal to record?",
+    "min_total": 100
+  },
+  "U-LSE-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "min_total": 1000,
+    "words": "hire purchase|\\bh\\.?p\\.? (payment|agreement)|leasing|\\blease\\b|finance agreement|black horse|close brothers|santander consumer|ald automotive|lex autolease|arval|zenith|\\bpcp\\b|vehicle finance|asset finance",
+    "unless_sections": [
+      "Hire Purchase and Finance Leases"
+    ],
+    "title": "Lease / hire purchase payments of {total} and no HP or lease creditor in the books",
+    "unless_names": "hire purchase|\\bh\\.?p\\.?\\b|lease|finance"
+  },
+  "U-LOAN-001": {
+    "test": "loan_without_interest"
+  },
+  "U-DLA-002": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "overheads",
+    "min_total": 50,
+    "words": "tesco|sainsbury|asda|aldi|lidl|morrisons|waitrose|iceland foods|co-?op food|netflix|spotify|disney\\+|amazon prime|prime video|holiday|jet2|easyjet|ryanair|\\btui\\b|airbnb|booking\\.com|puregym|pure gym|the gym group|david lloyd|school fees|nursery|primark|\\bzara\\b|\\bh&m\\b|next retail|deliveroo|uber \\*?eats|just eat",
+    "exclude": "pay at pump|petrol|diesel|fuel|esso|\\bshell\\b|\\bbp\\b|texaco|car park|parking|holiday inn|holiday express|\\brent\\b",
+    "title": "{n} costs look personal ({total}): supermarket, streaming, holidays, gym or takeaways",
+    "skip_accounts": "rent|hotel|accommodation|subsistence|travel|vehicle|motor|fuel|insurance|staff welfare|purchases|cost of sales|materials|stock|printing|stationery|cleaning|postage|entertain|gift|repairs|equipment"
+  },
+  "U-DT-001": {
+    "test": "deferred_tax_missing"
+  },
+  "U-PRV-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "words": "\\bclaim\\b|dispute|tribunal|settlement|litigation|lawsuit|acas|county court|small claims",
+    "exclude": "insurance claim|expense claim|mileage claim",
+    "title": "Costs mentioning a claim, dispute or tribunal ({n} lines, {total}): any provision or contingent liability?"
+  },
+  "U-JNL-001": {
+    "test": "round_journals"
+  },
+  "U-FX-001": {
+    "test": "balance",
+    "bs": true,
+    "names": "\\beur\\b|euro|\\busd\\b|dollar|\\bfx\\b|foreign|currency|\\bwise\\b|revolut|payoneer",
+    "title": "Foreign currency balances in {n} account(s): retranslated at the year-end rate?"
+  },
+  "U-GRT-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "\\bgrant\\b|innovate uk|arts council|kickstart|restart grant|growth hub|\\bsubsid|council.*(grant|support)",
+    "exclude": "hmrc|refund",
+    "title": "Grant-type receipts ({n} lines, {total}): terms and conditions to check"
+  },
+  "U-INS-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "insurance|insurer|aviva|\\baxa\\b|zurich|allianz|direct line|hiscox|admiral|\\bclaim\\b",
+    "exclude": "premium|refund of premium|national insurance|\\bnics?\\b|paye|recharge",
+    "title": "Receipts from insurers or claims ({n} lines, {total}): how were they recorded?",
+    "where": "pl"
+  },
+  "R-REV-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "dojo|sumup|square|worldpay|zettle|izettle|stripe|paypal|takepayments|teya|elavon|barclaycard merchant|paymentsense|deliveroo|uber ?eats|uber \\*eats|just ?eat|hungry ?house",
+    "title": "Sales come in through card machines or delivery platforms ({n} lines, {total}): all channels in sales?"
+  },
+  "R-REV-002": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "deliveroo|uber ?eats|uber \\*eats|just ?eat|hungry ?house",
+    "unless_names": "commission|platform fee",
+    "unless_words": "commission|platform fee|service fee",
+    "title": "Delivery platform receipts of {total} and no platform commission cost: sales may be recorded net"
+  },
+  "R-REV-004": {
+    "test": "share_of_sales",
+    "side": "in",
+    "words": "\\bcash\\b|lodgement|takings banked|counter credit",
+    "low": 5,
+    "title": "Cash takings are only {share} of sales ({total}): is all cash recorded?"
+  },
+  "R-REV-005": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "voucher|gift card|giftcard",
+    "title": "Gift voucher receipts ({n} lines, {total}): unredeemed vouchers are a liability"
+  },
+  "R-VAT-001": {
+    "test": "single_sales_account",
+    "title": "All sales in one account: hot food, cold takeaway and drinks carry different VAT rates"
+  },
+  "R-VAT-002": {
+    "test": "keyword_lines",
+    "side": "any",
+    "words": "service charge|\\btips?\\b|tronc|gratuit",
+    "title": "Service charge or tips in the books ({n} lines, {total}): VAT and payroll treatment?"
+  },
+  "R-VAT-003": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "delivery (fee|charge)",
+    "title": "Delivery charges received ({n} lines, {total}): VAT follows the food supplied"
+  },
+  "R-INV-001": {
+    "test": "stock_unchanged"
+  },
+  "R-PAY-002": {
+    "test": "keyword_lines",
+    "side": "out",
+    "words": "staff (meal|food)|staff lunch",
+    "title": "Staff meals ({n} lines, {total}): VAT and benefit treatment?"
+  },
+  "R-LSE-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "words": "\\brent\\b|landlord|lease",
+    "exclude": "rentokil|car rent|van rent|equipment",
+    "min_total": 1000,
+    "title": "Premises rent of {total}: lease terms, rent-free periods and deposits?"
+  },
+  "R-FA-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "min_total": 500,
+    "words": "kitchen|refurb|fit[- ]?out|oven|fryer|extractor|refrigerat|freezer|chiller|coffee machine|dishwasher",
+    "exclude": "kitchen roll|cleaning",
+    "title": "Kitchen equipment or refurbishment in costs ({n} lines, {total}): capital?"
+  },
+  "R-LIC-001": {
+    "test": "absent_words",
+    "words": "licen[cs]e|\\bprs\\b|\\bppl\\b|waste|trade refuse|biffa|veolia",
+    "title": "No premises licence, music licence or trade waste cost in the books"
+  },
+  "C-REV-001": {
+    "test": "sales_present",
+    "min_sales": 10000,
+    "title": "Construction turnover of {sales}: contracts complete at the year end, applications and certificates?"
+  },
+  "C-REV-002": {
+    "test": "absent_balance",
+    "sections": [
+      "Prepayments and accrued income"
+    ],
+    "names": "accrued income",
+    "title": "No accrued income in the books: work done before the year end but invoiced after?"
+  },
+  "C-REV-003": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "deposit|advance|upfront|up-front|stage payment",
+    "title": "Deposits or advance payments received ({n} lines, {total}): work not yet done is deferred income"
+  },
+  "C-REV-004": {
+    "test": "keyword_lines",
+    "side": "any",
+    "words": "retention",
+    "unless_names": "retention",
+    "title": "Retentions mentioned in the ledger ({n} lines, {total}) and no retentions debtor"
+  },
+  "C-REV-005": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "variation|extra works|additional works",
+    "title": "Variations in sales ({n} lines, {total}): agreed with the customer?"
+  },
+  "C-WIP-001": {
+    "test": "absent_balance",
+    "sections": [
+      "Stock"
+    ],
+    "names": "work in progress|\\bwip\\b|contract",
+    "title": "No work in progress in the books: any jobs part-done at the year end?"
+  },
+  "C-WIP-002": {
+    "test": "last_month_spike",
+    "sections": [
+      "Cost of sales"
+    ],
+    "times": 1.5,
+    "title": "Last month's costs {last} against {avg} a month: materials on site at the year end?"
+  },
+  "C-WIP-003": {
+    "test": "keyword_lines",
+    "side": "out",
+    "words": "\\bland\\b|\\bplot\\b|site purchase|planning (fee|permission)",
+    "title": "Land or plot costs ({n} lines, {total}): an own development (stock, not costs)?",
+    "min_total": 5000
+  },
+  "C-COS-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "words": "subcontract|sub-contract|sub contract|labour only|\\bcis\\b|plaster|brickl|electrician|plumb|joiner|roofer|groundwork|scaffold",
+    "title": "Subcontractor costs of {total} ({n} lines): CIS deducted and returns filed?"
+  },
+  "C-COS-002": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "min_total": 500,
+    "words": "plant hire|tool hire|speedy|\\bhss\\b|gap group|sunbelt|\\bhire\\b",
+    "title": "Plant and tool hire of {total}: any long-term hire that is really a lease?"
+  },
+  "C-COS-003": {
+    "test": "monthly_margin_swing",
+    "points": 15
+  },
+  "C-CIS-002": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "words": "subcontract|sub-contract|sub contract|labour only|\\bcis\\b|plaster|brickl|electrician|plumb|joiner|roofer|groundwork|scaffold",
+    "unless_names": "\\bcis\\b",
+    "title": "Subcontractor costs of {total} and no CIS deductions account: is the company registered as a contractor?"
+  },
+  "C-CIS-005": {
+    "test": "balance",
+    "names": "cis.*(suffered|withheld|asset|deduct|recover)|(suffered|withheld).*cis",
+    "min": 1,
+    "title": "CIS suffered of {total}: set off against PAYE on the EPS, or claimed back?"
+  },
+  "C-CIS-006": {
+    "test": "months_without",
+    "side": "out",
+    "where": "expense",
+    "words": "subcontract|sub-contract|sub contract|labour only|\\bcis\\b|plaster|brickl|electrician|plumb|joiner|roofer|groundwork|scaffold",
+    "title": "{n} month(s) with no subcontractor payments: nil CIS returns filed or inactivity notified?"
+  },
+  "C-CIS-007": {
+    "test": "regular_payee",
+    "side": "out",
+    "where": "expense",
+    "words": "subcontract|sub-contract|sub contract|labour only|\\bcis\\b|plaster|brickl|electrician|plumb|joiner|roofer|groundwork|scaffold",
+    "months": 7,
+    "title": "{n} subcontractor(s) paid in most months: employment status check"
+  },
+  "C-VAT-006": {
+    "test": "debtors_vs_quarter",
+    "share": 0.5
+  },
+  "C-VAT-007": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "new build|new dwelling|conversion|renovation|empty home|charity",
+    "title": "Work on new builds, conversions or charity buildings ({n} lines, {total}): zero or 5% VAT rate?"
+  },
+  "C-FA-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "fixed_assets",
+    "min_total": 1000,
+    "words": "\\bvan\\b|vehicle|excavator|digger|dumper|plant|mixer|telehandler|motor",
+    "title": "Vans or plant bought ({n} lines, {total}): capital allowances and any HP?"
+  },
+  "C-PRV-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "words": "remedial|defect|warranty|snagging|making good",
+    "title": "Remedial or warranty costs ({n} lines, {total}): any provision needed at the year end?",
+    "min_total": 500
+  },
+  "C-EXP-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "min_total": 500,
+    "words": "subsistence|\\bppe\\b|workwear|screwfix|toolstation|safety boots|hi-?vis",
+    "title": "Site costs, tools and workwear of {total}: paid for employees or subcontractors?"
+  },
+  "C-LEV-001": {
+    "test": "absent_words",
+    "needs_payroll": true,
+    "words": "\\bcitb\\b|construction industry training",
+    "title": "A construction employer with no CITB levy cost"
+  },
+  "C-INS-001": {
+    "test": "absent_words",
+    "words": "public liability|employers'? liability|contractors'? all risk|\\bcar insurance\\b|insurance",
+    "title": "No public liability, employer's liability or contractors' insurance cost in the books"
+  },
+  "PS-REV-001": {
+    "test": "absent_balance",
+    "sections": [
+      "Prepayments and accrued income",
+      "Stock"
+    ],
+    "names": "work in progress|\\bwip\\b|accrued income|unbilled",
+    "title": "No unbilled work (WIP or accrued income) in the books: work done before the year end but billed after?"
+  },
+  "PS-REV-002": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "retainer|in advance|advance (payment|fee)|upfront|up-front|fixed fee|on account",
+    "title": "Retainers or fees received in advance ({n} lines, {total}): work not done by the year end is deferred income",
+    "where": "income"
+  },
+  "PS-REV-003": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "success fee|contingent|no win|completion fee",
+    "title": "Success or contingent fees ({n} lines, {total}): recognised only when earned?"
+  },
+  "PS-VAT-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "needs_vat": true,
+    "words": "recharge|re-charge|disbursement|expenses recharged|rechargeable",
+    "title": "Expenses recharged to clients ({n} lines, {total}): VAT charged on recharges (not true disbursements)?"
+  },
+  "PS-VAT-002": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "words": "\\busd\\b|\\beur\\b|\\bllc\\b|\\binc\\b|gmbh|\\bb\\.?v\\.?\\b|\\bpte\\b|\\bpvt\\b|sarl|\\bs\\.?a\\.?\\b|\\bag\\b|\\bab\\b|\\boy\\b|\\bapS\\b|international|overseas",
+    "title": "Income from overseas clients ({n} lines, {total}): outside the scope of UK VAT, shown as such on returns?",
+    "min_total": 1000
+  },
+  "PS-VAT-003": {
+    "test": "limited_cost_trader"
+  },
+  "PS-IR35-001": {
+    "test": "main_customer",
+    "share": 80,
+    "min_sales": 20000,
+    "title": "{share} of income from one client ({name}): a personal service company (IR35) check"
+  },
+  "PS-CLM-001": {
+    "test": "balance",
+    "names": "client account|client money|clients'? money|client funds|clients'? funds",
+    "bs": true,
+    "title": "Client money held ({total}): kept apart from the company's own money and reconciled?"
+  },
+  "PS-PRV-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "words": "professional indemnity|\\bpi (claim|excess)\\b|complaint|compensation|redress|ombudsman",
+    "exclude": "insurance premium|\\bpremium\\b",
+    "title": "Complaint or claim costs ({n} lines, {total}): any provision for open claims?"
+  },
+  "PS-DEB-001": {
+    "test": "debtor_days",
+    "days": 90
+  },
+  "E-REV-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "amazon|ebay|etsy|shopify|paypal|stripe|tiktok|onbuy|vinted|depop|wayfair|\\bmanomano\\b|notonthehighstreet|klarna|clearpay",
+    "min_total": 1000,
+    "title": "Marketplace payouts of {total} ({n} lines): sales recorded gross, with fees and refunds shown separately?"
+  },
+  "E-REV-002": {
+    "test": "balance",
+    "bs": true,
+    "min": 1,
+    "names": "amazon|ebay|etsy|shopify|paypal|stripe|tiktok|marketplace|clearing|holding account|reserve",
+    "title": "Marketplace or payment balances at the year end ({total} in {n} account(s)): agreed to the payout reports?",
+    "exclude_names": "sales|\\bcos\\b|cost|fee|interest|income|loan"
+  },
+  "E-REV-003": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "income",
+    "min_total": 500,
+    "words": "refund|return|chargeback|cancel",
+    "title": "Refunds and returns of {total} taken off sales ({n} lines): any after the year end for sales before it?"
+  },
+  "E-INV-001": {
+    "test": "keyword_lines",
+    "side": "any",
+    "min_total": 100,
+    "words": "\\bfba\\b|fulfil+ment|fulfil+ed by|\\b3pl\\b|warehous|amazon storage|inbound placement",
+    "title": "Fulfilment / warehouse costs ({n} lines, {total}): stock held at Amazon FBA or a 3PL counted in closing stock?"
+  },
+  "E-INV-002": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "min_total": 500,
+    "words": "freight|shipping in|import dut|\\bduty\\b|customs|clearance|forwarding|\\bdhl\\b|fedex|\\bups\\b",
+    "title": "Freight and import duty of {total} in costs: part of the cost of stock still held at the year end?"
+  },
+  "E-VAT-002": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 500,
+    "words": "\\beur\\b|europe|ireland|germany|france|spain|italy|netherlands|amazon\\.(de|fr|it|es|nl)|ebay\\.(de|fr|it|es)|\\bioss\\b|\\boss\\b|northern ireland",
+    "title": "Sales to EU or Northern Ireland customers ({n} lines, {total}): VAT where the customer is (OSS/IOSS)?"
+  },
+  "E-VAT-003": {
+    "test": "keyword_lines",
+    "side": "out",
+    "min_total": 500,
+    "words": "\\bimport|customs|alibaba|aliexpress|\\bchina\\b|shenzhen|guangzhou|yiwu|hong kong|\\b1688\\b",
+    "title": "Goods bought from overseas ({n} lines, {total}): import VAT postponed on the VAT return (PVA)?"
+  },
+  "E-VAT-004": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "amazon|ebay|etsy|shopify|paypal|stripe|tiktok|onbuy|vinted|depop|wayfair|\\bmanomano\\b|notonthehighstreet|klarna|clearpay",
+    "min_total": 1700,
+    "title": "Platform sales of {total}: the platforms report these to HMRC, so the turnover must agree"
+  },
+  "E-COS-001": {
+    "test": "share_of_sales",
+    "side": "out",
+    "where": "expense",
+    "low": 3,
+    "high": 30,
+    "words": "selling fee|final value|commission|seller fee|referral fee|promoted|advertis|\\bads\\b|subscription fee|merchant fee|paypal fee|stripe fee",
+    "title": "Marketplace fees and advertising are {share} of sales ({total}): outside the usual 3% to 30%?",
+    "skip_zero": true
+  },
+  "P-CLS-001": {
+    "test": "balance",
+    "bs": true,
+    "min": 1000,
+    "names": "propert|freehold|leasehold|\\bland\\b|building|\\bflat\\b|\\bhouse\\b|residential|commercial",
+    "exclude_names": "depreciation|insurance|rates|repairs",
+    "title": "Property held ({total} in {n} account(s)): investment property, own use, or stock for sale?"
+  },
+  "P-VAL-001": {
+    "test": "investment_property_at_cost"
+  },
+  "P-REV-001": {
+    "test": "months_without",
+    "side": "in",
+    "where": "income",
+    "words": "\\brent\\b|rental|tenant|letting|lettings",
+    "title": "{n} month(s) with no rent received: void periods, or rent not recorded?"
+  },
+  "P-REV-002": {
+    "test": "keyword_lines",
+    "side": "in",
+    "words": "openrent|foxtons|countrywide|letting|lettings|property management|your move|connells|haart|martin ?& ?co|bairstow|belvoir|leaders|hamptons|savills|knight frank|chestertons|dexters|winkworth|reeds rains|northwood|purplebricks|estate agents?|for ?the ?landlord",
+    "min_total": 500,
+    "unless_words": "agent fee|management fee|letting fee|agent commission|managing agent",
+    "title": "Rent received through a letting agent ({total}) and no agent fees in costs: rent recorded net of fees?"
+  },
+  "P-DEP-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 100,
+    "words": "deposit|\\bdps\\b|mydeposits|\\btds\\b|tenancy deposit",
+    "title": "Tenant deposits in income ({n} lines, {total}): deposits are owed back, not income"
+  },
+  "P-SVC-001": {
+    "test": "keyword_lines",
+    "side": "any",
+    "min_total": 1000,
+    "words": "service charge|ground rent|management company",
+    "title": "Service charges or ground rent ({n} lines, {total}): recharged to tenants or a cost?"
+  },
+  "P-VAT-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "needs_vat": true,
+    "min_total": 1000,
+    "words": "commercial|\\bunit\\b|office|warehouse|shop|retail|industrial",
+    "title": "Commercial rent of {total} and VAT registered: option to tax notified to HMRC?"
+  },
+  "P-VAT-002": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "needs_vat": true,
+    "min_total": 1000,
+    "words": "residential|\\bflat\\b|apartment|\\bhouse\\b|\\bhmo\\b|\\bast\\b|tenant",
+    "title": "Residential rent of {total} (VAT exempt) and VAT registered: is input VAT on property costs restricted?"
+  },
+  "P-RPR-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "min_total": 1000,
+    "words": "refurb|extension|renovat|new kitchen|new bathroom|\\bloft\\b|conversion|rewir|new roof|replacement windows|damp proof",
+    "title": "Refurbishment or improvement work in repairs ({n} lines, {total}): capital rather than a cost?"
+  },
+  "P-FIN-001": {
+    "test": "balance",
+    "bs": true,
+    "min": 1000,
+    "names": "mortgage|buy to let|\\bbtl\\b",
+    "title": "Mortgages of {total}: split between current and long term, and interest agreed to the lender's statement?"
+  },
+  "P-DIS-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "min_total": 1000,
+    "words": "completion|sale of (the )?property|conveyanc|proceeds of sale|solicitors? client account",
+    "title": "Property sale proceeds ({n} lines, {total}): disposal, gain and tax to work out"
+  },
+  "P-ATED-001": {
+    "test": "balance",
+    "bs": true,
+    "min": 500000,
+    "names": "propert|freehold|leasehold|\\bflat\\b|\\bhouse\\b|dwelling|residential",
+    "exclude_names": "depreciation",
+    "title": "Property of {total}: if a residential dwelling worth over £500,000, an ATED return may be due"
+  },
+  "P-FHL-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "min_total": 500,
+    "words": "airbnb|booking\\.com|\\bvrbo\\b|holiday let|sykes|holiday cottages|cottages\\.com",
+    "title": "Holiday let income ({n} lines, {total}): FHL rules ended April 2025, now normal property income",
+    "where": "income"
+  },
+  "RT-INV-001": {
+    "test": "stock_unchanged"
+  },
+  "RT-COS-001": {
+    "test": "monthly_margin_swing",
+    "points": 15
+  },
+  "RT-VAT-001": {
+    "test": "single_sales_account",
+    "title": "All sales in one account: standard, reduced and zero-rated goods split for VAT (retail scheme)?"
+  },
+  "RT-VAT-002": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "needs_vat": true,
+    "line_min": 5000,
+    "words": "iphone|samsung|mobile phone|\\bphones?\\b|handset|\\bcpu\\b|processor|\\bchips?\\b|\\bgpu\\b|graphics card|\\bipad\\b|tablet|laptop",
+    "title": "Sales of phones or computer chips of £5,000+ per invoice ({n} lines, {total}): reverse charge (specified goods) applies to trade buyers"
+  },
+  "RT-VAT-003": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 500,
+    "words": "second[- ]hand|\\bused\\b|pre-?owned|refurbished|margin scheme",
+    "title": "Second-hand goods sold ({n} lines, {total}): VAT margin scheme records kept?"
+  },
+  "RT-REV-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "min_total": 100,
+    "words": "voucher|gift card|giftcard|loyalty|points redeemed",
+    "title": "Gift cards or loyalty ({n} lines, {total}): unredeemed balances are a liability"
+  },
+  "RT-REB-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "min_total": 500,
+    "words": "rebate|retro(spective)? discount|volume discount|supplier bonus|overrider",
+    "exclude": "hmrc|tax rebate|vat",
+    "title": "Supplier rebates ({n} lines, {total}): earned in the year and reducing cost of sales?"
+  },
+  "RT-CNS-001": {
+    "test": "keyword_lines",
+    "side": "any",
+    "min_total": 100,
+    "words": "sale or return|\\bsor\\b|consignment",
+    "title": "Sale-or-return or consignment goods ({n} lines, {total}): stock that is not yours left out of closing stock?"
+  },
+  "RT-CSH-001": {
+    "test": "share_of_sales",
+    "side": "in",
+    "words": "\\bcash\\b|lodgement|takings banked|counter credit",
+    "low": 5,
+    "title": "Cash takings are only {share} of sales ({total}): till takings agreed to bankings?"
+  },
+  "RT-WHL-001": {
+    "test": "debtor_days",
+    "days": 60
+  },
+  "RT-AWRS-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 1000,
+    "words": "\\bwine|\\bbeer|lager|spirits|whisky|vodka|\\bgin\\b|alcohol|cider|\\bale\\b|prosecco|champagne",
+    "title": "Alcohol sales ({n} lines, {total}): selling to other businesses needs AWRS approval"
+  },
+  "T-REV-001": {
+    "test": "sales_present",
+    "min_sales": 10000,
+    "title": "Transport income of {sales}: passenger, freight or courier work, each with its own VAT treatment?"
+  },
+  "T-VAT-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 500,
+    "words": "passenger|\\bfares?\\b|taxi|\\bcab\\b|minicab|private hire|school run|coach hire|minibus",
+    "title": "Passenger fares ({n} lines, {total}): zero-rated only for vehicles with 10 or more seats"
+  },
+  "T-VAT-002": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 500,
+    "words": "freight|haulage|courier|logistics|\\bexport|shipping|parcel|pallet|consignment",
+    "title": "Freight or courier income ({n} lines, {total}): international legs zero-rated, domestic at 20%?"
+  },
+  "T-VAT-003": {
+    "test": "keyword_lines",
+    "side": "in",
+    "min_total": 500,
+    "words": "\\buber\\b|\\bbolt\\b|\\bola\\b|free ?now|addison lee|private hire operator|\\boperator\\b",
+    "title": "Income through Uber/Bolt or an operator ({n} lines, {total}): agent or principal, and VAT on fares?",
+    "where": "income"
+  },
+  "T-FA-001": {
+    "test": "balance",
+    "bs": true,
+    "min": 1000,
+    "names": "vehicle|\\bvans?\\b|truck|lorry|\\bhgv\\b|fleet|motor|\\bcars?\\b|taxi|trailer",
+    "exclude_names": "depreciation|insurance|repairs|running|fuel|expenses",
+    "title": "Vehicles of {total} ({n} account(s)): fixed asset register, HP agreements and capital allowances?"
+  },
+  "T-FA-002": {
+    "test": "balance",
+    "min": 1000,
+    "names": "(profit|loss|gain) on (sale|disposal)|disposal of (asset|vehicle)",
+    "title": "Gain or loss on vehicle disposals of {total}: are the depreciation rates right for resale values?"
+  },
+  "T-COS-001": {
+    "test": "monthly_swing",
+    "side": "out",
+    "where": "expense",
+    "share": 0.6,
+    "months": 2,
+    "min_month": 200,
+    "words": "fuel|diesel|petrol|pay at pump|\\bshell\\b|\\besso\\b|\\bbp\\b|texaco|\\bjet\\b|gulf|keyfuels|allstar|fleetcor|ukfuels",
+    "title": "Fuel cost swings in {n} month(s) against {avg} a month: missing or duplicated fuel bills?"
+  },
+  "T-CTR-001": {
+    "test": "regular_payee",
+    "side": "out",
+    "where": "expense",
+    "months": 7,
+    "words": "driver|courier|subcontract|sub-contract|self[- ]employed|delivery",
+    "title": "{n} driver(s) or courier(s) paid in most months: self-employed or really employees?"
+  },
+  "T-PEN-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "min_total": 50,
+    "words": "\\bpcn\\b|penalty charge|parking fine|speeding|congestion charge|\\bulez\\b|bus lane|fixed penalty|\\bfine\\b",
+    "title": "Fines and penalty charges of {total} ({n} lines): not allowed for corporation tax"
+  },
+  "T-CLM-001": {
+    "test": "keyword_lines",
+    "side": "any",
+    "min_total": 200,
+    "words": "accident|insurance excess|policy excess|third party|claims? handler|collision",
+    "title": "Accident or insurance excess costs ({n} lines, {total}): any claim still open at the year end?"
+  },
+  "T-LIC-001": {
+    "test": "absent_words",
+    "words": "operator licen|\\bo-?licen|tachograph|\\bmot\\b|plating|\\bpsv\\b|hgv licen|taxi licen|private hire licen|council licen",
+    "title": "No operator licence, tachograph, MOT or taxi licence costs in the books"
+  },
+  "M-INV-001": {
+    "test": "one_account_in_section",
+    "sections": [
+      "Stock"
+    ],
+    "min": 1000,
+    "title": "All stock ({total}) in one account ({name}): raw materials, work in progress and finished goods split?"
+  },
+  "M-INV-002": {
+    "test": "balance",
+    "sections": [
+      "Stock"
+    ],
+    "min": 10000,
+    "title": "Stock of {total}: finished goods and work in progress include labour and production overheads?"
+  },
+  "M-INV-003": {
+    "test": "stock_days",
+    "days": 180
+  },
+  "M-INV-004": {
+    "test": "last_month_spike",
+    "sections": [
+      "Cost of sales"
+    ],
+    "times": 1.5,
+    "title": "Goods bought in the last month {last} against {avg} a month: received and counted before the year end?"
+  },
+  "M-COS-001": {
+    "test": "monthly_margin_swing",
+    "points": 15
+  },
+  "M-COS-002": {
+    "test": "absent_words",
+    "words": "scrap|wastage|\\bwaste\\b|stock write|obsolete|rework",
+    "title": "No scrap, waste or stock write-off in the books: unusual for a manufacturer"
+  },
+  "M-IMP-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "min_total": 500,
+    "words": "\\bimport|customs|\\bduty\\b|freight|forwarding|clearance|\\bdhl\\b|fedex|shipping",
+    "title": "Import, freight and duty costs ({n} lines, {total}): postponed import VAT and landed cost of stock?"
+  },
+  "M-FX-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "min_total": 1000,
+    "words": "\\busd\\b|\\beur\\b|\\bcny\\b|\\brmb\\b|\\$\\s?\\d|€",
+    "title": "Purchases in foreign currency ({n} lines, {total}): creditors retranslated at the year-end rate, any forward contracts?",
+    "where": "expense"
+  },
+  "M-FA-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "fixed_assets",
+    "min_total": 1000,
+    "words": "machine|machinery|plant|\\bcnc\\b|lathe|\\bpress\\b|equipment|tooling|mould|mold|robot",
+    "title": "Machinery added ({n} lines, {total}): annual investment allowance or full expensing claimed?"
+  },
+  "M-RD-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "min_total": 1000,
+    "words": "prototype|r ?& ?d|research|development|product design|testing|trials?\\b|engineering design",
+    "title": "Development or prototype costs ({n} lines, {total}): an R&D tax relief claim?"
+  },
+  "M-PRV-001": {
+    "test": "keyword_lines",
+    "side": "any",
+    "min_total": 500,
+    "words": "warranty|returns? (credit|cost)|rework|recall|guarantee claim",
+    "title": "Warranty, returns or rework costs ({n} lines, {total}): any provision for claims after the year end?"
+  },
+  "M-ENR-001": {
+    "test": "monthly_swing",
+    "side": "out",
+    "where": "expense",
+    "share": 0.6,
+    "months": 2,
+    "min_month": 200,
+    "words": "electric|\\bgas\\b|energy|\\bedf\\b|british gas|octopus|\\beon\\b|e\\.on|scottish power|\\bsse\\b|npower|\\bovo\\b|totalenergies|total gas",
+    "title": "Energy costs swing in {n} month(s) against {avg} a month: missing or estimated bills?"
+  },
+  "RC-REV-001": {
+    "test": "sales_present",
+    "min_sales": 10000,
+    "title": "Agency turnover of {sales}: temporary workers shown gross (principal) or only the margin (agent)?"
+  },
+  "RC-REV-002": {
+    "test": "absent_balance",
+    "sections": [
+      "Prepayments and accrued income"
+    ],
+    "names": "accrued income|unbilled",
+    "title": "No accrued income: timesheets for the last week(s) before the year end not yet invoiced?"
+  },
+  "RC-REV-003": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 500,
+    "words": "placement|perm fee|permanent|introduction fee|finder'?s fee|search fee",
+    "title": "Permanent placement fees ({n} lines, {total}): any refunds due if candidates left within the rebate period?"
+  },
+  "RC-PAY-001": {
+    "test": "share_of_sales",
+    "sections": [
+      "Cost of sales",
+      "Employee costs"
+    ],
+    "low": 40,
+    "high": 95,
+    "title": "Worker pay is {share} of sales ({total}): temp pay agreed to RTI and to the hours billed?"
+  },
+  "RC-UMB-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "min_total": 500,
+    "words": "umbrella|paystream|parasol|giant group|brookson|crystal umbrella|clarity umbrella|vitesse|workwell|danbro",
+    "title": "Payments to umbrella companies ({n} lines, {total}): compliance checked (agencies are liable for umbrella PAYE from April 2026)?"
+  },
+  "RC-IR35-001": {
+    "test": "regular_payee",
+    "side": "out",
+    "where": "expense",
+    "months": 6,
+    "words": "contractor|subcontract|sub-contract|consultan|freelanc|agency staff|\\btemps?\\b|locum",
+    "title": "{n} contractor(s) paid in most months: employment status or off-payroll (IR35) determinations done?",
+    "payee_min": 3000
+  },
+  "RC-EIR-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "min_total": 500,
+    "words": "self[- ]employed|gross pay|freelanc|sole trader|\\bcis\\b",
+    "title": "Workers paid gross ({n} lines, {total}): quarterly employment intermediaries report sent to HMRC?"
+  },
+  "RC-FIN-001": {
+    "test": "balance",
+    "bs": true,
+    "min": 1000,
+    "names": "\\bfactoring\\b|\\bfactor\\b|invoice financ|invoice discount|bibby|aldermore|commercial finance|nucleus|marketfinance|marketinvoice",
+    "title": "Invoice finance balances ({total} in {n} account(s)): agreed to the funder's statement, with fees accrued?"
+  },
+  "RC-HOL-001": {
+    "test": "absent_words",
+    "needs_payroll": true,
+    "min_payroll": 50000,
+    "words": "holiday pay|accrued holiday|holiday accrual|annual leave",
+    "title": "A sizeable workforce and no holiday pay accrual in the books"
+  },
+  "RC-LEV-001": {
+    "test": "absent_words",
+    "needs_payroll": true,
+    "min_payroll": 3000000,
+    "words": "apprenticeship levy|\\blevy\\b",
+    "title": "Pay bill over £3m and no apprenticeship levy cost"
+  },
+  "S-REV-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 1000,
+    "words": "annual|yearly|12 months|subscription|licen[cs]e|renewal|\\bplan\\b",
+    "unless_names": "deferred income|income in advance|contract liabilit",
+    "title": "Subscription income of {total} and no deferred income: annual plans paid upfront spread over the months served?"
+  },
+  "S-REV-002": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 500,
+    "words": "set[- ]?up|onboarding|implementation|installation|integration fee",
+    "title": "Set-up or onboarding fees ({n} lines, {total}): recognised up front, or over the contract?"
+  },
+  "S-REV-003": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 1000,
+    "words": "bundle|support|maintenance|professional services|consultancy|training",
+    "title": "Licence plus support or services sold together ({n} lines, {total}): each part recognised when delivered?"
+  },
+  "S-DEV-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "min_total": 5000,
+    "words": "developer|development|software engineer|\\bdev\\b|upwork|\\bdeel\\b|toptal|programm|coding",
+    "unless_sections": [
+      "Intangible assets"
+    ],
+    "title": "Software development costs of {total} in the P&L and no intangible asset: any to capitalise (FRS 102 18.8H)?"
+  },
+  "S-RD-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "min_total": 2000,
+    "words": "\\baws\\b|amazon web services|azure|google cloud|\\bgcp\\b|digitalocean|heroku|vercel|netlify|github|gitlab|atlassian|\\bjira\\b|openai|anthropic|cloudflare|mongodb|datadog|sentry|developer|software engineer|data scientist|machine learning",
+    "title": "Technical, cloud and developer costs of {total}: an R&D tax relief claim (merged scheme)?"
+  },
+  "S-VAT-001": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 500,
+    "words": "\\beur\\b|\\busd\\b|europe|ireland|germany|france|\\bpaddle\\b|app store|google play|apple",
+    "title": "Digital sales to customers abroad ({n} lines, {total}): VAT where the consumer is (OSS) or outside the scope?"
+  },
+  "S-VAT-002": {
+    "test": "keyword_lines",
+    "side": "out",
+    "needs_vat": true,
+    "min_total": 500,
+    "words": "\\baws\\b|amazon web services|azure|google cloud|\\bgcp\\b|digitalocean|heroku|vercel|netlify|github|gitlab|atlassian|\\bjira\\b|openai|anthropic|cloudflare|mongodb|datadog|sentry|google workspace|g suite|microsoft|office 365|slack|zoom|notion|figma|adobe|hubspot|salesforce|canva|dropbox|mailchimp|intercom|twilio|stripe fee",
+    "title": "Software bought from overseas suppliers ({n} lines, {total}): reverse charge VAT on the returns (boxes 1 and 4)?"
+  },
+  "S-SBP-001": {
+    "test": "keyword_lines",
+    "side": "any",
+    "min_total": 1,
+    "words": "\\bemi\\b|share option|options? granted|vesting|seedlegals|vestd|carta|share scheme",
+    "title": "Share options or EMI mentioned ({n} lines): share-based payment charge and EMI notifications?"
+  },
+  "S-CTR-001": {
+    "test": "keyword_lines",
+    "side": "out",
+    "min_total": 500,
+    "words": "\\bdeel\\b|upwork|fiverr|toptal|remote\\.com|oyster hr|payoneer|freelancer\\.com|turing\\.com",
+    "title": "Overseas or platform contractors ({n} lines, {total}): contracts, IR35 and reverse charge VAT?"
+  },
+  "S-GC-001": {
+    "test": "balance",
+    "bs": true,
+    "min": 1000,
+    "names": "convertible|advance subscription|\\basa\\b|\\bsafe\\b|investor loan|seed|bridge loan",
+    "title": "Funding by convertible loans or advance subscriptions ({total}): going concern, and debt or equity in the accounts?"
+  },
+  "IND-ECM-15": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 1000,
+    "words": "\\b(oss|ioss|marketplace facilitator|deemed supplier)\\b|amazon\\.(de|fr|it|es|nl)|\\b(germany|france|spain|italy|netherlands|ireland)\\b",
+    "exclude": "amazon services europe|amazon eu s\\.?a\\.?r\\.?l",
+    "title": "Overseas marketplace or EU sales of {total}: who accounts for the VAT?"
+  },
+  "IND-PRD-09": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "overheads",
+    "min_total": 5000,
+    "words": "\\bplot\\b|land purchase|build(ing)? cost|construction|groundwork|architect|planning (fee|permission|application)|development|\\bsdlt\\b|stamp duty|building control",
+    "title": "Property development costs of {total} in the P&L: stock (work in progress) until the property is sold"
+  },
+  "IND-PRD-10": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "any",
+    "min_total": 20000,
+    "words": "completion|sale proceeds|sale of (property|plot|unit|house|flat)|conveyanc",
+    "title": "Property sale receipts of {total}: completion statement for each sale"
+  },
+  "IND-RES-10": {
+    "test": "margin_vs_last_year",
+    "points": 10
+  },
+  "IND-RTL-06": {
+    "test": "margin_vs_last_year",
+    "points": 5
+  },
+  "IND-REC-06": {
+    "test": "margin_vs_last_year",
+    "points": 5
+  },
+  "IND-HBB-06": {
+    "test": "regular_payee",
+    "side": "out",
+    "where": "expense",
+    "months": 6,
+    "words": "stylist|barber|therapist|\\bnails?\\b|beautic|lash|brow|hair|commission|chair",
+    "title": "{n} person(s) paid in most months outside the payroll: employed or self-employed?"
+  },
+  "IND-HBB-07": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "any",
+    "min_total": 100,
+    "words": "\\btips?\\b|gratuit|tronc",
+    "title": "Tips of {total} in the books: through the payroll or a tronc?"
+  },
+  "IND-HLT-07": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 5000,
+    "needs_vat": true,
+    "words": "\\bnhs\\b|\\bccg\\b|\\bicb\\b|patient|treatment|dental|care fee|prescription|clinic",
+    "title": "Health and care income of {total} (usually VAT exempt) and VAT reclaimed: partial exemption check"
+  },
+  "IND-HLT-08": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "min_total": 10000,
+    "words": "agency|locum|bank staff|\\bnurse|carer",
+    "title": "Agency and locum staff costs of {total}: contracts and status checks"
+  },
+  "IND-CHR-06": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "any",
+    "min_total": 1,
+    "words": "trustee",
+    "title": "Payments to trustees of {total}: authority in the governing document?"
+  },
+  "IND-CHR-07": {
+    "test": "framework_is",
+    "frameworks": [
+      "FRS105"
+    ],
+    "why": "A charitable company follows the Charities SORP (FRS 102): FRS 105 is not available to charities (CA 2006 s384B).",
+    "title": "Charity set up on FRS 105: it must follow the Charities SORP (FRS 102)"
+  },
+  "IND-CON-05": {
+    "test": "keyword_lines",
+    "side": "out",
+    "where": "expense",
+    "min_total": 50,
+    "words": "\\bcis\\b|construction industry scheme",
+    "title": "CIS of {total} in the costs: CIS suffered is a debtor and CIS withheld a liability, not a cost"
+  },
+  "IND-REC-02": {
+    "test": "absent_balance",
+    "sections": [
+      "Prepayments and accrued income"
+    ],
+    "names": "accrued income|unbilled",
+    "title": "No accrued income: timesheets worked before the year end, invoiced after (with the temps' pay)?"
+  },
+  "IND-HLT-04": {
+    "test": "absent_balance",
+    "sections": [
+      "Prepayments and accrued income"
+    ],
+    "names": "accrued income|unbilled",
+    "title": "No accrued income: NHS / council income for the year paid after the year end?"
+  },
+  "IND-HLD-03": {
+    "test": "balance",
+    "bs": true,
+    "min": 1,
+    "names": "intercompany|inter-company|inter company|group compan|subsidiar|parent compan|holding compan",
+    "exclude_names": "bank|director",
+    "title": "Balances with group or connected companies ({total}): agree each to the other company's books"
+  },
+  "IND-HLD-05": {
+    "test": "balance",
+    "bs": true,
+    "min": 1,
+    "names": "investment|shares in|subsidiar|\\bisa\\b|portfolio",
+    "exclude_names": "property|propert|bank",
+    "title": "Investments of {total}: agree to the statements or share certificates"
+  },
+  "IND-CHR-02": {
+    "test": "absent_balance",
+    "min_sales": 1,
+    "names": "restricted|endowment|designated",
+    "title": "No restricted or endowment funds: any income given for a particular purpose?"
+  },
+  "IND-CHR-03": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "any",
+    "min_total": 1,
+    "words": "gift ?aid",
+    "title": "Gift Aid of {total}: claims made but not received at the year end are a debtor"
+  },
+  "IND-CHR-04": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 1000,
+    "words": "\\bgrants?\\b",
+    "title": "Grants of {total}: conditions met by the year end, or deferred?"
+  },
+  "IND-HBB-02": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 100,
+    "needs_vat": true,
+    "words": "chair rent|rent a chair|room rent|station rent|chair hire|desk rent",
+    "title": "Chair or room rental income of {total}: standard-rated for VAT"
+  },
+  "IND-HBB-03": {
+    "test": "single_sales_account",
+    "title": "All sales in one account: services and product sales coded separately?"
+  },
+  "IND-HLT-03": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 1000,
+    "words": "prescription|dispens|pharmacy|nhsbsa",
+    "title": "Pharmacy income of {total}: NHS dispensing zero-rated, retail at its own rates"
+  },
+  "IND-PRP-08": {
+    "test": "keyword_lines",
+    "side": "in",
+    "where": "income",
+    "min_total": 1,
+    "words": "deposit",
+    "exclude": "interest|rent deposit refund",
+    "title": "Tenant deposits of {total} in income: a liability, not income"
+  }
+}

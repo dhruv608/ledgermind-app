@@ -1,0 +1,13 @@
+{
+  "_note": "The firm's own defaults, used when a client's setup leaves them blank. Depreciation: per asset class, method REDUCING_BALANCE / STRAIGHT_LINE / NONE and the rate in %. 20% reducing balance with a full year on additions is the most common rate in the firm's finished working papers; property is not given a default (land is not depreciated, buildings vary).",
+  "depreciation": {
+    "Freehold property": {"method": "NONE"},
+    "Leasehold property": {"method": "NONE"},
+    "Plant and machinery": {"method": "REDUCING_BALANCE", "rate": 20},
+    "Motor vehicles": {"method": "REDUCING_BALANCE", "rate": 20},
+    "Fixtures and fittings": {"method": "REDUCING_BALANCE", "rate": 20},
+    "Computers": {"method": "REDUCING_BALANCE", "rate": 20}
+  },
+  "_freight_note": "Freight and carriage on goods bought (carriage in): the firm's cost of sales code. the firm's final codes put it in 1100 Purchases on most clients; the chart's own line is 1711.",
+  "freight_in_code": 1100
+}

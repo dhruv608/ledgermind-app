@@ -1,0 +1,275 @@
+{
+  "about": "Engagement Setup rule activation (firm spec, 1 Oct 2026). Each rule: when the client setup says <when>, switch on <engine> (<rules>). A field nobody answered never switches a rule off: the rule stays on and shows 'not answered'. Rules marked blank_off are for optional entries where blank means the firm default. Edit this file to change what switches on; no code change needed.",
+  "rules": [
+    {
+      "id": "R01",
+      "when": "always",
+      "engine": "Universal checks",
+      "rules": "U-TB, U-BNK, U-DEB, U-PRE, U-ACC, U-CRD, U-JNL, U-GC, A-tests",
+      "reason": "Always run"
+    },
+    {
+      "id": "R02",
+      "when": {
+        "field": "client.prior_year_accounts",
+        "eq": true
+      },
+      "engine": "Opening balances and comparatives",
+      "rules": "U-TB-002",
+      "reason": "Last year's accounts available"
+    },
+    {
+      "id": "R03",
+      "when": {
+        "field": "client.prior_year_tb_gl",
+        "eq": true
+      },
+      "engine": "Trend, recurring-cost and movement analytics",
+      "rules": "A-REC-01–03, A-REV-01, A-GP-01",
+      "reason": "Last year's TB / ledger available"
+    },
+    {
+      "id": "R04",
+      "when": {
+        "field": "client.framework",
+        "eq": "FRS105"
+      },
+      "engine": "Micro-entity rules (FRS 105)",
+      "rules": "FRS 105 set; skip U-DT-001",
+      "reason": "Framework FRS 105"
+    },
+    {
+      "id": "R05",
+      "when": {
+        "field": "client.framework",
+        "in": [
+          "FRS102_1A",
+          "FULL_FRS102"
+        ]
+      },
+      "engine": "FRS 102 rules",
+      "rules": "U-DT-001, P-VAL-001",
+      "reason": "Framework FRS 102"
+    },
+    {
+      "id": "R06",
+      "when": {
+        "field": "client.period_start",
+        "gte": "2026-01-01"
+      },
+      "engine": "New revenue and lease rules",
+      "rules": "U-LSE-001 (new s20), s23 five-step",
+      "reason": "Period starts on or after 1 Jan 2026"
+    },
+    {
+      "id": "R07",
+      "when": {
+        "field": "industry.code",
+        "set": true
+      },
+      "engine": "Industry query library",
+      "rules": "{industry.code} queries, CoA_Map column {industry.code}",
+      "reason": "Industry {industry.name}; business model: {industry.models_text}"
+    },
+    {
+      "id": "R08",
+      "when": {
+        "field": "vat.registered",
+        "eq": true
+      },
+      "engine": "VAT engine",
+      "rules": "V-A, V-C, V-D, V-F, V-H, V-I, Box_Recon",
+      "reason": "VAT registered"
+    },
+    {
+      "id": "R09",
+      "when": {
+        "field": "vat.registered",
+        "eq": false
+      },
+      "engine": "VAT registration monitor",
+      "rules": "V-B01",
+      "reason": "Not VAT registered"
+    },
+    {
+      "id": "R10",
+      "when": {
+        "field": "vat.scheme",
+        "in": [
+          "CASH",
+          "FLAT_RATE",
+          "ANNUAL",
+          "RETAIL",
+          "MARGIN",
+          "TOMS"
+        ]
+      },
+      "engine": "VAT scheme tests",
+      "rules": "V-B07 / V-B05–B06 / V-B08 / V-G14 / V-G12 / V-G11",
+      "reason": "VAT scheme {vat.scheme}",
+      "blank_off": true
+    },
+    {
+      "id": "R11",
+      "when": {
+        "field": "vat.features",
+        "nonempty": true
+      },
+      "engine": "VAT special features",
+      "rules": "V-G01–G02, V-G03, V-G06, V-G08–G09, V-E04, V-E01–E05, V-G04",
+      "reason": "VAT features: {vat.features}",
+      "blank_off": true
+    },
+    {
+      "id": "R12",
+      "when": {
+        "field": "payroll.registered",
+        "eq": true
+      },
+      "engine": "Payroll",
+      "rules": "U-PAY-001–004, CT-ADJ-002, IR35 queries",
+      "reason": "PAYE registered"
+    },
+    {
+      "id": "R13",
+      "when": {
+        "field": "cis.status",
+        "in": [
+          "CONTRACTOR",
+          "BOTH"
+        ]
+      },
+      "engine": "CIS contractor",
+      "rules": "C-CIS-001–004, C-CIS-006, C-CIS-007, A-CIS-01",
+      "reason": "CIS contractor"
+    },
+    {
+      "id": "R14",
+      "when": {
+        "field": "cis.status",
+        "in": [
+          "SUBCONTRACTOR",
+          "BOTH"
+        ]
+      },
+      "engine": "CIS subcontractor",
+      "rules": "C-CIS-005",
+      "reason": "CIS subcontractor"
+    },
+    {
+      "id": "R15",
+      "when": {
+        "all": [
+          {
+            "field": "industry.code",
+            "eq": "CON"
+          },
+          {
+            "field": "cis.status",
+            "eq": "NONE"
+          }
+        ]
+      },
+      "engine": "Subcontractor costs query",
+      "rules": "C-CIS-002",
+      "reason": "Construction but not in CIS"
+    },
+    {
+      "id": "R16",
+      "when": {
+        "field": "ct.associated_companies",
+        "gt": 0
+      },
+      "engine": "Corporation tax limits shared",
+      "rules": "CT-RATE-001, Tax_Comp",
+      "reason": "{ct.associated_companies} associated company(ies): the £50k / £250k limits are divided by n + 1",
+      "blank_off": true
+    },
+    {
+      "id": "R17",
+      "when": {
+        "field": "people.any_dla",
+        "eq": true
+      },
+      "engine": "s455 and CT600A",
+      "rules": "U-DLA-001, CT-A-001–003",
+      "reason": "A director has a loan account"
+    },
+    {
+      "id": "R18",
+      "when": {
+        "any": [
+          {
+            "field": "ct.losses_bf",
+            "gt": 0
+          },
+          {
+            "field": "ct.group_75",
+            "eq": true
+          },
+          {
+            "field": "ct.rd_expected",
+            "eq": true
+          }
+        ]
+      },
+      "engine": "Losses, group relief, R&D",
+      "rules": "CT-LOS, CT-C-001, CT-L-001",
+      "reason": "Losses brought forward, 75% group or R&D claim",
+      "blank_off": true
+    },
+    {
+      "id": "R19",
+      "when": {
+        "field": "people.names",
+        "nonempty": true
+      },
+      "engine": "Related parties",
+      "rules": "U-DLA-002, U-RP-001, U-EQ-001, A-RP-01",
+      "reason": "Directors / shareholders named"
+    },
+    {
+      "id": "R20",
+      "when": {
+        "field": "policies.thresholds_entered",
+        "eq": true
+      },
+      "engine": "Client thresholds instead of the firm's",
+      "rules": "P-CAP-THR → U-FA-002, A-CAP-01; U-PRE-001; U-ACC-001",
+      "reason": "Policy threshold entered",
+      "blank_off": true
+    },
+    {
+      "id": "R21",
+      "when": {
+        "field": "policies.depreciation_entered",
+        "eq": true
+      },
+      "engine": "Depreciation recalculated",
+      "rules": "U-FA-004",
+      "reason": "Depreciation rates entered",
+      "blank_off": true
+    },
+    {
+      "id": "R22",
+      "when": {
+        "field": "materiality.overall",
+        "gt": 0
+      },
+      "engine": "Materiality scoring",
+      "rules": "All queries",
+      "reason": "Materiality £{materiality.overall}: findings under £{materiality.trivial} are logged, not sent to the client"
+    },
+    {
+      "id": "R23",
+      "when": {
+        "field": "prior_year.issues",
+        "nonempty": true
+      },
+      "engine": "Last year's issues retested",
+      "rules": "{prior_year.rules_text}",
+      "reason": "Last year: {prior_year.issues}",
+      "blank_off": true
+    }
+  ]
+}

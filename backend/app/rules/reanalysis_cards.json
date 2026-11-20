@@ -1,0 +1,258 @@
+{
+  "about": "Definition cards for the reanalysis engine: what each firm code is for, its usual suppliers and words, and the common wrong postings with their right code. The cards are the only place such a rule lives; the engine never ties a supplier to a code outside a card or the client's own history. Drafted 28 Oct 2026 from the SOP's examples and the 3,163 moves in 100 of his final WPs' reanalysis tabs (count = moved lines involving the code); every card is a draft until an accountant reviews it. Firm data: another firm keeps its own copy.",
+  "version": "2026-10-28 draft 1",
+  "cards": [
+    {
+      "code": 3241, "name": "Computer software costs", "heading": "General admin",
+      "definition": "Software licences and subscriptions used to run the business.",
+      "includes": ["SaaS subscriptions", "app store business apps", "cloud storage", "accounting software", "design software"],
+      "excludes": [
+        {"item": "computer hardware over the capitalisation limit", "code": 4151},
+        {"item": "computer hardware under the limit, IT consumables", "code": 3242},
+        {"item": "website build or hosting", "code": 3293},
+        {"item": "personal streaming or music (Netflix, Spotify, Disney+)", "code": 5400},
+        {"item": "online advertising (Facebook, Google Ads, LinkedIn ads)", "code": 3280},
+        {"item": "training courses and coaching apps", "code": 3040}
+      ],
+      "keywords": ["subscription", "licence", "license", "saas", "cloud", "software", "app"],
+      "typical_suppliers": ["Microsoft", "Adobe", "Google Workspace", "Xero", "QuickBooks", "Dropbox", "Canva", "Apple"],
+      "sector_variants": ["Design studios: Adobe is a direct cost (1100 range) when the client recharges it"],
+      "vat_note": "Overseas suppliers: reverse charge, no UK VAT on the invoice",
+      "tax_note": "Allowable", "balance_sheet_link": null,
+      "evidence": {"lines": 269, "most_moved_from": [[3320, 166], [3385, 14]]}, "status": "draft"
+    },
+    {
+      "code": 3320, "name": "Subscriptions", "heading": "General admin",
+      "definition": "Memberships and recurring services that are not software: trade bodies, professional bodies and journals.",
+      "includes": ["trade body membership", "professional body fees", "professional journals"],
+      "excludes": [
+        {"item": "software subscriptions", "code": 3241},
+        {"item": "personal subscriptions (Amazon Prime, Netflix, Disney+, Twitch)", "code": 5400}
+      ],
+      "keywords": ["membership", "subscription", "institute", "association", "journal"],
+      "typical_suppliers": [],
+      "sector_variants": [],
+      "vat_note": "Professional body fees are often exempt", "tax_note": "Allowable when for the trade",
+      "balance_sheet_link": null,
+      "evidence": {"lines": 311, "most_moved_to": [[3241, 166]]}, "status": "draft"
+    },
+    {
+      "code": 3242, "name": "Computer and IT consumables", "heading": "General admin",
+      "definition": "Small IT items and accessories below the capitalisation limit.",
+      "includes": ["cables", "keyboards and mice", "printer ink", "small IT accessories"],
+      "excludes": [{"item": "computers over the capitalisation limit", "code": 4151}, {"item": "phone and broadband bills", "code": 3290}],
+      "keywords": ["cable", "adapter", "ink", "toner", "mouse", "keyboard"],
+      "typical_suppliers": ["Currys", "Amazon"], "sector_variants": [], "vat_note": null, "tax_note": "Allowable",
+      "balance_sheet_link": null, "evidence": {"lines": 32}, "status": "draft"
+    },
+    {
+      "code": 3290, "name": "Telecommunications and data costs", "heading": "General admin",
+      "definition": "Phone, mobile and broadband used for the business.",
+      "includes": ["landline", "mobile contract", "broadband"],
+      "excludes": [{"item": "a personal mobile with no business use", "code": 5400}],
+      "keywords": ["mobile", "broadband", "phone", "telecom", "sim"],
+      "typical_suppliers": ["BT", "Vodafone", "EE", "O2", "Three", "Virgin Media", "Sky"],
+      "sector_variants": [], "vat_note": null, "tax_note": "Allowable",
+      "balance_sheet_link": null, "evidence": {"lines": 65, "most_moved_from": [[3242, 24]]}, "status": "draft"
+    },
+    {
+      "code": 3081, "name": "Travel and subsistence expenses", "heading": "Employee costs",
+      "definition": "Business journeys and meals away from the usual place of work.",
+      "includes": ["train and air fares", "taxis", "hotels", "meals on business trips", "parking on business trips"],
+      "excludes": [
+        {"item": "food shopping with no business trip", "code": 5400},
+        {"item": "staff food and drink at work", "code": 3050},
+        {"item": "fuel for business vehicles", "code": 3231},
+        {"item": "travel that is a direct cost of a job the client recharges", "code": 1780}
+      ],
+      "keywords": ["train", "rail", "flight", "taxi", "uber", "hotel", "parking"],
+      "typical_suppliers": ["Trainline", "Uber", "Premier Inn", "Travelodge"],
+      "sector_variants": ["Food businesses: supermarket purchases are cost of sales (1100), not travel"],
+      "vat_note": "Overseas hotels and fares carry no UK VAT", "tax_note": "Allowable when on a business trip",
+      "balance_sheet_link": null,
+      "evidence": {"lines": 160, "most_moved_from": [[5400, 45], [1780, 29]]}, "status": "draft"
+    },
+    {
+      "code": 3231, "name": "Vehicle fuel costs", "heading": "General admin",
+      "definition": "Fuel for business vehicles.",
+      "includes": ["petrol", "diesel", "EV charging"],
+      "excludes": [{"item": "fuel for a private car with no mileage claim", "code": 5400}],
+      "keywords": ["fuel", "petrol", "diesel", "charging"],
+      "typical_suppliers": ["Shell", "BP", "Esso", "Texaco"],
+      "sector_variants": [], "vat_note": "Private use of business fuel may need the fuel scale charge",
+      "tax_note": "Allowable for business vehicles", "balance_sheet_link": null,
+      "evidence": {"lines": 0, "source": "SOP example"}, "status": "draft"
+    },
+    {
+      "code": 3233, "name": "Vehicle parking costs", "heading": "General admin",
+      "definition": "Parking for business vehicles.",
+      "includes": ["council car parks", "parking apps"],
+      "excludes": [{"item": "parking fines and penalty charge notices", "code": 3391}],
+      "keywords": ["parking", "car park"],
+      "typical_suppliers": ["RingGo", "JustPark", "PayByPhone"],
+      "sector_variants": [], "vat_note": "On-street parking is outside the scope of VAT", "tax_note": "Allowable",
+      "balance_sheet_link": null, "evidence": {"lines": 0, "source": "SOP example"}, "status": "draft"
+    },
+    {
+      "code": 3301, "name": "Accountancy fees", "heading": "General admin",
+      "definition": "The company's own accounts, tax and compliance work.",
+      "includes": ["accounts preparation", "corporation tax return", "bookkeeping", "payroll bureau fees"],
+      "excludes": [{"item": "fees for the directors' personal tax returns", "code": 5400}],
+      "keywords": ["accountant", "accountancy", "bookkeeping", "tax return"],
+      "typical_suppliers": [],
+      "sector_variants": [], "vat_note": null, "tax_note": "Allowable", "balance_sheet_link": null,
+      "evidence": {"lines": 0, "source": "SOP example (TaxAssist personal returns moved to the DLA on 22 jobs)"}, "status": "draft"
+    },
+    {
+      "code": 3280, "name": "Advertising and marketing costs", "heading": "General admin",
+      "definition": "Promoting the business: ads, marketing materials, sponsorship.",
+      "includes": ["online ads", "printed marketing", "sponsorship", "promotional events"],
+      "excludes": [{"item": "software used to run the business", "code": 3241}, {"item": "client hospitality", "code": 3385}],
+      "keywords": ["ads", "advert", "marketing", "promotion", "sponsor"],
+      "typical_suppliers": ["Facebook", "Meta", "Google Ads", "LinkedIn"],
+      "sector_variants": [], "vat_note": "Meta and Google ads: reverse charge", "tax_note": "Allowable",
+      "balance_sheet_link": null,
+      "evidence": {"lines": 72, "most_moved_from": [[3241, 23], [5400, 12]]}, "status": "draft"
+    },
+    {
+      "code": 3385, "name": "Entertaining", "heading": "General admin",
+      "definition": "Hospitality for clients and suppliers (disallowable for corporation tax).",
+      "includes": ["restaurant bills with clients", "client gifts of food and drink"],
+      "excludes": [{"item": "staff events", "code": 3070}, {"item": "business trip meals", "code": 3081}],
+      "keywords": ["restaurant", "dinner", "lunch", "bar", "hospitality"],
+      "typical_suppliers": [],
+      "sector_variants": [], "vat_note": "No input VAT on business entertaining", "tax_note": "Disallowable: added back",
+      "balance_sheet_link": null,
+      "evidence": {"lines": 38, "most_moved_from": [[3270, 17], [3390, 4]]}, "status": "draft"
+    },
+    {
+      "code": 3050, "name": "Staff welfare", "heading": "Employee costs",
+      "definition": "Refreshments and welfare items for staff at work.",
+      "includes": ["tea, coffee and milk", "water", "first aid"],
+      "excludes": [{"item": "staff parties and events", "code": 3070}, {"item": "food for resale", "code": 1100}],
+      "keywords": ["tea", "coffee", "milk", "water", "refreshments"],
+      "typical_suppliers": ["Tesco", "Lidl", "Co-op", "Aldi"],
+      "sector_variants": ["Food businesses: supermarket purchases are usually cost of sales (1100)"],
+      "vat_note": null, "tax_note": "Allowable", "balance_sheet_link": null,
+      "evidence": {"lines": 65}, "status": "draft"
+    },
+    {
+      "code": 3040, "name": "Staff training", "heading": "Employee costs",
+      "definition": "Courses and training for staff and directors related to the business.",
+      "includes": ["courses", "coaching", "training platforms"],
+      "excludes": [{"item": "software used to run the business", "code": 3241}],
+      "keywords": ["course", "training", "coaching", "academy", "workshop"],
+      "typical_suppliers": [], "sector_variants": [], "vat_note": null,
+      "tax_note": "Allowable when it updates existing skills", "balance_sheet_link": null,
+      "evidence": {"lines": 30, "most_moved_from": [[3241, 15]]}, "status": "draft"
+    },
+    {
+      "code": 3140, "name": "Repairs and maintenance", "heading": "Premises expenses",
+      "definition": "Keeping premises and equipment in working order.",
+      "includes": ["repairs", "small tools and parts for repairs", "servicing"],
+      "excludes": [
+        {"item": "improvements or new equipment over the capitalisation limit", "code": 4121},
+        {"item": "materials used in client jobs", "code": 1100}
+      ],
+      "keywords": ["repair", "maintenance", "service", "fix"],
+      "typical_suppliers": ["Screwfix", "Toolstation", "B&Q", "Wickes"],
+      "sector_variants": ["Builders: materials for client jobs are cost of sales (1100)"],
+      "vat_note": null, "tax_note": "Allowable; improvements are capital", "balance_sheet_link": null,
+      "evidence": {"lines": 68, "most_moved_from": [[1100, 17]]}, "status": "draft"
+    },
+    {
+      "code": 3260, "name": "Insurance", "heading": "General admin",
+      "definition": "Business insurance: liability, contents, professional indemnity.",
+      "includes": ["public liability", "professional indemnity", "business contents"],
+      "excludes": [{"item": "vehicle insurance", "code": 3232}, {"item": "personal life or health cover", "code": 5400}],
+      "keywords": ["insurance", "policy", "cover", "indemnity"],
+      "typical_suppliers": ["Superscript", "Hiscox", "Simply Business", "AXA", "Aviva"],
+      "sector_variants": [], "vat_note": "Exempt from VAT (insurance premium tax instead)", "tax_note": "Allowable",
+      "balance_sheet_link": "4900 prepayments when the policy runs past the year end",
+      "evidence": {"lines": 37, "most_moved_from": [[3241, 12]]}, "status": "draft"
+    },
+    {
+      "code": 3270, "name": "Printing, postage and stationery", "heading": "General admin",
+      "definition": "Printing, postage and office stationery.",
+      "includes": ["stamps", "courier", "printing", "paper and pens"],
+      "excludes": [{"item": "client hospitality", "code": 3385}, {"item": "personal subscriptions", "code": 5400}],
+      "keywords": ["postage", "royal mail", "courier", "print", "stationery"],
+      "typical_suppliers": ["Royal Mail", "Post Office", "Vistaprint"],
+      "sector_variants": [], "vat_note": "Postage stamps are exempt", "tax_note": "Allowable",
+      "balance_sheet_link": null, "evidence": {"lines": 37}, "status": "draft"
+    },
+    {
+      "code": 3380, "name": "Other office costs", "heading": "General admin",
+      "definition": "Office running costs that have no more specific code.",
+      "includes": ["office supplies with no better head", "cleaning", "small office items"],
+      "excludes": [{"item": "goods for resale or used in the product", "code": 1100}, {"item": "software", "code": 3241}],
+      "keywords": ["office"], "typical_suppliers": [], "sector_variants": [],
+      "vat_note": null, "tax_note": "Allowable", "balance_sheet_link": null,
+      "evidence": {"lines": 59, "most_moved_to": [[1100, 38]]}, "status": "draft"
+    },
+    {
+      "code": 1100, "name": "Purchases", "heading": "Cost of sales",
+      "definition": "Goods bought for resale or used in making the product or doing client jobs.",
+      "includes": ["stock for resale", "food supplies for a café or caterer", "materials for a builder", "packaging"],
+      "excludes": [{"item": "office supplies", "code": 3274}, {"item": "repairs to the business's own premises", "code": 3140}],
+      "keywords": ["stock", "wholesale", "materials", "supplies", "packaging"],
+      "typical_suppliers": ["Booker", "Bidfood", "Costco", "Brakes", "Bestway"],
+      "sector_variants": ["Depends on the industry: the same supplier is an overhead for a business that does not resell"],
+      "vat_note": null, "tax_note": "Allowable", "balance_sheet_link": "4300 stock at the year end",
+      "evidence": {"lines": 77, "most_moved_from": [[3380, 38]]}, "status": "draft"
+    },
+    {
+      "code": 1780, "name": "Other direct costs", "heading": "Cost of sales",
+      "definition": "Costs of doing client work that are not purchases or labour.",
+      "includes": ["travel recharged to clients", "job-specific hire"],
+      "excludes": [{"item": "general business travel", "code": 3081}],
+      "keywords": ["recharge", "project", "job"], "typical_suppliers": [], "sector_variants": [],
+      "vat_note": null, "tax_note": "Allowable", "balance_sheet_link": null,
+      "evidence": {"lines": 58}, "status": "draft"
+    },
+    {
+      "code": 1440, "name": "Subcontractor costs (cost of sales)", "heading": "Cost of sales",
+      "definition": "Labour bought in from self-employed workers for client work.",
+      "includes": ["payments to named self-employed workers", "CIS subcontractors"],
+      "excludes": [{"item": "directors", "code": 3010}, {"item": "employees on the payroll", "code": 5330}],
+      "keywords": ["subcontract", "labour", "cis", "freelance"],
+      "typical_suppliers": [], "sector_variants": ["Construction: check CIS deductions"],
+      "vat_note": "Construction: domestic reverse charge between CIS-registered businesses",
+      "tax_note": "Allowable", "balance_sheet_link": null,
+      "evidence": {"lines": 0, "source": "SOP; bank test: 253 payments to named people the accountant coded here"}, "status": "draft"
+    },
+    {
+      "code": 5400, "name": "Directors loan account", "heading": "Current liabilities",
+      "definition": "Money between the company and the director personally.",
+      "includes": ["personal spending from the business account", "personal tax fees", "private fuel", "personal subscriptions", "dividends credited to the director"],
+      "excludes": [{"item": "business costs paid personally by the director: the cost code, credit 5400", "code": null}],
+      "keywords": ["director", "personal", "drawings"],
+      "typical_suppliers": ["Netflix", "Spotify", "Disney+", "Amazon Prime"],
+      "sector_variants": [], "vat_note": "No input VAT on personal items",
+      "tax_note": "Overdrawn at the year end: s455; benefits may need a P11D",
+      "balance_sheet_link": null,
+      "evidence": {"lines": 316}, "status": "draft"
+    },
+    {
+      "code": 5300, "name": "VAT", "heading": "Current liabilities",
+      "definition": "VAT on valid VAT invoices only.",
+      "includes": ["VAT on supplier invoices with a valid VAT number"],
+      "excludes": [{"item": "VAT claimed with no valid VAT (overseas apps, marketplace sellers, exempt items): back to the cost code", "code": null}],
+      "keywords": ["vat"], "typical_suppliers": [], "sector_variants": ["Flat Rate Scheme: no input VAT except capital items"],
+      "vat_note": null, "tax_note": null, "balance_sheet_link": null,
+      "evidence": {"lines": 0, "source": "SOP example"}, "status": "draft"
+    },
+    {
+      "code": 0, "name": "Sales", "heading": "Sales",
+      "definition": "Income from the business's goods and services.",
+      "includes": ["customer receipts", "platform payouts grossed up"],
+      "excludes": [
+        {"item": "refunds from suppliers: the cost code", "code": null},
+        {"item": "platform fees on gross-up (Airbnb, Booking.com, Uber, Deliveroo, Just Eat, Etsy)", "code": 3306}
+      ],
+      "keywords": ["invoice", "receipt", "payout"], "typical_suppliers": [], "sector_variants": [],
+      "vat_note": null, "tax_note": null, "balance_sheet_link": "4400 trade debtors when invoiced",
+      "evidence": {"lines": 78}, "status": "draft"
+    }
+  ]
+}

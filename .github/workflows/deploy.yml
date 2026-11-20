@@ -1,0 +1,114 @@
+# Deploy LedgerMind: press "Run workflow" on the Actions tab. Never runs by itself.
+# GitHub builds the two images on its own machines, stores them in Amazon ECR (London), then tells the server
+# (through AWS Systems Manager, no SSH key here) to pull them and restart. The server never builds, so a deploy
+# cannot slow it down or run it out of memory. If any step fails, the version already running stays up.
+# One-time AWS setup: deploy/aws_setup_github_deploy.sh (run once in AWS CloudShell).
+# nginx is restarted after the new containers start: it remembers the old containers' addresses otherwise (502).
+
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write      # GitHub proves who it is to AWS: no AWS keys are stored in GitHub
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+env:
+  AWS_REGION: eu-west-2
+  REGISTRY: 361103952475.dkr.ecr.eu-west-2.amazonaws.com
+  INSTANCE_ID: i-026198d03f29b0664
+  ROLE_ARN: arn:aws:iam::361103952475:role/ledgermind-github-deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show who GitHub says this run is (what AWS checks; not secret)
+        run: |
+          token=$(curl -s -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+                  "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" | jq -r .value)
+          echo "$token" | python3 -c "import sys,json,base64; p=sys.stdin.read().split('.')[1]; c=json.loads(base64.urlsafe_b64decode(p+'='*(-len(p)%4))); print('sub:', c.get('sub')); print('aud:', c.get('aud'))" || true
+
+      - name: Sign in to AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sign in to the image store (ECR)
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build and store the backend image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: backend/Dockerfile
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/ledgermind-backend:latest
+            ${{ env.REGISTRY }}/ledgermind-backend:${{ github.sha }}
+          cache-from: type=gha,scope=backend
+          cache-to: type=gha,mode=max,scope=backend
+
+      - name: Build and store the frontend image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./frontend
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/ledgermind-frontend:latest
+            ${{ env.REGISTRY }}/ledgermind-frontend:${{ github.sha }}
+          cache-from: type=gha,scope=frontend
+          cache-to: type=gha,mode=max,scope=frontend
+
+      - name: Tell the server to pull the new images and restart
+        run: |
+          REG="$REGISTRY"
+          cat > /tmp/params.json <<EOF
+          {"commands": [
+            "set -e",
+            "cd /home/ubuntu/ledgermind",
+            "sudo -u ubuntu git pull -q",
+            "grep -q '^BACKEND_IMAGE=' .env || echo 'BACKEND_IMAGE=$REG/ledgermind-backend:latest' >> .env",
+            "grep -q '^FRONTEND_IMAGE=' .env || echo 'FRONTEND_IMAGE=$REG/ledgermind-frontend:latest' >> .env",
+            "docker run --rm --network host amazon/aws-cli ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $REG",
+            "docker compose pull backend frontend",
+            "docker compose up -d",
+            "docker compose restart nginx",
+            "docker image prune -f",
+            "docker compose ps --format '{{.Name}} {{.Status}}'"
+          ]}
+          EOF
+          id=$(aws ssm send-command --instance-ids "$INSTANCE_ID" --document-name AWS-RunShellScript \
+                 --comment "LedgerMind deploy ${GITHUB_SHA::7}" --parameters file:///tmp/params.json \
+                 --timeout-seconds 900 --query Command.CommandId --output text)
+          echo "Server command $id"
+          for i in $(seq 1 120); do
+            status=$(aws ssm get-command-invocation --command-id "$id" --instance-id "$INSTANCE_ID" \
+                       --query Status --output text 2>/dev/null || echo Pending)
+            case "$status" in Success|Failed|Cancelled|TimedOut) break ;; esac
+            sleep 5
+          done
+          aws ssm get-command-invocation --command-id "$id" --instance-id "$INSTANCE_ID" \
+            --query '[StandardOutputContent,StandardErrorContent]' --output text
+          echo "Server: $status"
+          test "$status" = Success
+
+      - name: Check the site answers
+        run: |
+          for i in $(seq 1 36); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' https://ledgermind.duckdns.org/api/auth/me || true)
+            [ "$code" = 401 ] && { echo "API up (401 = sign in needed)"; exit 0; }
+            sleep 5
+          done
+          echo "The API did not come back"; exit 1

@@ -1,0 +1,21 @@
+# Exact versions that run on the developer's laptop: a newer release can change behaviour (SQLAlchemy 2.1 changed
+# the default Postgres driver and the server would not start). Update on purpose, test, then change them here.
+fastapi==0.135.2
+uvicorn[standard]==0.42.0
+pydantic==2.12.5
+pydantic-settings==2.15.0
+sqlalchemy==2.0.52
+psycopg2-binary==2.9.12
+pandas==3.0.6
+numpy==2.4.4
+openpyxl==3.1.5
+reportlab==5.0.1
+boto3==1.43.2
+python-dotenv==1.2.2
+python-multipart==0.0.22
+httpx==0.28.1
+requests==2.33.1
+beautifulsoup4==4.14.3
+pypdf==6.11.0
+PyMuPDF==1.27.2.3
+amazon-transcribe==0.6.4

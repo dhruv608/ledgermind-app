@@ -1,0 +1,13 @@
+# Only the backend folder is copied into the server image; keep everything else (and every secret) out
+data
+docs
+frontend
+.claude
+.git
+**/__pycache__
+**/*.pyc
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.production.example
+backend/tests
